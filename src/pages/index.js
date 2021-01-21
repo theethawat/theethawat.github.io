@@ -39,8 +39,11 @@ const features = [
     imageUrl: "img/undraw_docusaurus_react.svg",
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Next Inspiration of Theethawat, on technology, education, culture
+        program, etc. <br />
+        <br />
+        แรงบันดาลใจใหม่ของเขาทั้งในด้านเทคโนโลยี การศึกษา สังคม วัฒนธรรม
+        และอื่นๆ
       </>
     ),
   },
