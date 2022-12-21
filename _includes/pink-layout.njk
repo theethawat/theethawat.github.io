@@ -1,3 +1,6 @@
+---
+title: Pink Layout
+---
 
 <!DOCTYPE html>
 <html lang="th">
@@ -5,12 +8,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Readme</title>
-    <meta property="description" content="" />
-    <meta property="og:title" content="Readme" />
+    <title>{{ title }}</title>
+    <meta property="description" content="{{subtitle | safe}}" />
+    <meta property="og:title" content="{{title}}" />
     <meta property="og:type" content="text/html" />
     <meta property="og:locale" content="th_TH" />
-    <meta property="og:description" content="" />
+    <meta property="og:description" content="{{subtitle | safe}}" />
     <meta
       property="og:image"
       content="https://www.theduckcreator.in.th/assets/Logo2021/Banner2021.png"
@@ -224,15 +227,21 @@ pre {
 
   <body>
 
-    <section class="hero tdc-hero-blue  is-medium is-bold">
+    <section class="hero tdc-hero-pink  is-medium is-bold">
       <div class="hero-body">
         <div class="container">
           <h1
             class="subtitle  has-text-light is-2 kanit acenter tdc-remove-margin-bt"
           >
-            Readme
+            {{ title }}
             <br />
           </h1>
+            <h2
+            class="subtitle  has-text-light is-4 kanit acenter tdc-remove-margin-bt"
+          >
+            {{ subtitle }}
+            <br />
+          </h2>
         </div>
       </div>
     </section>
@@ -240,11 +249,18 @@ pre {
     <div class="container ">
 
        <div class="is-medium mx-6">
-        
-            <h1>Page Header</h1>
-
-        </div>
      
+            {{ content | safe }}
+        </div>
+      <div class="  has-text-centered my-4">
+        <a href="/" class="mx-2">
+          <button class="button is-primary ">Home Page</button>
+        </a>
+          <a href="/article" class="mx-2">
+          <button class="button is-secondary ">All Articles</button>
+        </a>
+
+   </div>
     </div>
 
     <br /><br />
