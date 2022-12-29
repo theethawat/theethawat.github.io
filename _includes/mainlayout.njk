@@ -8,7 +8,7 @@ title: My Rad Blog
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>{{ title }}</title>
+    <title>{{ title }} - {{subtitle}}</title>
     <meta property="description" content="{{subtitle | safe}}" />
     <meta property="og:title" content="{{title}}" />
     <meta property="og:type" content="text/html" />
@@ -236,6 +236,12 @@ pre {
             {{ title }}
             <br />
           </h1>
+          <h2
+            class="subtitle  has-text-light is-5 kanit acenter tdc-remove-margin-bt"
+          >
+            {{ subtitle }}
+            <br />
+          </h2>
         </div>
       </div>
     </section>
@@ -312,7 +318,14 @@ pre {
       </a>
     </p>
     <br/>
-    <img src="https://theduckcreator.in.th/assets/Logo2021/Logo-TDC-CBT.png" class="image piccenter " style="height:70px;"/>
+    <div class="columns is-justify-content-center">
+      <div class="column is-one-quarter  is-offset-one-quarter">
+        <img src="/img/Theethawat Logo.png" class="image piccenter " style="height:70px;"/>
+      </div>
+      <div class="column is-one-quarter ">
+        <img src="/img/5thAnniversary.png" class="image piccenter" style="height:70px;"/>
+      </div>
+    </div>
   </div>
 </footer>
     <script src="https://kit.fontawesome.com/942c2b45e2.js"></script>

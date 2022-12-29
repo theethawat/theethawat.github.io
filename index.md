@@ -1,25 +1,35 @@
 ---
 layout: mainlayout.njk
 title: Theethawat Savastham
-subtitle: Theethawat Savastham - ธีร์ธวัช สวาสดิ์ธรรม
+subtitle: TheethawatSpace/> Space of Theethawat Savastham
+activity_images:
+  - img/a1.jpg
+  - img/a2.jpg
+  - img/a3.jpg
 ---
 
-# ธีร์ธวัช สวาสดิ์ธรรม
+<div class="columns ">
+<div class="column is-one-third">
+<img src="img/tin_photo.jpg" alt="Tin Photo" class="image" style="height:240px;">
+</div>
+<div class="column is-two-third mt-6">
+<h1 class="subtitle is-2 mb-0">Theethawat Savastham</h1>
+<h1 class="subtitle is-3 pt-2">ธีร์ธวัช สวาสดิ์ธรรม</h1>
+</div>
+</div>
 
-<br>
-
-## Brief Info
+### Brief Info
 
 - **Nickname:** Tin
 - **Location:** From Yala => Songkhla Thailand
 - **Birthday:** Febuary 7, 1998
 
-## Position
+### Position
 
 - **2020-Present** Full Stack Software Developer at Intelligent Automation Research Center
 - **2022-Present** Master Degree Student at Faculty of Engineering, Prince of Songkla University
 
-## Education
+### Education
 
 - Bachelor in Engineering from Prince of Songkla University in 2021
 - Grade 9 - 12 from Benjamarachutit School, Nakhon si thammarat
@@ -37,53 +47,62 @@ After I graduated, I have joined [Intelligent Automation Research Center](https:
 
 # My Working Project
 
-I prefer try and playing a lot of work type!
-
-### 2016
-
-- [Culture writing in Big Asia Site](https://theethawat.github.io/oldblog/blog/issue2.html) - Culture program of my grade 12, I founded since 2016 but it was stop on middle of 2018. I had learn about hosting and wordpress with this.
-
-### 2017
-
-- PHP Programing for **Big Asia** and **Thailand Blog hub** Web Application and Fail
-
-### 2018
-
-- [Thaileague Unofficial Web Application](/work/2019/06/28/thaileagueapp.html) - PHP with Laravel programing about football program system and Fail again but it make a lot of programing techniques.
-- [QR Code Congratulation Project](#) - make on PHP with Laravel to map a good wish with a random number.
-- Join **Windows Insider Program** to try a beta release version of Microsoft Windows on fast ring.
-- Joing one of Fandom campaign website
-
-### 2019
-
-- Create my personal site using **Jekyll** Static Site Generater
-- Develop **Offline Bike Event Registration** and **Water Monitoring Page** - during internship on June 2019, co working with my collegue.
-- [You're flower](#) - Congratulation project for graduated student of Eng-PSU in September 2019, using code to search a good wish item. Write on Javascript, React and Firebase Realtime DB. That is the new programing language era for me.
-- Demo the frontend page about [HA and FT Subject Register System](#) - co working with by collegue for Internet Programing course mini project.
-- [Ehealth For Personal Sensor Application](/it-blog/2020/06/05/senior-project-talk.html) - **Android**, ReactiveX and **Cloud Firestore** application with Kotlin as my senior graduation project furthermore it has Web App Monitor With **React** and **TypeScript**.
-
 ### 2020
 
 - Joing [Intelligent Automation Research Center](https://iarc.psu.ac.th) at Prince of Songkla University on July 2020, First Page of my working life as Software Developer
-- Co-Developer of [E-OnlineShop](https://eonlineshop.net) online your-own-business e-commerce platform, [E-Accom](https://eaccom.net) Accomodation management and [E-Salesman](https://esalesman.net) platform
-- Co Developer of E-IoTsoft or now [E-Machine](https://emachine.efactory.biz), the IoT dashboard and controlling software, now it's handover to another developer to implement them.
+- Co-Developer of E-OnlineShop (Now [E-Merchant](https://emerchant.efactory.biz)) online your-own-business e-commerce platform, [E-Accom](https://eaccom.net) Accomodation management and [E-Salesman](https://esalesman.net) platform
+- Co-Developer of E-IoTsoft or (Now [E-Machine](https://emachine.efactory.biz)), the IoT dashboard and controlling software, now it's handover to another developer to implement them.
 
 ### 2021
 
-- Co-Developer of **E-Logistic** that a cloud based ERP for southern logistic service prodiver (not success at all)
-- Co-Developer of E-ERP or now is [E-Manufac](https://emanufac.efactory.biz) Cloud-based Manufacturing Mini ERP for SMEs local company
+- Handover the E-Merchant and E-Machine to another developer in the center
+- Co-Developer of E-Logistic (Now [E-Maintenance](https://emaintenance.efactory.biz)) that a cloud based ERP for southern logistic service prodiver (not success at all)
+- Co-Developer of E-ERP (Now is [E-Manufac](https://emanufac.efactory.biz)) Cloud-based Manufacturing Mini ERP for SMEs local company
 - Implement Version 2 of E-Accom and it always use on [Kittipoomhill](https://kittipoomhill.com) one of Nakhonsithammarat Province Resort until today, then scale af them to another hotels and resort.
 - Co-Developer of **E-Worker** organization collaboration platform that always work at least 2 resort at Krabi most attractive place, Aonang.
 
+### 2022
+
+- Support and Maintenance **E-Manufac** and **E-Maintenance** follow the business enterprise requirement and make it can be more flexible and make a general platform and name all of these stack as [E-Factory](https://efactory.biz)
+- Enroll as Master Degree student on [Computer Engineering](https://www.coe.psu.ac.th), Prince of Songkla University
+
+<br>
 <br>
 
-## Programing Language Skill
+<div class="columns">
+{% for image in  activity_images %}
+<div class="column is-one-third">
+<img src="{{image}}" alt="activity-image" class="image" style="height:240px;">
+</div>
+{% endfor %}
+</div>
 
-- JavaScript / TypeScript _Most Prefer_
+<br>
+<a href="/project/summary">
+<button class="button is-link is-outlined">All Projects</button>
+</a>
+
+<br>
+
+<br>
+
+# My Academic Project
+
+- Bachelor Degree Project - [E-Health for Personal Sensor Application](project/ehealth)
+- Master Degree Thesis - Coming Soon
+
+<br>
+
+# My Programing
+
+### Programing Language Skill
+
+- JavaScript _Most Prefer_ (React, Node.js, MongoDB Aggregate)
+- TypeScript
 - Python
 - Kotlin _(long time no see)_
 
-## Interested
+### Interested
 
 - Cloud Computing / Computing Infrastructure
 - Web Application / Desktop Application
@@ -91,13 +110,14 @@ I prefer try and playing a lot of work type!
 
 <br>
 
-# Personal Life After Programing
+# Personal Life
 
 - **Virtual Runner**, I had join in many virtual run event for my challenging.
 - **Creating**, **Designing** and **Organizing**, as you can see in The Duck Creator Facebook.
+- **Cat Lover**, I have 3 cats, Khaow tang, Khaow Neaw Ping and Khaow Lham. (Former I have their mom Steve and their father-in-law Pakdam)
 - **Cooking** is the reason why my weight get more and more.
-- **Culture**, **History** or sometimes soft politic thinking.
-- **Bloging** is why this page is avaliable to you.
+- **Culture**, **History** thinking.
+- **Bloging** is why this page is avaliable to you. Visit My [Personal Bloging Article](/article/)
 - **BNK48**, **CGM48** and AKB48 group is one of my motivation.
 
 <br>
