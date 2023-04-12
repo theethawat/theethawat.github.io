@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx @11ty/eleventy --serve",
-    "image": "npx @11ty/eleventy  --formats=liquid,html,jpg,png",
+    "image": "npx @11ty/eleventy  --formats=liquid,html,jpg,png,pdf",
     "build": "npx @11ty/eleventy"
   },
   "keywords": [],

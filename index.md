@@ -1,6 +1,6 @@
 ---
 layout: mainlayout.njk
-title: Theethawat Savastham
+title: Theethawat Savastham - ธีร์ธวัช สวาสดิ์ธรรม
 subtitle: TheethawatSpace/> Space of Theethawat Savastham
 activity_images:
   - img/a1.jpg
@@ -36,6 +36,13 @@ activity_images:
 - Grade 7 - 8 from Mahavajiravudh School, Songkhla
 
 <br/>
+
+<div class="is-flex ">
+  <a class="button is-link is-outlined mr-2" href="/file/Resume-20230412.pdf">Download Resume</a>
+  <a class="button is-link is-outlined " href="/thai-biography">Thai Biography</a>
+</div>
+
+<hr />
 
 # About Myself
 
