@@ -1,11 +1,12 @@
 ---
 layout: mainlayout.njk
-title: Theethawat Savastham - ธีร์ธวัช สวาสดิ์ธรรม
-subtitle: TheethawatSpace/> Space of Theethawat Savastham
+title: THEETHAWAT.DEV/>
+subtitle: Development Space of Theethawat Savastham
 activity_images:
   - img/a1.jpg
   - img/a2.jpg
   - img/a3.jpg
+anotherLanguage: th
 ---
 
 <div class="columns ">
@@ -17,6 +18,8 @@ activity_images:
 <h1 class="subtitle is-3 pt-2">ธีร์ธวัช สวาสดิ์ธรรม</h1>
 </div>
 </div>
+<div class="columns">
+<div class="column ">
 
 ### Brief Info
 
@@ -34,6 +37,9 @@ activity_images:
 - Bachelor in Engineering from Prince of Songkla University in 2021
 - Grade 9 - 12 from Benjamarachutit School, Nakhon si thammarat
 - Grade 7 - 8 from Mahavajiravudh School, Songkhla
+
+</div>
+</div>
 
 <br/>
 

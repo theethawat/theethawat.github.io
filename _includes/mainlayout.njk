@@ -263,6 +263,18 @@ pre {
         </div>
 
     </div>
+    <div class="navbar-end kanitlight" >
+    {% if anotherLanguage == "th" %} 
+               <a class="navbar-item is-uppercase"  href="/{{anotherLanguage|safe}}">
+                {{anotherLanguage | safe}}
+            </a>
+      {% endif %}
+        {% if anotherLanguage == "en" %} 
+               <a class="navbar-item is-uppercase"  href="/">
+                {{anotherLanguage | safe}}
+            </a>
+      {% endif %}
+    </div>
 </nav>
     <section class="hero tdc-hero-blue  is-medium is-bold">
       <div class="hero-body">
