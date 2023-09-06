@@ -1,58 +1,27 @@
-<div class="carousel rounded-box h-64">
-  <div class="carousel-item">
-    <img src="/img/tin_photo.jpg" alt="Burger" class="w-84" />
-  </div>
-  <div class="carousel-item">
-    <img src="/img/a1.jpg" alt="Burger" />
-  </div>
-  <div class="carousel-item">
-    <img src="/img/a2.jpg" alt="Burger" />
-  </div>
-  <div class="carousel-item">
-    <img src="/img/a3.jpg" alt="Burger" />
-  </div>
-</div>
+---
+layout: mainlayout.njk
+title: About Theethawat
+subtitle: เกี่ยวกับธีร์ธวัช สวาสดิ์ธรรม
+activity_images:
+  - img/a1.jpg
+  - img/a2.jpg
+  - img/a3.jpg
+anotherLanguage: th
+---
 
-<div class="columns piccenter">
-  <div class="column is-two-fourth mt-6">
-    <h1 class="subtitle is-2 mb-0">Theethawat Savastham</h1>
-    <h1 class="subtitle is-3 pt-2">ธีร์ธวัช สวาสดิ์ธรรม</h1>
-    <h3 class="subtitle is-5">
-      Full Stack Software Developer <br /><span class="has-text-link"
-        >Intelligent Automation Research Center
-      </span>
-    </h3>
-
-    <div class="is-flex">
-      <a
-        class="button is-link is-outlined mr-2"
-        href="/file/Resume-20230412.pdf"
-        >Download Resume</a
-      >
-      <a class="button is-link is-outlined" href="/thai-biography"
-        >Thai Biography</a
-      >
-    </div>
-
-  </div>
-</div>
-<div class="columns">
-  <div class="column">
-    <hr />
-
-    ### Brief Info - **Nickname:** Tin - **Location:** From Yala => Songkhla
-    Thailand - **Birthday:** Febuary 7, 1998 ### Position - **2020-Present**
-    Full Stack Software Developer at Intelligent Automation Research Center -
-    **2022-Present** Master Degree Student at Faculty of Engineering, Prince of
-    Songkla University ### Education - Bachelor in Engineering from Prince of
-    Songkla University in 2021 - Grade 9 - 12 from Benjamarachutit School,
-    Nakhon si thammarat - Grade 7 - 8 from Mahavajiravudh School, Songkhla
-
-  </div>
-</div>
-
+ธีร์ธวัช สวาสดิ์ธรรม หรือชื่อเล่น ติน เป็นนักพัฒนาซอฟต์แวร์แบบ Full Stack ที่ศูนย์วิจัยระบบอัตโนมัติอัจฉริยะ คณะวิศวกรรมศาสตร์ มหาวิทยาลัยสงขลานครินทร์ รวมถึงเป็นนักศึกษาระดับปริญญาโทของศูนย์วิจัยแห่งนี้ด้วย ธีร์ธวัชจบการศึกษาปริญญาตรี วิศวกรรมศาสตร์บัณฑิต สาขาวิชาวิศวกรรมคอมพิวเตอร์ จากที่นี่ ระหว่างศึกษาในช่วงปีสุดท้าย ได้รับการเขิญชวนจากเพื่อนและอาจารย์ เข้ามาทำงานในศูนย์วิจัยแห่งนี้ และได้ทำงานเรื่อยมาจนถึงปัจจุบัน
+<br/>
+<br/>
+Theethawat Savastham or Tin is full stack software development at Intelligent Automation Research Center, located on faculty of engineering, Prince of Songkla Unversity. He graduated from that school with bachelor degree on computer engineerinf .On his last year as undergraduated student, he had invited from his friend and his advisor for joining this research center.
 <br />
+<br />
+ในช่วงเริ่มทำงาน ปี 2563 ธีร์ธวัช ได้รับมอบหมายให้ร่วมพัฒนาระบบร้านค้าออนไลน์ สำหรับผู้ประกอบการ SMEs จากนั้นจึงได้ร่วมเข้ามาเป็นส่วนหนึ่งในการทำระบบมอนิเตอร์ และ ควบคุมระบบเซนเซอร์น้ำประปา ที่อำเภอจะนะ จังหวัดสงขลา จนซอฟต์แวร์ตัวนั้นได้เป็นจุดเริ่มต้นของระบบ [E-Machine](https://emachine.efactory.biz) ระบบมอนิเตอร์ และ ควบคุมค่าเซ็นเซอร์ผ่านเครือข่าย IoT ซึ่งเป็นผลงานของคณะ และมหาวิทยาลัย และทำให้สามารถนำซอฟต์แวร์นี้ไปให้บริการวิชาการยังพื้นที่ต่าง ๆ ทั้งภาคโรงงาน และภาคท่องเที่ยว เช่น โรงแรม
+<br />
+<br />
+In 2020, Theethawat has assigned to develop an e-commerce system for SMEs entrepreneurs. After that he has joined the water supply monitoring team at Chana, Songkhla. The monitoring software of water supply has grown up to be the [E-Machine](https://emachine.efactory.biz) - IoT monitoring platform.
 
+<br/>
+<br/>
 <hr />
 
 # About Myself Hello, My name is Theethawat. Since I was in secondary school, I
