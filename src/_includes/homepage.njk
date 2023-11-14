@@ -3,7 +3,7 @@ title: My Rad Blog
 ---
 
 <!DOCTYPE html>
-<html lang="th">
+<html lang="th" >
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,15 +27,10 @@ title: My Rad Blog
       href="https://fonts.googleapis.com/css?family=Kanit:300,400&display=swap"
       rel="stylesheet"
     />
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="main.css" rel="stylesheet" />
-    <link rel="icon" href="/assets/Logo2021/TDC-ICON.png" />
-
    
- <style>
- {% include "index.css" %}
- </style>
+    <link rel="icon" href="/assets/Logo2021/TDC-ICON.png" />
+ <link rel="stylesheet" href="{{ '/index.css' | url }}">
+
 
   </head>
 
@@ -47,9 +42,9 @@ title: My Rad Blog
         <img src="/img/logo.png" class="w-36"   />
     </a>
   </div>
-  <div class="flex-none">
+   <div class="flex-none">
     <ul class="menu menu-horizontal px-1">
-      <li><a href="/about">เกี่ยวกับ</a></li>
+      <li><a>Link</a></li>
       <li>
         <details>
           <summary>

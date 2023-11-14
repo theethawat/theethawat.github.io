@@ -1,5 +1,5 @@
 ---
-layout: pink-layout.njk
+layout: mainlayout.njk
 title: Blog Article
 subtitle: Personal Blog Article
 ---

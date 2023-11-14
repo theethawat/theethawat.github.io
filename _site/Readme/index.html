@@ -24,14 +24,19 @@
       href="https://fonts.googleapis.com/css?family=Kanit:300,400&display=swap"
       rel="stylesheet"
     />
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+   
     <link href="main.css" rel="stylesheet" />
     <link rel="icon" href="/assets/Logo2021/TDC-ICON.png" />
 
    
  <style>
- h1,
+ @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+h1,
 h2,
 h3,
 h4,
@@ -272,11 +277,14 @@ background-size: cover;
 
     <br /><br />
     <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded">
+     
+
+<div>
   <div class="grid grid-flow-col gap-4">
-    <a class="link link-hover"><img src="/img/Theethawat Logo.png" class="image piccenter " style="height:70px;"/></a> 
-    <a class="link link-hover"> <img src="/img/5thAnniversary.png" class="image piccenter" style="height:70px;"/></a> 
-  
+    <a class="link link-hover"><img src="/img/logo.png" class="image piccenter " style="height:70px;"/></a> 
+    <a class="link link-hover"  href="https://theduckcreator.in.th"> <img src="/img/logotdc.png" class="image piccenter" style="height:70px;"/></a> 
   </div> 
+</div>
   <div>
     <div class="grid grid-flow-col gap-4">
       <a
