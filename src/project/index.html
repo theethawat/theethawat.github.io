@@ -1,0 +1,36 @@
+---
+layout: mainlayout.njk
+title: Project
+subtitle: โปรเจกต์
+next_page: /skill
+next_page_name: Skill/ความสามารถ
+prev_page: /timeline
+prev_page_name: Working Timeline / ประวัติการทำงาน
+projects:
+  - name: E-Health for Personal Sensor application
+    subtitle: โปรเจกต์จบการศึกษาปริญญาตรี
+    description: การพัฒนาแอปพลิเคชันสำหรับการติดตามสุขภาพของผู้ใช้งาน โดยอ่านข้อมูลจากเซนเซอร์ผ่าน Bluetooth ในระบบ Android
+    link: ehealth
+    image: /img/project/ehealth.jpg
+    year: 2019-2020
+---
+
+<div class="grid grid-cols-2 md:grid-cols-3">
+  {% for project in projects %}
+  <div class="card w-96 bg-base-100 shadow-xl">
+    <figure>
+      <img src="{{project.image}}" alt="{{project.name}}" />
+    </figure>
+    <div class="card-body">
+      <h2 class="card-title">{{project.name}}</h2>
+
+      <small> {{project.subtitle}} </small>
+      <div class="badge badge-accent">{{project.year}}</div>
+      <p>{{project.description}}</p>
+      <div class="card-actions justify-end">
+        <a class="btn btn-primary" href="{{project.link}}">More</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
