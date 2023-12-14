@@ -6,11 +6,11 @@ subtitle: Bachelor Degree Graduated Project
 
 ## Project Info
 
-- Project Type : Bachelor Degree Graduated Project
-- Academic Year: 2019
-- Advisor: Assoc. Prof. Thossaporn Kamolphiwong
-- Laboratory: Centre of Network Research, Department of Computer Engineering, Faculty of Engineering, Prince of Songkla University
-- Data on Computer Engineering Database : [CoE Project Database](https://project.coe.psu.ac.th/projects/5ebe1ecb480d363a31f2fc18)
+- **Project Type** : Bachelor Degree Graduated Project
+- **Year**: 2019
+- **Advisor**: Assoc. Prof. Thossaporn Kamolphiwong
+- **Laboratory**: [Centre of Network Research](https://www.facebook.com/CNRPSU/), Department of Computer Engineering, Faculty of Engineering, Prince of Songkla University
+- **Data on Computer Engineering Database** : [CoE Project Database](https://project.coe.psu.ac.th/projects/5ebe1ecb480d363a31f2fc18)
 
 ## Abstract
 

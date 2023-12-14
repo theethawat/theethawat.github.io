@@ -796,6 +796,10 @@ html {
     text-decoration-line: underline;
   }
 
+  .link-neutral:hover {
+    color: color-mix(in oklab,var(--fallback-n,oklch(var(--n)/1)) 80%,black);
+  }
+
   .menu li > *:not(ul):not(.menu-title):not(details):active,
 .menu li > *:not(ul):not(.menu-title):not(details).active,
 .menu li > details > summary:active {
@@ -1733,6 +1737,11 @@ html {
   margin-inline-start: -1px;
 }
 
+.link-neutral {
+  --tw-text-opacity: 1;
+  color: var(--fallback-n,oklch(var(--n)/var(--tw-text-opacity)));
+}
+
 .link:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -2429,10 +2438,6 @@ html {
   width: 2rem;
 }
 
-.w-96 {
-  width: 24rem;
-}
-
 .w-full {
   width: 100%;
 }
@@ -2505,6 +2510,10 @@ html {
   border-radius: 0.375rem;
 }
 
+.rounded-sm {
+  border-radius: 0.125rem;
+}
+
 .bg-accent {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-a,oklch(var(--a)/var(--tw-bg-opacity)));
@@ -2526,6 +2535,16 @@ html {
 
 .bg-cover {
   background-size: cover;
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.object-top {
+  -o-object-position: top;
+     object-position: top;
 }
 
 .p-10 {
@@ -2704,8 +2723,31 @@ ul {
 }
 
 @media (hover:hover) {
-  .blog a:hover {
+  .blog .my-neutral a:hover {
     color: color-mix(in oklab,var(--fallback-n,oklch(var(--n)/1)) 80%,black);
+  }
+}
+
+.blog .my-neutral a {
+  cursor: pointer;
+  text-decoration-line: underline;
+  --tw-text-opacity: 1;
+  color: var(--fallback-n,oklch(var(--n)/var(--tw-text-opacity)));
+}
+
+.blog .my-neutral a:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.blog .my-neutral a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+@media (hover:hover) {
+  .blog a:hover {
+    color: color-mix(in oklab,var(--fallback-a,oklch(var(--a)/1)) 80%,black);
   }
 }
 
@@ -2713,7 +2755,7 @@ ul {
   cursor: pointer;
   text-decoration-line: underline;
   --tw-text-opacity: 1;
-  color: var(--fallback-n,oklch(var(--n)/var(--tw-text-opacity)));
+  color: var(--fallback-a,oklch(var(--a)/var(--tw-text-opacity)));
 }
 
 .blog a:focus {
@@ -3067,6 +3109,10 @@ max-height: 300px;
   }
 }
 
+.hover\:h-52:hover {
+  height: 13rem;
+}
+
 .hover\:bg-opacity-80:hover {
   --tw-bg-opacity: 0.8;
 }
@@ -3076,21 +3122,23 @@ max-height: 300px;
   line-height: 2rem;
 }
 
+.hover\:shadow-md:hover {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 @media (min-width: 768px) {
   .md\:w-1\/4 {
     width: 25%;
   }
 
-  .md\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .md\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .md\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .md\:justify-start {
@@ -3107,8 +3155,8 @@ max-height: 300px;
     width: 25%;
   }
 
-  .lg\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .lg\:flex-row {

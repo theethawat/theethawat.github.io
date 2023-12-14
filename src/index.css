@@ -56,10 +56,16 @@ margin-left:2em;
 }
 
 
-  .blog a{
+.blog .my-neutral a{
   @apply link link-neutral;
   
 }  
+
+.blog a{
+  @apply link link-accent;
+  
+}  
+
 
 /*Override Bulma Intial Config*/
 code,
