@@ -4,8 +4,6 @@ title: E-Health for Personal Sensor Application
 subtitle: Bachelor Degree Graduated Project
 ---
 
-# E-Health for Personal Sensor Application
-
 ## Project Info
 
 - Project Type : Bachelor Degree Graduated Project
@@ -27,10 +25,3 @@ subtitle: Bachelor Degree Graduated Project
 - Blog - [1 Year from unknown project / 1 ปีกว่ากับโปรเจกต์ที่ไม่รู้ว่ามีอะไร และ ไม่รู้ว่าจะออกมายังไง](https://www.theduckcreator.in.th/it-blog/2020/06/05/senior-project-talk.html)
 - Some of Code in (Open Source Part) - [Some part in Android App](https://github.com/cnrpsu-2019/cnrphr-open), [Dashboard and Editor Part](https://github.com/cnrpsu-2019/phr-dashboard)
 - My Android Note - [Tin Android Doc](https://www.theduckcreator.in.th/tin-android-docs/)
-
-<br>
-<div class="acenter">
-<a href="/">
-<button class="button is-primary">Back</button>
-</a>
-</div>

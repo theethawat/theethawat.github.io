@@ -50,6 +50,17 @@ margin-left:2em;
 
 
 
+
+ .btn a {
+  all: none;
+}
+
+
+  .blog a{
+  @apply link link-neutral;
+  
+}  
+
 /*Override Bulma Intial Config*/
 code,
 pre {

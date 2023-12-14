@@ -13,11 +13,23 @@ projects:
     link: ehealth
     image: /img/project/ehealth.jpg
     year: 2019-2020
+  - name: E-Accom
+    subtitle: โปรเจกต์ร่วมกับศูนย์วิจัยระบบอัตโนมัติอัจฉริยะ
+    description: การพัฒนาแอปพลิเคชันสำหรับการติดตามสุขภาพของผู้ใช้งาน โดยอ่านข้อมูลจากเซนเซอร์ผ่าน Bluetooth ในระบบ Android
+    link: ehealth
+    image: /img/project/ehealth.jpg
+    year: 2021-2023
+  - name: E-Manufac
+    subtitle: โปรเจกต์ร่วมกับศูนย์วิจัยระบบอัตโนมัติอัจฉริยะ
+    description: การพัฒนาแอปพลิเคชันสำหรับการติดตามสุขภาพของผู้ใช้งาน โดยอ่านข้อมูลจากเซนเซอร์ผ่าน Bluetooth ในระบบ Android
+    link: ehealth
+    image: /img/project/ehealth.jpg
+    year: 2021-2023
 ---
 
-<div class="grid grid-cols-2 md:grid-cols-3">
+<div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
   {% for project in projects %}
-  <div class="card w-96 bg-base-100 shadow-xl">
+  <div class="card max-w-96 bg-base-100 shadow-xl">
     <figure>
       <img src="{{project.image}}" alt="{{project.name}}" />
     </figure>
@@ -28,9 +40,16 @@ projects:
       <div class="badge badge-accent">{{project.year}}</div>
       <p>{{project.description}}</p>
       <div class="card-actions justify-end">
-        <a class="btn btn-primary" href="{{project.link}}">More</a>
+        <a
+          class="btn btn-primary"
+          style="color: white; text-decoration: none"
+          href="{{project.link}}"
+        >
+          More
+        </a>
       </div>
     </div>
   </div>
   {% endfor %}
+  <div class="text-accent"></div>
 </div>
