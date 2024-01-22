@@ -32,7 +32,7 @@ activity_images:
 {% for image in activity_images%}
 <div class="w-3/4 lg:w-1/4 p-2">
 <a href="{{image}}" target="_blank">
-<img src="{{ image }}" alt="E-Accom System" class="h-48 hover:h-52 cursor-pointer hover:shadow-md  rounded-sm" />
+<img src="{{ image }}" alt="E-Accom System" class="h-48  cursor-pointer hover:shadow-lg  rounded-sm" />
 </a>
 </div>
 {% endfor %}
