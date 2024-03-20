@@ -13,11 +13,11 @@ projects:
     link: ehealth
     image: /img/project/ehealth.jpg
     year: 2019-2020
-  - name: Cost Estimation Research Project
+  - name: Artificial Neural Network-Like For Cost Estimation
     subtitle: งานวิจัยระดับปริญญาโท
-    description: งานวิจัยเกี่ยวกับการประมาณการต้นทุนโดย Time Driven Activity-based Costing และ Machine Learning
-    link: cost-estimation
+    description: งานวิจัยเกี่ยวกับการสร้าง Glass Box สำหรับประมาณการต้นทุนโดยสร้างเทคนิคเสมือน Neural Network
     image: /img/project/thesis.jpg
+    link: cost-estimation
     year: 2023-ปัจจุบัน
   - name: E-Accom
     subtitle: โปรเจกต์ร่วมกับศูนย์วิจัยระบบอัตโนมัติอัจฉริยะ
@@ -34,12 +34,12 @@ projects:
   - name: งานกับ The Duck Creator
     subtitle: งานส่วนตัว
     description: งานส่วนตัวสนุก ๆ ทั้งการพัฒนาเว็บไซต์ เว็บแอพ และการศึกษาต่าง ๆ
-    link: ehealth
+    link: https://theduckcreator.in.th
     image: /img/project/tdc.png
     year: 2017-2020
 ---
 
-<div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
   {% for project in projects %}
   <div class="card max-w-96 bg-base-100 shadow-xl">
     <figure>
@@ -50,14 +50,22 @@ projects:
       />
     </figure>
     <div class="card-body">
-      <h2 class="card-title">{{project.name}}</h2>
+      <h2 class="card-title">
+        <a style="text-decoration: none; color: black" href="{{project.link}}"
+          >{{project.name}}</a
+        >
+      </h2>
 
       <small> {{project.subtitle}} </small>
       <div class="badge badge-accent">{{project.year}}</div>
+      <div class="flex">
+        <div class="w-3/4"></div>
+        <div class="w-1/4"></div>
+      </div>
       <p>{{project.description}}</p>
       <div class="card-actions justify-end">
         <a
-          class="btn btn-primary"
+          class="btn btn-primary btn-sm"
           style="color: white; text-decoration: none"
           href="{{project.link}}"
         >
