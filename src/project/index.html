@@ -1,7 +1,7 @@
 ---
 layout: mainlayout.njk
-title: Project
-subtitle: โปรเจกต์
+title: Portfolio
+subtitle: ผลงาน
 next_page: /skill
 next_page_name: Skill/ความสามารถ
 prev_page: /timeline
@@ -9,13 +9,13 @@ prev_page_name: Working Timeline / ประวัติการทำงาน
 projects:
   - name: E-Health for Personal Sensor application
     subtitle: โปรเจกต์จบการศึกษาปริญญาตรี
-    description: การพัฒนาแอปพลิเคชันสำหรับการติดตามสุขภาพของผู้ใช้งาน โดยอ่านข้อมูลจากเซนเซอร์ผ่าน Bluetooth ในระบบ Android
+    description: แอปพลิเคชันติดตามสุขภาพของผู้ใช้งาน โดยอ่านผ่าน Bluetooth ในระบบ Android
     link: ehealth
     image: /img/project/ehealth.jpg
     year: 2019-2020
   - name: Artificial Neural Network-Like For Cost Estimation
     subtitle: งานวิจัยระดับปริญญาโท
-    description: งานวิจัยเกี่ยวกับการสร้าง Glass Box สำหรับประมาณการต้นทุนโดยสร้างเทคนิคเสมือน Neural Network
+    description: การสร้าง Glass Box สำหรับประมาณการต้นทุนโดยเทคนิคเสมือน Neural Network
     image: /img/project/thesis.jpg
     link: cost-estimation
     year: 2023-ปัจจุบัน
@@ -31,7 +31,7 @@ projects:
     link: emanufac
     image: /img/project/emanufac/3.jpg
     year: 2021-2023
-  - name: งานกับ The Duck Creator
+  - name: The Duck Creator
     subtitle: งานส่วนตัว
     description: งานส่วนตัวสนุก ๆ ทั้งการพัฒนาเว็บไซต์ เว็บแอพ และการศึกษาต่าง ๆ
     link: https://theduckcreator.in.th
@@ -39,6 +39,9 @@ projects:
     year: 2017-2020
 ---
 
+<div>
+  <h2 class="mb-2">Feature Project</h2>
+</div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
   {% for project in projects %}
   <div class="card max-w-96 bg-base-100 shadow-xl">
