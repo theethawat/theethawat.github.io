@@ -28,12 +28,18 @@ activity_images:
 
 ## Gallery
 
-<div class="flex flex-wrap w-full my-6 justify-center md:justify-start">
+<div class="grid grid-cols-3 md:grid-cols-4 gap-4">
 {% for image in activity_images%}
-<div class="w-3/4 lg:w-1/4 p-2">
 <a href="{{image}}" target="_blank">
-<img src="{{ image }}" alt="E-Accom System" class="h-48  cursor-pointer hover:shadow-lg  rounded-sm" />
+<img src="{{ image }}" alt="E-Accom System" class="h-48 image-cover  max-w-full cursor-pointer hover:shadow-lg  rounded-sm" />
 </a>
-</div>
 {% endfor %}
 </div>
+
+<!-- <html>
+{% gallery "eaccom" %}
+{% for image in activity_images %}
+{% galleryImage image, "hi" %}
+{% endfor %}
+{% endgallery %}
+</html> -->

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx @11ty/eleventy --serve",
-    "image": "npx @11ty/eleventy  --formats=liquid,html,jpg,png,pdf",
+    "image": "npx @11ty/eleventy  --formats=liquid,html,jpg,png,pdf,js",
     "build": "npx @11ty/eleventy",
     "build:css": "tailwindcss -i src/index.css -o _site/index.css ",
     "dev:css": "tailwindcss -i src/index.css -o _site/index.css --watch "
@@ -22,5 +22,10 @@
     "node-fetch": "^3.3.2",
     "postcss": "^8.4.7",
     "tailwindcss": "^3.0.23"
+  },
+  "dependencies": {
+    "@11ty/eleventy-img": "^4.0.2",
+    "photoswipe": "^5.4.4",
+    "sharp": "^0.33.4"
   }
 }
