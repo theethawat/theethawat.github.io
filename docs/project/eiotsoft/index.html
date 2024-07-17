@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="th"   >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>E- Machine / E-IotSoft - ระบบแดชบอร์ด และ ควบคุมสำหรับ IoT</title>
+    <meta property="description" content="ระบบแดชบอร์ด และ ควบคุมสำหรับ IoT" />
+    <meta property="og:title" content="E- Machine / E-IotSoft" />
+    <meta property="og:type" content="text/html" />
+    <meta property="og:locale" content="th_TH" />
+    <meta property="og:description" content="ระบบแดชบอร์ด และ ควบคุมสำหรับ IoT" />
+    <meta
+      property="og:image"
+      content="https://www.theduckcreator.in.th/assets/Logo2021/Banner2021.png"
+    />
+ 
+  
+    <link
+      href="https://fonts.googleapis.com/css?family=Kanit:300,400&display=swap"
+      rel="stylesheet"
+    />
+   
+
+    <link rel="icon" href="/img/ThSFavicon.png" />
+
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+
+  </head>
+
+  <body class="bg-base-100">
+<nav class="navbar" role="navigation" aria-label="main navigation" class="rounded-md">
+   <div class="navbar bg-base-100">
+  <div class="flex-1">
+    <a class="btn btn-ghost normal-case text-xl" href="/">
+        <img src="/img/logo.png" class="w-36"   />
+    </a>
+  </div>
+  <div class="flex-none">
+    <ul class="menu menu-horizontal px-1 pr-10">
+    
+      <li><a href="/">หน้าแรก</a></li>
+      <li>
+        <details>
+          <summary>
+            เมนู
+          </summary>
+          <ul class="p-2 bg-base-100">
+          <li><a href="/about">ประวัติส่วนตัว</a></li>
+            <li><a href="/timeline">ประวัติการทำงาน</a></li>
+            <li><a href="/project">ผลงาน</a></li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </div>
+</div>
+</nav>
+<div class="w-full h-32">
+<div class="px-8 lg:px-32 py-6">
+<div class="flex gap-4 items-center">
+<div class="w-2 h-20 bg-accent"></div>
+<div>
+
+<h1 class="text-2xl lg:text-4xl font-semibold ">E- Machine / E-IotSoft</h1>
+    <h2 class=" text-gray-500 text-lg">
+ระบบแดชบอร์ด และ ควบคุมสำหรับ IoT</h2>
+</div>
+</div>
+</div>
+</div>
+ <div class="container px-8 lg:px-32  ">
+    <div>
+
+</div>
+    <div class="blog">
+    <h2>Project Info</h2>
+<ul>
+<li><strong>Project Type</strong> : Working Project</li>
+<li><strong>Year</strong> : 2020 - 2021</li>
+<li><strong>Owner</strong> : <a href="https://iarc.psu.ac.th">Intelligent Automation Research Center</a></li>
+<li><strong>Technique</strong> : JavaScript, React, MongoDB, Firebase Realtime DB, MQTT</li>
+<li><strong>Website</strong> : <a href="https://emachine.efactory.biz">emachine.efactory.biz</a></li>
+<li><strong>Role in Project</strong> : Developer</li>
+</ul>
+<h2>Information</h2>
+<p>ระบบนี้ได้ถูกพัฒนาขึ้นเริ่มแรก เพื่อใช้สำหรับการมอนิเตอร์ และ ควบคุม ระบบน้ำประปาหมู่บ้านของตำบลสะกอม อำเภอจะนะ จังหวัดสงขลา แต่ได้มีการพัฒนาโปรแกรม ให้รอบรับการเปลี่ยนแปลงที่หลากหลาย มีความเป็น General สำหรับการพัฒนาต่อ โปรแกรมพัฒนาโดยการให้ข้อมูลวิ่งจากเครื่อง PLC เข้าสู่ระบบ Cloud ผ่าน IoT Gateway บน Siemense IoT 2000 และวิ่งเข้าไปบน Firebase Realtime Database จากนั้นระบบจะไป Pulling ข้อมูลจาก Realtime DB เข้ามาในโปรแกรม</p>
+<p>ระบบดูออกแบบมาให้สามารถเลือกข้อมูลมาแสดงได้ เลือกรูปแบบของ Gauge และ เลือกรูปแบบของ Chart มาแสดงได้ โดยผู้ใช้งาน ไม่ขึ้นกับการพัฒนา รวมถึงสามารถส่งสัญญาณไป Control เครื่อง PLC ผ่านทาง Realtime Database ได้เช่นกัน</p>
+<p>ปัจจุบัน แม้ทางผมจะไม่ได้พัฒนาระบบนี้แล้ว แต่ศูนย์วิจัยระบบอัตโนมัติอัจฉริยะ ได้พัฒนาระบบนี้ต่อ ในนามของระบบ E-Machine ได้มีการเปลี่ยนจากการใช้ Realtime Database บน Firebase ไปเป็นการใช้โปรโตคอลอย่าง MQTT มีการประยุกต์ใช้ที่หลากหลายยิ่งขึ้น รับจากอุปกรณ์ทั้ง PLC, Raspberry PI หรือ เซนเซอร์อื่นๆ ได้มากมาย รวมถึงมีระบบตัวแปร แดชบอร์ด การกรอกค่าโดยมนุษย์ ประมาณการบิลค่าไฟ และอื่นๆ อีกมากมาย</p>
+<h2>Gallery</h2>
+<html>
+      <div>          <div class="gallery pswp-gallery pswp-gallery" id="gallery-eiotsoft">                    <a href="\img\project\eiot\147278054_3693318977423555_4131158599099766082_n.jpg"   data-pswp-width="1875"    data-cropped="true"     data-pswp-height="2500" >          <img src="\img\project\eiot\147278054_3693318977423555_4131158599099766082_n.jpg"     alt="eiotsoft image" />      </a>        <a href="\img\project\eiot\147278054_3693318977423555_4131158599099766082_n.jpg"   data-pswp-width="1875"    data-cropped="true"     data-pswp-height="2500" >          <img src="\img\project\eiot\147278054_3693318977423555_4131158599099766082_n.jpg"     alt="eiotsoft image" />      </a>        <a href="\img\project\eiot\148960014_3693326094089510_3865423504178578198_n.jpg"   data-pswp-width="1875"    data-cropped="true"     data-pswp-height="2500" >          <img src="\img\project\eiot\148960014_3693326094089510_3865423504178578198_n.jpg"     alt="eiotsoft image" />      </a>        <a href="\img\project\eiot\6.png"   data-pswp-width="1875"    data-cropped="true"     data-pswp-height="2500" >          <img src="\img\project\eiot\6.png"     alt="eiotsoft image" />      </a>        <a href="\img\project\eiot\5.png"   data-pswp-width="1875"    data-cropped="true"     data-pswp-height="2500" >          <img src="\img\project\eiot\5.png"     alt="eiotsoft image" />      </a>        <a href="\img\project\eiot\7.png"   data-pswp-width="1875"    data-cropped="true"     data-pswp-height="2500" >          <img src="\img\project\eiot\7.png"     alt="eiotsoft image" />      </a>        <a href="\img\project\eiot\9.png"   data-pswp-width="1875"    data-cropped="true"     data-pswp-height="2500" >          <img src="\img\project\eiot\9.png"     alt="eiotsoft image" />      </a>            </div>          <script type="module">              import PhotoSwipeLightbox from '/js/photoswipe-lightbox.esm.min.js';              import PhotoSwipe from '/js/photoswipe.esm.min.js';                       </script>      </div>  
+</html>
+   
+     </div>
+     <div class="h-10"></div>
+
+     <div class="flex w-full justify-between">
+    
+    <a class="btn btn-block w-1/2 md:w-1/4 justify-between mx-2 " href=/project/emanufac >
+          <i class="fas fa-chevron-left"></i>
+          <div class="text-left"> 
+            <div class="text-xs font-thin">
+              Prev
+            </div>
+            <div>
+            E-Manufac 
+            </div>
+          </div>
+    </a>
+    
+      
+
+      
+      <a href=/project/internship class="btn btn-block w-1/2 md:w-1/4 justify-between  btn-outline mx-2">
+      <div class="text-left"> 
+      <div class="text-xs font-thin">
+      Next
+      </div>
+      <div>
+      10.28 Bike 
+      </div>
+     
+      </div>
+      <i class="fas fa-chevron-right"></i>
+      </a>
+      
+
+      
+    </div>
+ </div>
+    <br />
+   
+
+    <br /><br />
+    <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded">
+     
+
+<div>
+  <div class="grid grid-flow-col gap-4">
+    <a class="link link-hover"><img src="/img/logo.png" class="image piccenter " style="height:70px;"/></a> 
+    <a class="link link-hover"  href="https://theduckcreator.in.th"> <img src="/img/logotdc.png" class="image piccenter" style="height:70px;"/></a> 
+  </div> 
+</div>
+  <div>
+    <div class="grid grid-flow-col gap-4">
+      <a
+        href="https://github.com/theethawat"
+        title="Github TheDuckCreator"
+        target="_blank"
+        ><i class="fab fa-github  text-xl mx-1 my-2"></i>
+      </a>
+      <a
+        href="https://facebook.com/tin.savastham"
+        title="Theethawat Savastham Facebook"
+        target="_blank"
+        ><i class="fab fa-facebook  text-xl mx-1 my-2"></i>
+      </a>
+      <a
+        href="https://instagram.com/tin_savastham"
+        title="Theethawat IG"
+        target="_blank"
+        ><i class="fab fa-instagram  text-xl mx-1 my-2"></i>
+      </a>
+       <a
+        href="https://th.linkedin.com/in/theethawat-savastham"
+        title="Linkedin"
+        target="_blank"
+        ><i class="fab fa-linkedin  text-xl mx-1 my-2"></i>
+      </a>
+       <a
+        href="https://www.youtube.com/channel/UCCJCyyJie_v2t76AcJZvjVA"
+        title="Youtube"
+        target="_blank"
+        ><i class="fab fa-youtube  text-xl mx-1 my-2"></i>
+      </a>
+        <a
+        href="http://line.me/ti/p/~svstin1998"
+        title="Line"
+        target="_blank"
+        ><i class="fab fa-line  text-xl mx-1 my-2"></i>
+      </a>
+        <a
+        href="mailto:theethawat@theduckcreator.in.th"
+        title="Line"
+        target="_blank"
+        ><i class="fas fa-envelope  text-xl mx-1 my-2"></i>
+      </a>
+    </div>
+  </div> 
+  <div>
+    <p class="kanitlight"> &copy; 2024  <strong>Theethawat</strong> & <strong>The Duck Creator</strong>, Web
+      Content is licensed by
+      <a rel="license" class="link" href="http://creativecommons.org/licenses/by/4.0/"
+        >Creative Commons 4.0 BY International</a
+      >
+      <br />Front Page Made by <a href="https://www.11ty.dev/">11ty </a>Server
+      By <a class="link" href="https://github.com/theethawat">GitHub Page</a> on
+      <a class="link" href="https://github.com">GitHub</a></p>
+  </div>
+</footer>
+ 
+    <script src="https://kit.fontawesome.com/942c2b45e2.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+
+            // Add a click event on each of them
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+
+                });
+            });
+        }
+
+    });
+    
+</script>
+
+    <script src="js/lightgallery.min.js"></script>
+
+    <!-- lightgallery plugins -->
+    <script src="js/plugins/lg-thumbnail.umd.js"></script>
+    <script src="js/plugins/lg-zoom.umd.js"></script>
+  </body>
+</html>
