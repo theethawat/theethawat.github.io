@@ -6,11 +6,15 @@ activity_images:
   - /img/project/eaccom/1.jpg
   - /img/project/eaccom/2.jpg
   - /img/project/eaccom/3.jpg
+  - /img/project/eaccom/6.png
   - /img/project/eaccom/4.jpg
   - /img/project/eaccom/5.png
-  - /img/project/eaccom/6.png
-  - /img/project/eaccom/7.png
   - /img/project/eaccom/8.jpg
+  - /img/project/eaccom/7.png
+prev_page: /project/cost-estimation
+prev_page_name: ANN-Like for Cost Estimation
+next_page: /project/emanufac
+next_page_name: E-Manufac
 ---
 
 ## Project Info
@@ -28,18 +32,10 @@ activity_images:
 
 ## Gallery
 
-<div class="grid grid-cols-3 md:grid-cols-4 gap-4">
-{% for image in activity_images%}
-<a href="{{image}}" target="_blank">
-<img src="{{ image }}" alt="E-Accom System" class="h-48 image-cover  max-w-full cursor-pointer hover:shadow-lg  rounded-sm" />
-</a>
-{% endfor %}
-</div>
-
-<!-- <html>
+<html>
 {% gallery "eaccom" %}
 {% for image in activity_images %}
-{% galleryImage image, "hi" %}
+{% galleryImage image, "eaccom-gallery" %}
 {% endfor %}
 {% endgallery %}
-</html> -->
+</html>

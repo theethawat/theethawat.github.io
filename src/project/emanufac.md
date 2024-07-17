@@ -10,6 +10,10 @@ activity_images:
   - /img/project/emanufac/5.png
   - /img/project/emanufac/6.png
   - /img/project/emanufac/7.png
+prev_page: /project/eaccom
+prev_page_name: E-Accom
+next_page: /project/eiotsoft
+next_page_name: E-IoTSoft
 ---
 
 ## Project Info
@@ -27,12 +31,10 @@ activity_images:
 
 ## Gallery
 
-<div class="flex flex-wrap w-full my-6 justify-center md:justify-start">
-{% for image in activity_images%}
-<div class="w-3/4 lg:w-1/4 p-2">
-<a href="{{image}}" target="_blank">
-<img src="{{ image }}" alt="E-Manufac System" class="h-48 cursor-pointer hover:shadow-lg  rounded-sm" />
-</a>
-</div>
+<html>
+{% gallery "emanufac" %}
+{% for image in activity_images %}
+{% galleryImage image, "emanufac-gallery" %}
 {% endfor %}
-</div>
+{% endgallery %}
+</html>

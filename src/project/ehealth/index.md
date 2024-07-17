@@ -2,6 +2,8 @@
 layout: mainlayout.njk
 title: E-Health for Personal Sensor Application
 subtitle: Bachelor Degree Graduated Project
+next_page: /project/cost-estimation
+next_page_name: ANN-Like for  Cost Estimation
 ---
 
 ## Project Info

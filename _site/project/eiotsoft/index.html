@@ -5,12 +5,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>E-Manufac - ระบบบริหารจัดการและติดตามการผลิต</title>
-    <meta property="description" content="ระบบบริหารจัดการและติดตามการผลิต" />
-    <meta property="og:title" content="E-Manufac" />
+    <title>E- Machine / E-IotSoft - ระบบแดชบอร์ด และ ควบคุมสำหรับ IoT</title>
+    <meta property="description" content="ระบบแดชบอร์ด และ ควบคุมสำหรับ IoT" />
+    <meta property="og:title" content="E- Machine / E-IotSoft" />
     <meta property="og:type" content="text/html" />
     <meta property="og:locale" content="th_TH" />
-    <meta property="og:description" content="ระบบบริหารจัดการและติดตามการผลิต" />
+    <meta property="og:description" content="ระบบแดชบอร์ด และ ควบคุมสำหรับ IoT" />
     <meta
       property="og:image"
       content="https://www.theduckcreator.in.th/assets/Logo2021/Banner2021.png"
@@ -70,9 +70,9 @@
 <div class="w-2 h-20 bg-accent"></div>
 <div>
 
-<h1 class="text-2xl lg:text-4xl font-semibold ">E-Manufac</h1>
+<h1 class="text-2xl lg:text-4xl font-semibold ">E- Machine / E-IotSoft</h1>
     <h2 class=" text-gray-500 text-lg">
-ระบบบริหารจัดการและติดตามการผลิต</h2>
+ระบบแดชบอร์ด และ ควบคุมสำหรับ IoT</h2>
 </div>
 </div>
 </div>
@@ -85,17 +85,19 @@
     <h2>Project Info</h2>
 <ul>
 <li><strong>Project Type</strong> : Working Project</li>
-<li><strong>Year</strong> : 2021 - Present</li>
+<li><strong>Year</strong> : 2020 - 2021</li>
 <li><strong>Owner</strong> : <a href="https://iarc.psu.ac.th">Intelligent Automation Research Center</a></li>
-<li><strong>Technique</strong> : JavaScript, React, MongoDB, GraphQL, Microservice</li>
-<li><strong>Website</strong> : <a href="https://iarc.psu.ac.th/digital-platform">iarc.psu.ac.th/digital-platform</a></li>
-<li><strong>Role in Project</strong> : Project Manager, Developer</li>
+<li><strong>Technique</strong> : JavaScript, React, MongoDB, Firebase Realtime DB, MQTT</li>
+<li><strong>Website</strong> : <a href="https://emachine.efactory.biz">emachine.efactory.biz</a></li>
+<li><strong>Role in Project</strong> : Developer</li>
 </ul>
 <h2>Information</h2>
-<p>ระบบบริหารจัดการและติดตามการผลิต เป็นระบบ ERP ย่อม ๆ สำหรับการผลิตในอุตสาหกรรม SMEs รายย่อย เริ่มพัฒนาตั้งแต่ปี 2564 จากการสนับสนุนของศูนย์ส่งเสริมอุตสาหกรรมภาคที่ 11 และมหาวิทยาลัยสงขลานครินทร์ โดยเริ่มทดลองใช้ในอุตสาหกรรมบนอำเภอหาดใหญ่ จังหวัดสงขลา ระบบมีความครอบคลุมทั้งคลังวัตถุดิบ คลังสินค้า และการติดตามการผลิตในแต่ละขั้นตอน ต่อมาได้ออกแบบให้โปรแกรมสามารถทำงานในอุตสาหกรรมที่หลากหลายยิ่งขึ้น มีสิ่งต่างๆ ในการผลิตเข้ามาเกี่ยวข้องมากขึ้น ไม่ว่าจะเป็นเรื่องของ Bill of Material, การกระจาย Batch, การแยกหรือรวมกิจกรรม และรวมถึงการออกแบบระบบให้มีความยืดหยุ่นต่ออุตสาหกรรมการผลิต และสามารถ Config ระบบให้เหมาะกับการใช้งานได้ ปัจจุบันมีอยู่ในระหว่างการวิจัยและพัฒนาเพิ่มระบบการคิดต้นทุนต่าง ๆ</p>
+<p>ระบบนี้ได้ถูกพัฒนาขึ้นเริ่มแรก เพื่อใช้สำหรับการมอนิเตอร์ และ ควบคุม ระบบน้ำประปาหมู่บ้านของตำบลสะกอม อำเภอจะนะ จังหวัดสงขลา แต่ได้มีการพัฒนาโปรแกรม ให้รอบรับการเปลี่ยนแปลงที่หลากหลาย มีความเป็น General สำหรับการพัฒนาต่อ โปรแกรมพัฒนาโดยการให้ข้อมูลวิ่งจากเครื่อง PLC เข้าสู่ระบบ Cloud ผ่าน IoT Gateway บน Siemense IoT 2000 และวิ่งเข้าไปบน Firebase Realtime Database จากนั้นระบบจะไป Pulling ข้อมูลจาก Realtime DB เข้ามาในโปรแกรม</p>
+<p>ระบบดูออกแบบมาให้สามารถเลือกข้อมูลมาแสดงได้ เลือกรูปแบบของ Gauge และ เลือกรูปแบบของ Chart มาแสดงได้ โดยผู้ใช้งาน ไม่ขึ้นกับการพัฒนา รวมถึงสามารถส่งสัญญาณไป Control เครื่อง PLC ผ่านทาง Realtime Database ได้เช่นกัน</p>
+<p>ปัจจุบัน แม้ทางผมจะไม่ได้พัฒนาระบบนี้แล้ว แต่ศูนย์วิจัยระบบอัตโนมัติอัจฉริยะ ได้พัฒนาระบบนี้ต่อ ในนามของระบบ E-Machine ได้มีการเปลี่ยนจากการใช้ Realtime Database บน Firebase ไปเป็นการใช้โปรโตคอลอย่าง MQTT มีการประยุกต์ใช้ที่หลากหลายยิ่งขึ้น รับจากอุปกรณ์ทั้ง PLC, Raspberry PI หรือ เซนเซอร์อื่นๆ ได้มากมาย รวมถึงมีระบบตัวแปร แดชบอร์ด การกรอกค่าโดยมนุษย์ ประมาณการบิลค่าไฟ และอื่นๆ อีกมากมาย</p>
 <h2>Gallery</h2>
 <html>
-      <div>          <div class="gallery pswp-gallery pswp-gallery" id="gallery-emanufac">                    <a href="/img/project/emanufac/1.jpg"   data-pswp-width="1875"    data-cropped="true"     data-pswp-height="2500" >          <img src="/img/project/emanufac/1.jpg"     alt="emanufac-gallery" />      </a>        <a href="/img/project/emanufac/2.jpg"   data-pswp-width="1875"    data-cropped="true"     data-pswp-height="2500" >          <img src="/img/project/emanufac/2.jpg"     alt="emanufac-gallery" />      </a>        <a href="/img/project/emanufac/3.jpg"   data-pswp-width="1875"    data-cropped="true"     data-pswp-height="2500" >          <img src="/img/project/emanufac/3.jpg"     alt="emanufac-gallery" />      </a>        <a href="/img/project/emanufac/4.jpg"   data-pswp-width="1875"    data-cropped="true"     data-pswp-height="2500" >          <img src="/img/project/emanufac/4.jpg"     alt="emanufac-gallery" />      </a>        <a href="/img/project/emanufac/5.png"   data-pswp-width="1875"    data-cropped="true"     data-pswp-height="2500" >          <img src="/img/project/emanufac/5.png"     alt="emanufac-gallery" />      </a>        <a href="/img/project/emanufac/6.png"   data-pswp-width="1875"    data-cropped="true"     data-pswp-height="2500" >          <img src="/img/project/emanufac/6.png"     alt="emanufac-gallery" />      </a>        <a href="/img/project/emanufac/7.png"   data-pswp-width="1875"    data-cropped="true"     data-pswp-height="2500" >          <img src="/img/project/emanufac/7.png"     alt="emanufac-gallery" />      </a>            </div>          <script type="module">              import PhotoSwipeLightbox from '/js/photoswipe-lightbox.esm.min.js';              import PhotoSwipe from '/js/photoswipe.esm.min.js';                       </script>      </div>  
+      <div>          <div class="gallery pswp-gallery pswp-gallery" id="gallery-eiotsoft">                    <a href="\img\project\eiot\147278054_3693318977423555_4131158599099766082_n.jpg"   data-pswp-width="1875"    data-cropped="true"     data-pswp-height="2500" >          <img src="\img\project\eiot\147278054_3693318977423555_4131158599099766082_n.jpg"     alt="eiotsoft image" />      </a>        <a href="\img\project\eiot\147278054_3693318977423555_4131158599099766082_n.jpg"   data-pswp-width="1875"    data-cropped="true"     data-pswp-height="2500" >          <img src="\img\project\eiot\147278054_3693318977423555_4131158599099766082_n.jpg"     alt="eiotsoft image" />      </a>        <a href="\img\project\eiot\148960014_3693326094089510_3865423504178578198_n.jpg"   data-pswp-width="1875"    data-cropped="true"     data-pswp-height="2500" >          <img src="\img\project\eiot\148960014_3693326094089510_3865423504178578198_n.jpg"     alt="eiotsoft image" />      </a>        <a href="\img\project\eiot\6.png"   data-pswp-width="1875"    data-cropped="true"     data-pswp-height="2500" >          <img src="\img\project\eiot\6.png"     alt="eiotsoft image" />      </a>        <a href="\img\project\eiot\5.png"   data-pswp-width="1875"    data-cropped="true"     data-pswp-height="2500" >          <img src="\img\project\eiot\5.png"     alt="eiotsoft image" />      </a>        <a href="\img\project\eiot\7.png"   data-pswp-width="1875"    data-cropped="true"     data-pswp-height="2500" >          <img src="\img\project\eiot\7.png"     alt="eiotsoft image" />      </a>        <a href="\img\project\eiot\9.png"   data-pswp-width="1875"    data-cropped="true"     data-pswp-height="2500" >          <img src="\img\project\eiot\9.png"     alt="eiotsoft image" />      </a>            </div>          <script type="module">              import PhotoSwipeLightbox from '/js/photoswipe-lightbox.esm.min.js';              import PhotoSwipe from '/js/photoswipe.esm.min.js';                       </script>      </div>  
 </html>
    
      </div>
@@ -103,14 +105,14 @@
 
      <div class="flex w-full justify-between">
     
-    <a class="btn btn-block w-1/2 md:w-1/4 justify-between mx-2 " href=/project/eaccom >
+    <a class="btn btn-block w-1/2 md:w-1/4 justify-between mx-2 " href=/project/emanufac >
           <i class="fas fa-chevron-left"></i>
           <div class="text-left"> 
             <div class="text-xs font-thin">
               Prev
             </div>
             <div>
-            E-Accom 
+            E-Manufac 
             </div>
           </div>
     </a>
@@ -118,13 +120,13 @@
       
 
       
-      <a href=/project/eiotsoft class="btn btn-block w-1/2 md:w-1/4 justify-between  btn-outline mx-2">
+      <a href=/project/internship class="btn btn-block w-1/2 md:w-1/4 justify-between  btn-outline mx-2">
       <div class="text-left"> 
       <div class="text-xs font-thin">
       Next
       </div>
       <div>
-      E-IoTSoft 
+      10.28 Bike 
       </div>
      
       </div>

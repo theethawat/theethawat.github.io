@@ -18,13 +18,7 @@ function galleryShortcode(content, name) {
           <script type="module">
               import PhotoSwipeLightbox from '/js/photoswipe-lightbox.esm.min.js';
               import PhotoSwipe from '/js/photoswipe.esm.min.js';
-              const lightbox = new PhotoSwipeLightbox({
-                  gallery: '#gallery-${name}',
-                  children: 'a',
-                  pswpModule: PhotoSwipe,
-                  preload: [1, 1]
-              });
-              lightbox.init();
+             
           </script>
       </div>
   `.replace(/(\r\n|\n|\r)/gm, "");
@@ -53,8 +47,7 @@ async function galleryImageShortcode(src, alt) {
 
   return `
       <a href="${src}"   data-pswp-width="1875"    data-cropped="true" 
-    data-pswp-height="2500" 
-      target="_blank">
+    data-pswp-height="2500" >
           <img src="${src}"  
    alt="${alt}" />
       </a>

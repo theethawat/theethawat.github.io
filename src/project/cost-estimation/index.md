@@ -2,6 +2,10 @@
 layout: mainlayout.njk
 title: ANN-Like for Manufacturing Cost Estimation
 subtitle: Master Degree Research
+prev_page: /project/ehealth
+prev_page_name: E-Health For Personal Sensor Application
+next_page: /project/eaccom
+next_page_name: E-Accom
 ---
 
 ## Project Info
