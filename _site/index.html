@@ -29,7 +29,7 @@
   </head>
 
   <body class="bg-base-100">
-<nav class="navbar" role="navigation" aria-label="main navigation" class="rounded-md">
+<nav class="navbar" role="navigation" aria-label="main navigation" class="rounded-md z-2">
    <div class="navbar bg-base-100">
   <div class="flex-1">
     <a class="btn btn-ghost normal-case text-xl" href="/">
@@ -37,18 +37,20 @@
     </a>
   </div>
    <div class="flex-none">
-    <ul class="menu menu-horizontal px-1 ml-4">
-      <li><a href="/about">ประวัติส่วนตัว</a></li>
+    <ul class="menu menu-horizontal px-1 ml-4 pr-10 z-10">
+  
       <li>
-        <details>
+      <details>
           <summary>
-            เมนู 
+            Menu / เมนู 
           </summary>
-          <ul class="p-2 bg-base-100 z-100">
+          <ul class="p-2 bg-base-100" style="z-index:20;">
+           <li><a href="/about">ประวัติส่วนตัว</a></li>
             <li><a href="/timeline">ประวัติการทำงาน</a></li>
             <li><a href="/vcard">Contact Card</a></li>
             <li><a href="/project">ผลงาน</a></li>    
             <li><a href="/skill">ความสามารถ</a></li>
+            <li><a href="/event">งานที่กำลังจะมาถึง</a></li>
           </ul>
         </details>
       </li>
@@ -56,8 +58,9 @@
   </div>
 </div>
 </nav>
+<div class="z-0" >
     
-<div class="hero bg-base-100">
+<div class="hero bg-base-100 z-10">
   <div class="hero-content flex-col lg:flex-row">
     <img src="/img/tin_photo.jpg" class="max-w-sm rounded-lg shadow-2xl" />
     <div class="p-4 lg:p-1">
@@ -68,7 +71,7 @@
         </div>
       </h1>
       <h2 class="text-xl text-accent md:text-black">
-        Researcher, Master of Engineering Student in Computer Engineering
+        Master of Engineering Student in Computer Engineering
       </h2>
       <!-- <h2 class="text-xl font-bold">ธีร์ธวัช สวาสดิ์ธรรม</h2> -->
       <p class="pt-3">
@@ -128,7 +131,7 @@
     <div class="hero-overlay bg-opacity-60 hover:bg-opacity-80 cursor-pointer">
       <div class="w-full flex h-full items-center text-xl hover:text-2xl">
         <div class="mx-auto text-white kanit text-center">
-          ผลงาน <br />Portfolio
+          Portfolio <br />ผลงาน
         </div>
       </div>
     </div>
@@ -199,6 +202,7 @@
   </div>
 </div>
 
+</div>
     <br />
 
 
