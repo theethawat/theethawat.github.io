@@ -2054,10 +2054,6 @@ html {
   }
 }
 
-.artboard.phone {
-  width: 320px;
-}
-
 .btn-sm {
   height: 2rem;
   min-height: 2rem;
@@ -2386,12 +2382,20 @@ html {
   border-end-end-radius: 0px;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .fixed {
   position: fixed;
 }
 
 .z-0 {
   z-index: 0;
+}
+
+.z-10 {
+  z-index: 10;
 }
 
 .mx-1 {
@@ -2441,6 +2445,10 @@ html {
   margin-bottom: 0.5rem;
 }
 
+.ml-4 {
+  margin-left: 1rem;
+}
+
 .mr-2 {
   margin-right: 0.5rem;
 }
@@ -2451,10 +2459,6 @@ html {
 
 .mt-6 {
   margin-top: 1.5rem;
-}
-
-.ml-4 {
-  margin-left: 1rem;
 }
 
 .block {
@@ -2609,16 +2613,16 @@ html {
   justify-content: space-between;
 }
 
+.gap-1 {
+  gap: 0.25rem;
+}
+
 .gap-2 {
   gap: 0.5rem;
 }
 
 .gap-4 {
   gap: 1rem;
-}
-
-.gap-1 {
-  gap: 0.25rem;
 }
 
 .rounded {
