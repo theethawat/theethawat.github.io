@@ -3,7 +3,7 @@ title: My Rad Blog
 ---
 
 <!DOCTYPE html>
-<html lang="th" >
+<html lang="th"   >
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,43 +18,64 @@ title: My Rad Blog
       property="og:image"
       content="https://www.theduckcreator.in.th/assets/Logo2021/Banner2021.png"
     />
-   
+ 
   
     <link
       href="https://fonts.googleapis.com/css?family=Kanit:300,400&display=swap"
       rel="stylesheet"
     />
    
-    <link rel="icon" href="/img/ThSFavicon.png" />
- <link rel="stylesheet" href="{{ '/index.css' | url }}">
 
+    <link rel="icon" href="/img/ThSFavicon.png" />
+
+    <link rel="stylesheet" href="{{ '/index.css' | url }}">
+    <link rel="stylesheet" href="{{ '/main.css' | url }}">
+    <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
+
+    <style>
+    @media print {
+
+      .print-disable {
+        display:none;
+      }
+    
+}  
+
+.print-only{
+        display:none;
+      }
+    </style>
+
+    
 
   </head>
 
-  <body class="bg-base-100">
-<nav class="navbar" role="navigation" aria-label="main navigation" class="rounded-md z-2">
-   <div class="navbar bg-base-100">
+  <body class="bg-base-100 ">
+<nav class="navbar" role="navigation" aria-label="main navigation" class="rounded-md print-disable">
+   <div class="navbar bg-base-100 print-disable">
   <div class="flex-1">
     <a class="btn btn-ghost normal-case text-xl" href="/">
         <img src="/img/logo.png" class="w-36"   />
     </a>
   </div>
-   <div class="flex-none">
-    <ul class="menu menu-horizontal px-1 ml-4 pr-10 z-10">
-  
+  <div class="flex-none">
+    <ul class="menu menu-horizontal px-1 pr-10">
+    
+      <li><a href="/">หน้าแรก</a></li>
       <li>
-      <details>
+        <details>
           <summary>
-            Menu / เมนู 
+            เมนู
           </summary>
-          <ul class="p-2 bg-base-100" style="z-index:20;">
-           <li><a href="/about">ประวัติส่วนตัว</a></li>
+          <ul class="p-2 bg-base-100">
+          <li><a href="/about">ประวัติส่วนตัว</a></li>
             <li><a href="/timeline">ประวัติการทำงาน</a></li>
             <li><a href="/vcard">Contact Card</a></li>
             <li><a href="/project">ผลงาน</a></li>    
             <li><a href="/skill">ความสามารถ</a></li>
             <li><a href="/event">งานที่กำลังจะมาถึง</a></li>
             <li><a href="/cv">CV</a></li>
+
           </ul>
         </details>
       </li>
@@ -62,34 +83,78 @@ title: My Rad Blog
   </div>
 </div>
 </nav>
-<div class="z-0" >
-    {{ content | safe }}
+<div class="w-full h-32 print-disable">
+<div class="px-8 lg:px-32 py-6 print-disable">
+<div class="flex gap-4 items-center print-disable">
+<div class="w-2 h-20 bg-accent print-disable"></div>
+<div>
+{{project.html}}
+<h1 class="text-2xl lg:text-4xl font-semibold print-disable">{{title}}</h1>
+    <h2 class=" text-gray-500 text-lg print-disable">
+{{subtitle}}</h2>
 </div>
-    <br />
+</div>
+</div>
+</div>
+ <div class="container px-8 lg:px-32  ">
+    <div>
 
+</div>
+    <div class="blog">
+    {{ content | safe }}   
+     </div>
+     <div class="h-10"></div>
+
+     <div class="flex w-full justify-between print-disable">
+    {% if prev_page %}
+    <a class="btn btn-block w-1/2 md:w-1/4 justify-between mx-2 " href={{prev_page}} >
+          <i class="fas fa-chevron-left"></i>
+          <div class="text-left"> 
+            <div class="text-xs font-thin">
+              Prev
+            </div>
+            <div>
+            {{prev_page_name}} 
+            </div>
+          </div>
+    </a>
+    {% endif %}
+      {% if not prev_page %}
+         <div></div>
+         {% endif %}
+
+      {% if next_page %}
+      <a href={{next_page}} class="btn btn-block w-1/2 md:w-1/4 justify-between  btn-outline mx-2">
+      <div class="text-left"> 
+      <div class="text-xs font-thin">
+      Next
+      </div>
+      <div>
+      {{next_page_name}} 
+      </div>
+     
+      </div>
+      <i class="fas fa-chevron-right"></i>
+      </a>
+      {% endif %}
+
+      
+    </div>
+ </div>
+    <br />
+   
 
     <br /><br />
-    <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded">
+    <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded print-disable">
      
 
 <div>
-<div class="my-2 text-lg mx-1 kanitlight ">Find <b>Theethawat</b> Profile on!</div>
-<div class="grid grid-flow-col justify-center gap-4 items-center">
-    <a class="link link-hover" href="https://github.com/theethawat"><img src="/img/another-logo/github.png" class="image piccenter   w-24 " /></a> 
-    <a class="link link-hover"  href="https://www.researchgate.net/profile/Theethawat-Savastham"> <img src="/img/another-logo/researchgate.png" class="image piccenter  w-24" /></a> 
-    <a class="link link-hover" href="https://www.kaggle.com/theethawatsavastham"> <img src="/img/another-logo/kaggle.png" class="image piccenter h-6  w-16" /></a> 
-    <a class="link link-hover" href="https://www.blockdit.com/tintheethawat"> <img src="/img/another-logo/blockdit.png" class="image piccenter  w-24" /></a> 
- <a class="link link-hover" href="https://stackshare.io/theethawat"> <img src="/img/another-logo/stackshare.png" class="image piccenter  w-24" /></a> 
- <a class="link link-hover" href="https://dev.to/theethawat"> <img src="/img/another-logo/dev-black.png" class="image piccenter  w-8" /></a> 
-</div>
-<br/>
-<hr />
-  <div class="grid grid-flow-col gap-4">
+  <div class="grid grid-flow-col gap-4 print-disable">
     <a class="link link-hover"><img src="/img/logo.png" class="image piccenter " style="height:70px;"/></a> 
     <a class="link link-hover"  href="https://theduckcreator.in.th"> <img src="/img/logotdc.png" class="image piccenter" style="height:70px;"/></a> 
   </div> 
 </div>
-  <div>
+  <div class="print-disable">
     <div class="grid grid-flow-col gap-4">
       <a
         href="https://github.com/theethawat"
@@ -138,12 +203,12 @@ title: My Rad Blog
   <div>
     <p class="kanitlight"> &copy; 2024  <strong>Theethawat</strong> & <strong>The Duck Creator</strong>, Web
       Content is licensed by
-      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"
+      <a rel="license" class="link" href="http://creativecommons.org/licenses/by/4.0/"
         >Creative Commons 4.0 BY International</a
       >
       <br />Front Page Made by <a href="https://www.11ty.dev/">11ty </a>Server
-      By <a href="https://github.com/theethawat">GitHub Page</a> on
-      <a href="https://github.com">GitHub</a></p>
+      By <a class="link" href="https://github.com/theethawat">GitHub Page</a> on
+      <a class="link" href="https://github.com">GitHub</a></p>
   </div>
 </footer>
  
@@ -174,7 +239,13 @@ title: My Rad Blog
         }
 
     });
+    
 </script>
 
+    <script src="js/lightgallery.min.js"></script>
+
+    <!-- lightgallery plugins -->
+    <script src="js/plugins/lg-thumbnail.umd.js"></script>
+    <script src="js/plugins/lg-zoom.umd.js"></script>
   </body>
 </html>
