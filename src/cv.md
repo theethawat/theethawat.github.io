@@ -10,7 +10,7 @@ next_page_name: Working Timeline
 
 # **Theethawat Savastham**
 
-**Master Degree student in Computer Engineering**
+**Master's Degree student in Computer Engineering**
 
 Hatyai, Songkhla, Thailand
 
@@ -22,14 +22,14 @@ Hatyai, Songkhla, Thailand
 
 ### Skills
 
-- **Software Development** : Development Full Stack Web Application using JavaScript and Cloud Deployment.
-- **Data Engineering** : Data Cleansing, Analysing, Manipulating and Visualizing using Python.
+- **Software Development**: Development Full Stack Web Application using JavaScript and Cloud Deployment.
+- **Data Engineering**: Data Cleansing, Analysing, Manipulating and Visualizing using Python.
 
-### Education Backgroud
+### Education Background
 
 - **2022 - Present: Master of Engineering | Prince of Songkla University | Computer Engineering**
   - **Subject Include:** Data Engineering, Machine Learning,Research Methodology and Seminar.
-  - **Final Thesis:** Artificial Neural Network-like for Manufacturing Cost Estimation, which is create the specific purpose glass box neural network for cost.
+  - **Final Thesis:** Artificial Neural Network-like for Manufacturing Cost Estimation, which is to create the specific purpose glass box neural network for cost.
 
 <br class="print-disable"/>
 
