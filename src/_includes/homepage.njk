@@ -3,7 +3,7 @@ title: My Rad Blog
 ---
 
 <!DOCTYPE html>
-<html lang="th" >
+<html lang="{{lang}}">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,7 +12,6 @@ title: My Rad Blog
     <meta property="description" content="{{subtitle | safe}}" />
     <meta property="og:title" content="{{title}}" />
     <meta property="og:type" content="text/html" />
-    <meta property="og:locale" content="th_TH" />
     <meta property="og:description" content="{{subtitle | safe}}" />
     <meta
       property="og:image"
@@ -27,6 +26,10 @@ title: My Rad Blog
    
     <link rel="icon" href="/img/ThSFavicon.png" />
  <link rel="stylesheet" href="{{ '/index.css' | url }}">
+     <link rel="alternate" hreflang="{{lang}}" href="{{page.url}}">
+  {% for link in page.url | locale_links %}
+    <link rel="alternate" hreflang="{{link.lang}}" href="https://www.11ty.dev{{link.url}}">
+  {% endfor %}
 
 
   </head>
@@ -35,26 +38,25 @@ title: My Rad Blog
 <nav class="navbar" role="navigation" aria-label="main navigation" class="rounded-md z-2">
    <div class="navbar bg-base-100">
   <div class="flex-1">
-    <a class="btn btn-ghost normal-case text-xl" href="/">
+    <a class="btn btn-ghost normal-case text-xl" href="{{ "/" | locale_url }}">
         <img src="/img/logo.png" class="w-36"   />
     </a>
   </div>
    <div class="flex-none">
     <ul class="menu menu-horizontal px-1 ml-4 pr-10 z-10">
-  
+    {% for link in page.url | locale_links %}
+    {%- if not loop.first %},{% endif %}
+    <li><a href="{{link.url}}" lang="{{link.lang}}" hreflang="{{link.lang}}">{{link.label}}</a></li>
+    {% endfor %}
       <li>
       <details>
           <summary>
-            Menu / เมนู 
+             {{language[page.lang].menuText}}
           </summary>
           <ul class="p-2 bg-base-100" style="z-index:20;">
-           <li><a href="/about">ประวัติส่วนตัว</a></li>
-            <li><a href="/timeline">ประวัติการทำงาน</a></li>
-            <li><a href="/vcard">Contact Card</a></li>
-            <li><a href="/project">ผลงาน</a></li>    
-            <li><a href="/skill">ความสามารถ</a></li>
-            <li><a href="/event">งานที่กำลังจะมาถึง</a></li>
-            <li><a href="/cv">CV</a></li>
+            {% for item in navigation[page.lang] %}
+          <li><a href="{{ item.url }}">{{item.text}}</a></li>
+{% endfor %}
           </ul>
         </details>
       </li>

@@ -1,0 +1,153 @@
+---
+layout: homepage.njk
+title: THEETHAWAT.DEV/>
+subtitle: Development Space of Theethawat Savastham
+activity_images:
+  - img/a1.jpg
+  - img/a2.jpg
+  - img/a3.jpg
+lang: th
+---
+
+<div class="hero bg-base-100 z-10">
+  <div class="hero-content flex-col lg:flex-row">
+    <img src="/img/tin_photo.jpg" class="max-w-sm rounded-lg shadow-2xl" />
+    <div class="p-4 lg:p-1">
+      <h1 class="text-3xl lg:text-4xl font-bold lg:flex items-baseline">
+        <div>ธีร์ธวัช สวาสดิ์ธรรม</div>
+        <div class="text-2xl lg:text-3xl text-gray-400 font-normal lg:ml-4">
+          Theethawat Savastham
+        </div>
+      </h1>
+      <h2 class="text-xl text-accent md:text-black">
+        Master of Engineering Student in Computer Engineering
+      </h2>
+      <!-- <h2 class="text-xl font-bold">ธีร์ธวัช สวาสดิ์ธรรม</h2> -->
+      <p class="pt-3">
+        Hello, I'm Theethawat or you can call me <b>Tin</b>, Master Degree
+        Student in Computer Engineering since 2022. <br />
+        I am studying on Neural Network and AI. I'm also an Full Stack Web
+        Application Developer, using an Node.js Stack like<br />
+        React, Express, MongoDB, and interesting a microservice development.
+        Interesting in creating, Developing, DevOps, Cloud Computer and Machine
+        learning.
+      </p>
+      <!-- <p class="py-2">
+        นักพัฒนาโปรแกรมที่ศูนย์วิจัยระบบอัตโนมัติอัจฉริยะ ตั้งแต่ปี 2563 และ
+        <br />
+        นักศึกษาระดับปริญญาโท คณะวิศวกรรมศาสตร์ มหาวิทยาลัยสงขลานครินทร์
+        ตั้งแต่ปี 2565
+      </p> -->
+      <a href="{{ "/about" | locale_url }}" class="btn btn-accent kanit text-white mb-2">
+        ประวัติส่วนตัว
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="grid grid-cols-2 md:grid-cols-4 w-full">
+  <a
+    href="{{ "/about" | locale_url }}"
+    style="background-image: url(/img/menulist/1.jpg)"
+    class="h-48 w-full bg-cover"
+  >
+    <div class="hero-overlay bg-opacity-60 hover:bg-opacity-80 cursor-pointer">
+      <div class="w-full flex h-full items-center text-xl hover:text-2xl">
+        <div class="mx-auto text-white kanit text-center">
+          Biography <br />ประวัติส่วนตัว
+        </div>
+      </div>
+    </div>
+  </a>
+  <a
+    style="background-image: url(/img/menulist/2.jpg)"
+    href="{{ "/timeline" | locale_url }}"
+    class="h-48 w-full bg-cover"
+  >
+    <div class="hero-overlay bg-opacity-60 hover:bg-opacity-80 cursor-pointer">
+      <div class="w-full flex h-full items-center text-xl hover:text-2xl">
+        <div class="mx-auto text-white kanit text-center">
+          Working Timeline <br />ประวัติการทำงาน
+        </div>
+      </div>
+    </div>
+  </a>
+  <a
+    style="background-image: url(/img/menulist/3.jpg)"
+    class="h-48 w-full bg-cover"
+    href={{ "/project" | locale_url }}
+  >
+    <div class="hero-overlay bg-opacity-60 hover:bg-opacity-80 cursor-pointer">
+      <div class="w-full flex h-full items-center text-xl hover:text-2xl">
+        <div class="mx-auto text-white kanit text-center">
+          Portfolio <br />ผลงาน
+        </div>
+      </div>
+    </div>
+  </a>
+  <a
+    style="background-image: url(/img/menulist/4.jpg)"
+    class="h-48 w-full bg-cover"
+    href={{ "/skill" | locale_url }}
+  >
+    <div class="hero-overlay bg-opacity-60 hover:bg-opacity-80 cursor-pointer">
+      <div class="w-full flex h-full items-center text-xl hover:text-2xl">
+        <div class="mx-auto text-white kanit text-center">
+          Skill <br />ความสามารถ
+        </div>
+      </div>
+    </div>
+  </a>
+  <a
+    href="https://gallery.theethawat.dev"
+    style="background-image: url(/img/menulist/5.jpg)"
+    class="h-48 w-full bg-cover"
+  >
+    <div class="hero-overlay bg-opacity-60 hover:bg-opacity-80 cursor-pointer">
+      <div class="w-full flex h-full items-center text-xl hover:text-2xl">
+        <div class="mx-auto text-white kanit text-center">
+          Gallery <br />แกลอรี่
+        </div>
+      </div>
+    </div>
+  </a>
+  <a
+    style="background-image: url(/img/menulist/6.jpg)"
+    class="h-48 w-full bg-cover"
+    href={{ "/personal-life" | locale_url }}
+  >
+    <div class="hero-overlay bg-opacity-60 hover:bg-opacity-80 cursor-pointer">
+      <div class="w-full flex h-full items-center text-xl hover:text-2xl">
+        <div class="mx-auto text-white kanit text-center">
+          Personal Life <br />ชีวิตส่วนตัว
+        </div>
+      </div>
+    </div>
+  </a>
+  <a
+    href={{ "/blog" | locale_url }}
+    style="background-image: url(/img/menulist/7.jpg)"
+    class="h-48 w-full bg-cover"
+  >
+    <div class="hero-overlay bg-opacity-60 hover:bg-opacity-80 cursor-pointer">
+      <div class="w-full flex h-full items-center text-xl hover:text-2xl">
+        <div class="mx-auto text-white kanit text-center">
+          Blogs <br />บทความ
+        </div>
+      </div>
+    </div>
+  </a>
+  <a
+    href={{ "/vcard" | locale_url }}
+    style="background-image: url(/img/menulist/8.jpg)"
+    class="h-48 w-full bg-cover"
+  >
+    <div class="hero-overlay bg-opacity-60 hover:bg-opacity-80 cursor-pointer">
+      <div class="w-full flex h-full items-center text-xl hover:text-2xl">
+        <div class="mx-auto text-white kanit text-center">
+          Contacts <br />ติดต่อ
+        </div>
+      </div>
+    </div>
+  </a>
+</div>

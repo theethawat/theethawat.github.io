@@ -3,6 +3,7 @@ const tailwindcss = require("tailwindcss");
 const autoprefixer = require("autoprefixer");
 const sharp = require("sharp");
 const Image = require("@11ty/eleventy-img");
+const { EleventyI18nPlugin } = require("@11ty/eleventy");
 
 const GALLERY_IMAGE_WIDTH = 192;
 const LANDSCAPE_LIGHTBOX_IMAGE_WIDTH = 2000;
@@ -55,6 +56,11 @@ async function galleryImageShortcode(src, alt) {
 }
 
 module.exports = (eleventyConfig) => {
+  eleventyConfig.addPlugin(EleventyI18nPlugin, {
+    // any valid BCP 47-compatible language tag is supported
+    defaultLanguage: "en", // Required, this site uses "en"
+    errorMode: "allow-fallback", // Opting out of "strict"
+  });
   eleventyConfig.addNunjucksAsyncFilter("postcss", (cssCode, done) => {
     postcss([tailwindcss(require("./tailwind.config.js")), autoprefixer()])
       .process(cssCode)
@@ -63,6 +69,7 @@ module.exports = (eleventyConfig) => {
         (e) => done(e, null)
       );
   });
+
   eleventyConfig.addWatchTarget("./src/**/*.css");
   eleventyConfig.addPairedLiquidShortcode("gallery", galleryShortcode);
   eleventyConfig.addLiquidShortcode("galleryImage", galleryImageShortcode);

@@ -1,0 +1,132 @@
+---
+layout: mainlayout.njk
+title: Upcoming Event
+subtitle: กิจกรรมที่กำลังจะมาถึง
+---
+
+<html>
+  <h3>นำเสนอความก้าวหน้าวิทยานิพนธ์ปลายภาค 1/2024</h3>
+  <h1 id="progress1"></h1>
+  <p>ตุลาคม 2567</p>
+  <h3>นำเสนอความก้าวหน้าวิทยานิพนธ์กลางภาค 2/2024</h3>
+  <h1 id="defend1"></h1>
+  <p>ปลายธันวาคม 2567</p>
+
+  <h3>สอบปกป้องวิทยานิพนธ์</h3>
+  <h1 id="defend2"></h1>
+  <p>กุมภาพันธ์ 2568</p>
+
+  <h3>ต้องจบการศึกษาเพื่อรับปริญญา และศึกษาต่อ</h3>
+  <h1 id="finished"></h1>
+  <p>ปลายพฤษภาคม 2568</p>
+  <script>
+    // Converting string to required date format
+    let progressReportDate = new Date("Oct 10, 2024 09:00:00").getTime();
+
+    // To call defined fuction every second
+    let x = setInterval(function () {
+      // Getting current time in required format
+      let now = new Date().getTime();
+
+      // Calculating the difference
+      let t = progressReportDate - now;
+
+      // Getting value of days, hours, minutes, seconds
+      let days = Math.floor(t / (1000 * 60 * 60 * 24));
+      let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+      let seconds = Math.floor((t % (1000 * 60)) / 1000);
+
+      // Output the remaining time
+      document.getElementById("progress1").innerHTML =
+        days + " Day " + hours + ":" + minutes + ":" + seconds + "";
+
+      // Output for over time
+      if (t < 0) {
+        clearInterval(x);
+        document.getElementById("progress1").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+
+    let fistThesisDefend = new Date("Dec 25, 2024 09:00:00").getTime();
+
+    // To call defined fuction every second
+    let firstTDInt = setInterval(function () {
+      // Getting current time in required format
+      let now = new Date().getTime();
+
+      // Calculating the difference
+      let t = fistThesisDefend - now;
+
+      // Getting value of days, hours, minutes, seconds
+      let days = Math.floor(t / (1000 * 60 * 60 * 24));
+      let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+      let seconds = Math.floor((t % (1000 * 60)) / 1000);
+
+      // Output the remaining time
+      document.getElementById("defend1").innerHTML =
+        days + " Day " + hours + ":" + minutes + ":" + seconds + "";
+
+      // Output for over time
+      if (t < 0) {
+        clearInterval(firstTDInt);
+        document.getElementById("defend1").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+
+    let secondThesisDefend = new Date("Feb 14, 2025 09:00:00").getTime();
+
+    // To call defined fuction every second
+    let secondTDInt = setInterval(function () {
+      // Getting current time in required format
+      let now = new Date().getTime();
+
+      // Calculating the difference
+      let t = secondThesisDefend - now;
+
+      // Getting value of days, hours, minutes, seconds
+      let days = Math.floor(t / (1000 * 60 * 60 * 24));
+      let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+      let seconds = Math.floor((t % (1000 * 60)) / 1000);
+
+      // Output the remaining time
+      document.getElementById("defend2").innerHTML =
+        days + " Day " + hours + ":" + minutes + ":" + seconds + "";
+
+      // Output for over time
+      if (t < 0) {
+        clearInterval(secondTDInt);
+        document.getElementById("defend2").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+
+    let finished = new Date("May 15, 2025 00:00:00").getTime();
+
+    // To call defined fuction every second
+    let finishedInt = setInterval(function () {
+      // Getting current time in required format
+      let now = new Date().getTime();
+
+      // Calculating the difference
+      let t = finished - now;
+
+      // Getting value of days, hours, minutes, seconds
+      let days = Math.floor(t / (1000 * 60 * 60 * 24));
+      let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+      let seconds = Math.floor((t % (1000 * 60)) / 1000);
+
+      // Output the remaining time
+      document.getElementById("finished").innerHTML =
+        days + " Day " + hours + ":" + minutes + ":" + seconds + "";
+
+      // Output for over time
+      if (t < 0) {
+        clearInterval(finishedInt);
+        document.getElementById("finished").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  </script>
+</html>
