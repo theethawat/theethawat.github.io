@@ -1998,10 +1998,6 @@ html {
   }
 }
 
-.artboard.phone {
-  width: 320px;
-}
-
 .btn-sm {
   height: 2rem;
   min-height: 2rem;
@@ -2689,6 +2685,16 @@ html {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-neutral {
+  --tw-text-opacity: 1;
+  color: var(--fallback-n,oklch(var(--n)/var(--tw-text-opacity)));
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .shadow-2xl {
