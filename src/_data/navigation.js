@@ -36,7 +36,7 @@ module.exports = {
       url: "/en/about/",
     },
     {
-      text: "Work Experience",
+      text: "Working Timeline",
       url: "/en/timeline/",
     },
     {

@@ -1,0 +1,23 @@
+.gallery {
+  margin: 32px 0;
+  -moz-column-count: 4;
+       column-count: 4;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+
+.gallery a {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  margin-bottom: 8px;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  text-decoration: none;
+}
+
+.gallery img {
+  max-width: 100%;
+  display: block;
+  grid-row: 1 / -1;
+  grid-column: 1;
+}

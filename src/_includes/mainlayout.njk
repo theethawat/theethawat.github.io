@@ -53,7 +53,7 @@ title: My Rad Blog
     {%- if not loop.first %},{% endif %}
     <li><a href="{{link.url}}" lang="{{link.lang}}" hreflang="{{link.lang}}">{{link.label}}</a></li>
     {% endfor %}
-      <li><a href="{{ "/" | locale_url }}">   {{language[page.lang].homepage}}</a></li>
+ 
       <li>
         <details>
           <summary>
