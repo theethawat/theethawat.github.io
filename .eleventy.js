@@ -59,7 +59,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
     // any valid BCP 47-compatible language tag is supported
     defaultLanguage: "en", // Required, this site uses "en"
-    errorMode: "allow-fallback", // Opting out of "strict"
+    errorMode: "allow-fallback", //"never", // // Opting out of "strict"
   });
   eleventyConfig.addNunjucksAsyncFilter("postcss", (cssCode, done) => {
     postcss([tailwindcss(require("./tailwind.config.js")), autoprefixer()])

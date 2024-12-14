@@ -28,7 +28,7 @@ title: My Rad Blog
  <link rel="stylesheet" href="{{ '/index.css' | url }}">
      <link rel="alternate" hreflang="{{lang}}" href="{{page.url}}">
   {% for link in page.url | locale_links %}
-    <link rel="alternate" hreflang="{{link.lang}}" href="https://www.11ty.dev{{link.url}}">
+    <link rel="alternate" hreflang="{{link.lang}}" href="{{link.url}}">
   {% endfor %}
 
 
@@ -79,10 +79,7 @@ title: My Rad Blog
 <div class="grid grid-flow-col justify-center gap-4 items-center">
     <a class="link link-hover" href="https://github.com/theethawat"><img src="/img/another-logo/github.png" class="image piccenter   w-24 " /></a> 
     <a class="link link-hover"  href="https://www.researchgate.net/profile/Theethawat-Savastham"> <img src="/img/another-logo/researchgate.png" class="image piccenter  w-24" /></a> 
-    <a class="link link-hover" href="https://www.kaggle.com/theethawatsavastham"> <img src="/img/another-logo/kaggle.png" class="image piccenter h-6  w-16" /></a> 
-    <a class="link link-hover" href="https://www.blockdit.com/tintheethawat"> <img src="/img/another-logo/blockdit.png" class="image piccenter  w-24" /></a> 
  <a class="link link-hover" href="https://stackshare.io/theethawat"> <img src="/img/another-logo/stackshare.png" class="image piccenter  w-24" /></a> 
- <a class="link link-hover" href="https://dev.to/theethawat"> <img src="/img/another-logo/dev-black.png" class="image piccenter  w-8" /></a> 
 </div>
 <br/>
 <hr />
