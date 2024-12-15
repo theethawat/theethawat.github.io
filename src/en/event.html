@@ -9,8 +9,8 @@ subtitle: กิจกรรมที่กำลังจะมาถึง
   <h1 id="progress1"></h1>
   <p>ตุลาคม 2567</p>
   <h3>นำเสนอความก้าวหน้าวิทยานิพนธ์กลางภาค 2/2024</h3>
-  <h1 id="defend1"></h1>
-  <p>ปลายธันวาคม 2567</p>
+  <h1 id="midtermProg"></h1>
+  <p>16 มกราคม 2568</p>
 
   <h3>สอบปกป้องวิทยานิพนธ์</h3>
   <h1 id="defend2"></h1>
@@ -22,6 +22,7 @@ subtitle: กิจกรรมที่กำลังจะมาถึง
   <script>
     // Converting string to required date format
     let progressReportDate = new Date("Oct 10, 2024 09:00:00").getTime();
+    let midtermProgress = new Date("Jan 16, 2025 09:00:00").getTime();
 
     // To call defined fuction every second
     let x = setInterval(function () {
@@ -48,15 +49,13 @@ subtitle: กิจกรรมที่กำลังจะมาถึง
       }
     }, 1000);
 
-    let fistThesisDefend = new Date("Dec 25, 2024 09:00:00").getTime();
-
     // To call defined fuction every second
     let firstTDInt = setInterval(function () {
       // Getting current time in required format
       let now = new Date().getTime();
 
       // Calculating the difference
-      let t = fistThesisDefend - now;
+      let t = midtermProgress - now;
 
       // Getting value of days, hours, minutes, seconds
       let days = Math.floor(t / (1000 * 60 * 60 * 24));
@@ -65,13 +64,13 @@ subtitle: กิจกรรมที่กำลังจะมาถึง
       let seconds = Math.floor((t % (1000 * 60)) / 1000);
 
       // Output the remaining time
-      document.getElementById("defend1").innerHTML =
+      document.getElementById("midtermProg").innerHTML =
         days + " Day " + hours + ":" + minutes + ":" + seconds + "";
 
       // Output for over time
       if (t < 0) {
         clearInterval(firstTDInt);
-        document.getElementById("defend1").innerHTML = "EXPIRED";
+        document.getElementById("midtermProg").innerHTML = "EXPIRED";
       }
     }, 1000);
 

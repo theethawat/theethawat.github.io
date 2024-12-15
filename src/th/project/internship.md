@@ -9,9 +9,9 @@ activity_images:
   - \img\project\internship\Screenshot 2024-07-14 160725.png
   - \img\project\internship\Screenshot 2024-07-14 160741.png
   - \img\project\internship\Screenshot 2024-07-14 160755.png
-prev_page: /project/eiotsoft
+prev_page: /th/project/eiotsoft
 prev_page_name: E-IotSoft
-next_page: /project/esalesman
+next_page: /th/project/esalesman
 next_page_name: E-Salesman
 ---
 

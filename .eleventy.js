@@ -13,14 +13,15 @@ const PORTRAIT_LIGHTBOX_IMAGE_WIDTH = 720;
 function galleryShortcode(content, name) {
   return `
       <div>
-          <div class="gallery pswp-gallery pswp-gallery" id="gallery-${name}">
-              ${content}
-          </div>
-          <script type="module">
+        <script type="module">
               import PhotoSwipeLightbox from '/js/photoswipe-lightbox.esm.min.js';
               import PhotoSwipe from '/js/photoswipe.esm.min.js';
              
           </script>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-2 items-center" id="gallery-${name}">
+              ${content}
+          </div>
+        
       </div>
   `.replace(/(\r\n|\n|\r)/gm, "");
 }
@@ -45,13 +46,16 @@ async function galleryImageShortcode(src, alt) {
   // const genMetadata = await Image(source, options);
 
   // console.log("genMetadata.jpeg", genMetadata.jpeg);
-
+  //   <a href="${src}"   data-pswp-width="1875"    data-cropped="true"
+  //   data-pswp-height="2500" >
+  //         <img src="${src}"
+  //  alt="${alt}" />
+  //     </a>
   return `
-      <a href="${src}"   data-pswp-width="1875"    data-cropped="true" 
-    data-pswp-height="2500" >
-          <img src="${src}"  
-   alt="${alt}" />
-      </a>
+    <a href="${src}" class="hover:shadow-md"   >
+        <img src="${src}"  
+ alt="${alt}" />
+    </a>
   `.replace(/(\r\n|\n|\r)/gm, "");
 }
 
@@ -59,7 +63,10 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
     // any valid BCP 47-compatible language tag is supported
     defaultLanguage: "en", // Required, this site uses "en"
+    // when normal use
     errorMode: "allow-fallback", //"never", // // Opting out of "strict"
+    // when to build image
+    // errorMode: "never", //"never", // // Opting out of "strict"
   });
   eleventyConfig.addNunjucksAsyncFilter("postcss", (cssCode, done) => {
     postcss([tailwindcss(require("./tailwind.config.js")), autoprefixer()])

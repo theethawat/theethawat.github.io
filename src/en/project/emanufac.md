@@ -10,9 +10,9 @@ activity_images:
   - /img/project/emanufac/5.png
   - /img/project/emanufac/6.png
   - /img/project/emanufac/7.png
-prev_page: /project/eaccom
+prev_page: /en/project/eaccom
 prev_page_name: E-Accom
-next_page: /project/eiotsoft
+next_page: /en/project/eiotsoft
 next_page_name: E-IoTSoft
 ---
 

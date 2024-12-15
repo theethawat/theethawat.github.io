@@ -11,9 +11,9 @@ activity_images:
   - /img/project/eaccom/5.png
   - /img/project/eaccom/8.jpg
   - /img/project/eaccom/7.png
-prev_page: /project/cost-estimation
+prev_page: /en/project/cost-estimation
 prev_page_name: ANN-Like for Cost Estimation
-next_page: /project/emanufac
+next_page: /en/project/emanufac
 next_page_name: E-Manufac
 ---
 

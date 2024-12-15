@@ -2,7 +2,7 @@
 layout: mainlayout.njk
 title: Skill
 subtitle: ความสามารถ
-prev_page: /project
+prev_page: /en/project
 prev_page_name: Project / โปรเจกต์
 ---
 
@@ -22,14 +22,12 @@ Mainly useing React, the JavaScript Library
 
 ### JavaScript
 
-- ECMA Script Modules
-- HTML / SEO Basics / Basic CSS
+<!-- - HTML / SEO Basics / Basic CSS -->
+
 - React Framework
 - Tailwind CSS Utility
-- TypeScript
-- Basic Next.js
 - GraphQL
-- Little experiance in : Ionic, React Native
+- Some experiance in : Ionic, React Native, TypeScript, Next.js
 
 ## Backend
 
@@ -40,14 +38,13 @@ Mainly on Node.js JavaScripts, some little in Python
 
 ### JavaScript
 
-- Common JS & ECMA Script Modules
 - REST API with Express.js Framework
-- JWT & Basic Auth
-- Monolithic & Microservice App
-- Monorepo package with Lerna
+  <!-- - JWT & Basic Auth -->
+  <!-- - Monolithic & Microservice App -->
+- Monorepo package with Lerna and Nx
 - ORM with MongoDB and SQL
 - Basic Redis
-- Version Control with Git
+<!-- - Version Control with Git -->
 - NPM Package Creation
 - Handle Event to RabbitMQ
 
@@ -58,8 +55,8 @@ Mainly on Node.js JavaScripts, some little in Python
 
 - Basic Python Language
 - Data Science using Pandas, Numpy, Visualization
-- Basic Machine Learning using Keras
-- Basic Server with Flask
+<!-- - Basic Machine Learning using Keras -->
+- Some experiance in : Flask, Keras
 
 </div>     
 </div>
@@ -71,11 +68,11 @@ Mainly on Node.js JavaScripts, some little in Python
 
 ### Cloud Computing
 
-- Cloud Computing
-- Digital Ocean & Google Cloud Service
-- Infrastructure as a Service using Ubuntu / Debian
+- Cloud Computing & Infrastructure as a Service using Ubuntu / Debian
+- Serving Website Using Nginx
+<!-- - Digital Ocean & Google Cloud Service
 - Nginx Reverse Proxy and Load Balancer
-- Bash Scripting
+- Bash Scripting -->
 
 </div>
 <div class="w-full lg:w-1/2">

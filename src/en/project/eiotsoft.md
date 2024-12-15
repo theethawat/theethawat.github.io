@@ -10,9 +10,9 @@ activity_images:
   - \img\project\eiot\5.png
   - \img\project\eiot\7.png
   - \img\project\eiot\9.png
-prev_page: /project/emanufac
+prev_page: /en/project/emanufac
 prev_page_name: E-Manufac
-next_page: /project/internship
+next_page: /en/project/internship
 next_page_name: 10.28 Bike
 ---
 
