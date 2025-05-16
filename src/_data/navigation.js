@@ -26,6 +26,10 @@ module.exports = {
       url: "/th/event/",
     },
     {
+      text: "เซิฟเวอร์",
+      url: "https://dev.theduckcreator.in.th",
+    },
+    {
       text: "ติดต่อ",
       url: "/th/vcard/",
     },
@@ -54,6 +58,10 @@ module.exports = {
     {
       text: "Upcoming Event",
       url: "/en/event/",
+    },
+    {
+      text: "Server",
+      url: "https://dev.theduckcreator.in.th",
     },
     {
       text: "Contact",

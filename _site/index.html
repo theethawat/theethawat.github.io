@@ -1,1 +1,10 @@
-<meta http-equiv="refresh" content="0; url=/en" />
+<script>
+  (function () {
+    var lang = navigator.language || navigator.userLanguage;
+    if (lang && lang.toLowerCase().startsWith("th")) {
+      window.location.replace("/th");
+    } else {
+      window.location.replace("/en");
+    }
+  })();
+</script>
