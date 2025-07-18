@@ -8,18 +8,68 @@ prev_page: /th/timeline
 prev_page_name: Working Timeline
 ---
 
+
 <div>
-  <h2 class="mb-2">Research Project</h2>
+  <h2 class="my-4">ผลงานสำคัญ</h2>
+</div>
+{% assign feature_project = projects | where: "type", "feature-project" %}
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  {% for project in feature_project %}
+  <div class="card bg-base-100 shadow-xl max-w-96" href="{{project.link}}">
+    <figure>
+      <img
+        src="{{project.image}}"
+        alt="{{project.translation.[page.lang].name}}"
+        class="w-full object-cover h-52 object-center"
+      />
+    </figure>
+    <div class="card-body pt-2">
+      <div class="flex flex-wrap justify-between w-full items-center card-title" >
+          <h2 class="pb-0 text-2xl">
+            <a style="text-decoration: none; color: black" href="{{project.link}}">
+              {{project.translation[page.lang].name}}
+            </a>
+          </h2> 
+      <div>
+        <img src="/img/organization/{{project.organization}}.png" class="w-8 h-8 justify-items-end"></img>
+      </div>
+      </div>
+     
+      <p>{{project.translation[page.lang].description}}</p>
+      <!-- <small> {{project.translation[page.lang].subtitle}} </small> -->
+
+       <div class="flex flex-wrap w-3/4 md:w-2/3 justify-start">
+        {% for language in project.language %}
+          <img src="/img/icon/{{language}}.png" class="w-7"></img>
+        {% endfor %}
+      </div>
+      <div class="card-actions justify-end">
+        <a
+          class="btn btn-primary btn-sm"
+          style="color: white; text-decoration: none"
+          href="{{project.link}}"
+        >
+          More
+        </a>
+      </div>
+    </div>
+    
+  </div>
+  {% endfor %}
+</div>
+
+<div>
+  <h2 class="my-2 mt-8">งานวิจัย</h2>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
   {% assign research_project = projects | where: "type", "research" %} {% for
   project in research_project %}
-  <div class="card card-side max-w-96 bg-base-100 shadow-xl">
+  <div class="card md:card-side max-w-96 bg-base-100 shadow-xl">
     <figure>
       <img
         src="{{project.image}}"
         alt="{{project.name}}"
-        class="w-full object-cover object-top"
+        class="w-full object-cover object-top  h-52 md:h-full"
       />
     </figure>
     <div class="card-body">
@@ -31,51 +81,18 @@ prev_page_name: Working Timeline
 
       <small> {{project.translation[page.lang].subtitle}} </small>
       <div class="badge badge-accent">{{project.year}}</div>
-      <div class="flex">
-        <div class="w-3/4"></div>
-        <div class="w-1/4"></div>
-      </div>
+    
       <p>{{project.translation[page.lang].description}}</p>
-      <div class="card-actions justify-end">
-        <a
-          class="btn btn-primary btn-sm"
-          style="color: white; text-decoration: none"
-          href="{{project.link}}"
-        >
-          More
-        </a>
+       <div class="flex flex-wrap w-3/4 justify-start">
+         <div class="px-1">
+          <img src="/img/organization/{{project.organization}}.png" class="w-7 h-7"></img>
+        </div>
+        {% for language in project.language %}
+        <div class="px-1">
+          <img src="/img/icon/{{language}}.png" class="w-7 h-7"></img>
+        </div>
+        {% endfor %}
       </div>
-    </div>
-  </div>
-  {% endfor %}
-</div>
-<div>
-  <h2 class="my-4">Development Feature Project</h2>
-</div>
-{% assign feature_project = projects | where: "type", "feature-project" %}
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-  {% for project in feature_project %}
-  <div class="card max-w-96 bg-base-100 shadow-xl">
-    <figure>
-      <img
-        src="{{project.image}}"
-        alt="{{project.translation.[page.lang].name}}"
-        class="w-full object-cover h-52 object-center"
-      />
-    </figure>
-    <div class="card-body pt-2">
-      <h2 class="card-title pb-0">
-        <a style="text-decoration: none; color: black" href="{{project.link}}"
-          >{{project.translation[page.lang].name}}</a
-        >
-      </h2>
-      <small> {{project.translation[page.lang].subtitle}} </small>
-      <div class="badge badge-accent">{{project.year}}</div>
-      <div class="flex">
-        <div class="w-3/4"></div>
-        <div class="w-1/4"></div>
-      </div>
-      <p>{{project.translation[page.lang].description}}</p>
       <div class="card-actions justify-end">
         <a
           class="btn btn-primary btn-sm"
@@ -91,7 +108,7 @@ prev_page_name: Working Timeline
 </div>
 
 <div>
-  <h2 class="my-4">Working Project</h2>
+  <h2 class="my-4">งานพัฒนาต่าง ๆ</h2>
 </div>
 {% assign working_project = projects | where: "type", "working-project" %}
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -129,7 +146,7 @@ prev_page_name: Working Timeline
 </div>
 
 <div>
-  <h2 class="my-4">Writing & Publication</h2>
+  <h2 class="my-4">บทความ/งานเขียน</h2>
 </div>
 {% assign writing = projects | where: "type", "writing" %}
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

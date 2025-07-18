@@ -47,13 +47,25 @@ title: My Rad Blog
         <img src="/img/logo.png" class="w-36"   />
     </a>
   </div>
+  
   <div class="flex-none">
+  
     <ul class="menu menu-horizontal px-1 pr-10">
-     {% for link in page.url | locale_links %}
-    {%- if not loop.first %},{% endif %}
-    <li><a href="{{link.url}}" lang="{{link.lang}}" hreflang="{{link.lang}}">{{link.label}}</a></li>
+
+  {% for item in navigation[page.lang] %}
+        {% if item.inside == false  %}
+          <li class="hidden md:block"><a href="{{ item.url }}">{{item.text}}</a></li>
+        {% endif %}
     {% endfor %}
- 
+
+    {% for link in page.url | locale_links %}
+    {%- if not loop.first %},{% endif %}
+    <li>
+      <a href="{{link.url}}" lang="{{link.lang}}" hreflang="{{link.lang}}">
+        <img class="w-5 py-1" src="/img/{{link.lang}}.png"></img>
+      </a>
+    </li>
+    {% endfor %}
       <li>
         <details>
           <summary>

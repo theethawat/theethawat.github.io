@@ -7,6 +7,12 @@ activity_images:
   - img/a2.jpg
   - img/a3.jpg
 lang: th
+techniques:
+  - react
+  - js
+  - ts
+  - node
+  - python
 ---
 
 <div class="hero bg-base-100 z-10">
@@ -19,13 +25,13 @@ lang: th
           Theethawat Savastham
         </div>
       </h1>
-      <h2 class="text-xl text-accent md:text-black">
+      <h2 class="text-xl text-accent">
         นักศึกษาระดับปริญญาโท สาขาวิชาวิศวกรรมคอมพิวเตอร์
       </h2>
       <!-- <h2 class="text-xl font-bold">ธีร์ธวัช สวาสดิ์ธรรม</h2> -->
       <p class="pt-3">
       สวัสดีครับ ผมชื่อ ธีร์ธวัช หรือ ชื่อเล่นคือ <b>ติน</b>, เป็นนักศึกษาระดับปริญญาโท ของสาขาวิชาวิศวกรรมคอมพิวเตอร์ตั้งแต่ปี 2565 <br />
-         ผมศึกษาเกี่ยวกับ Neural Network และ AI  นอกจากนี้ผมยังเป็นนักพัฒนาซอฟต์แวร์แบบ Full Stack โดยเฉพาะ Web Application โดยผมมักจะสร้างมันด้วย Node.js Stack เช่น<br />
+         ผมศึกษาเกี่ยวกับ Neural Network และ AI  นอกจากนี้ผมยังเป็นนักพัฒนาซอฟต์แวร์แบบ Full Stack โดยเฉพาะ Web Application โดยผมมักจะสร้างมันด้วย Node.js Stack เช่น
         React, Express, MongoDB และสนใจเกี่ยวกับการทำ Microservice ด้วย
        และผมสนใจการสร้างสรรค์ต่างๆ การพัฒนาโปรแกรม DevOps Cloud Computer และ Machine learning ครับ
       </p>
@@ -35,118 +41,30 @@ lang: th
         นักศึกษาระดับปริญญาโท คณะวิศวกรรมศาสตร์ มหาวิทยาลัยสงขลานครินทร์
         ตั้งแต่ปี 2565
       </p> -->
-      <a href="{{ "/about" | locale_url }}" class="btn btn-accent kanit text-white mb-2 text-base">
-        ประวัติส่วนตัว
-      </a> <a href="{{ "/cv" | locale_url }}" class="btn btn-accent btn-outline kanit text-white mb-2 text-base">
-        ดาวน์โหลด CV
+          <div class="flex flex-wrap justify-between my-4">
+        <div class="flex flex-wrap">
+           <div class="px-1">
+              <img src="/img/organization/psu.png" class="w-10 h-7"></img>
+            </div><div class="px-1">
+              <img src="/img/organization/iaec.png" class="w-7 h-7"></img>
+            </div>
+            <div class="bg-gray-200 w-0.5 h-2/3 self-center mb-3 mx-3"></div>
+        {% for technique in techniques %}
+         <div class="px-1">
+          <img src="/img/icon/{{technique}}.png" class="w-7 h-7"></img>
+        </div>
+        {% endfor %} 
+        </div>
+        <div class="mt-4 md:mt-0">
+          <a href="{{ "/about" | locale_url }}" class="btn btn-info btn-sm kanit text-white mb-2 text-base">
+        ประวัติส่วนตัว 
       </a>
+        <a href="{{ "/cv" | locale_url }}" class="btn btn-accent  btn-sm kanit text-white mb-2 text-base">
+        ดาวน์โหลด CV
+        </a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="grid grid-cols-2 md:grid-cols-4 w-full">
-  <a
-    href="{{ "/about" | locale_url }}"
-    style="background-image: url(/img/menulist/1.jpg)"
-    class="h-48 w-full bg-cover"
-  >
-    <div class="hero-overlay bg-opacity-60 hover:bg-opacity-80 cursor-pointer">
-      <div class="w-full flex h-full items-center text-xl hover:text-2xl">
-        <div class="mx-auto text-white kanit text-center">
-          Biography <br />ประวัติส่วนตัว
-        </div>
-      </div>
-    </div>
-  </a>
-  <a
-    style="background-image: url(/img/menulist/2.jpg)"
-    href="{{ "/timeline" | locale_url }}"
-    class="h-48 w-full bg-cover"
-  >
-    <div class="hero-overlay bg-opacity-60 hover:bg-opacity-80 cursor-pointer">
-      <div class="w-full flex h-full items-center text-xl hover:text-2xl">
-        <div class="mx-auto text-white kanit text-center">
-          Working Timeline <br />ประวัติการทำงาน
-        </div>
-      </div>
-    </div>
-  </a>
-  <a
-    style="background-image: url(/img/menulist/3.jpg)"
-    class="h-48 w-full bg-cover"
-    href={{ "/project" | locale_url }}
-  >
-    <div class="hero-overlay bg-opacity-60 hover:bg-opacity-80 cursor-pointer">
-      <div class="w-full flex h-full items-center text-xl hover:text-2xl">
-        <div class="mx-auto text-white kanit text-center">
-          Portfolio <br />ผลงาน
-        </div>
-      </div>
-    </div>
-  </a>
-  <a
-    style="background-image: url(/img/menulist/4.jpg)"
-    class="h-48 w-full bg-cover"
-    href={{ "/skill" | locale_url }}
-  >
-    <div class="hero-overlay bg-opacity-60 hover:bg-opacity-80 cursor-pointer">
-      <div class="w-full flex h-full items-center text-xl hover:text-2xl">
-        <div class="mx-auto text-white kanit text-center">
-          Skill <br />ความสามารถ
-        </div>
-      </div>
-    </div>
-  </a>
-  <a
-    href="https://gallery.theethawat.dev"
-    style="background-image: url(/img/menulist/5.jpg)"
-    class="h-48 w-full bg-cover"
-  >
-    <div class="hero-overlay bg-opacity-60 hover:bg-opacity-80 cursor-pointer">
-      <div class="w-full flex h-full items-center text-xl hover:text-2xl">
-        <div class="mx-auto text-white kanit text-center">
-          Gallery <br />แกลอรี่
-        </div>
-      </div>
-    </div>
-  </a>
-  <a
-    style="background-image: url(/img/menulist/6.jpg)"
-    class="h-48 w-full bg-cover"
-    href={{ "/personal-life" | locale_url }}
-  >
-    <div class="hero-overlay bg-opacity-60 hover:bg-opacity-80 cursor-pointer">
-      <div class="w-full flex h-full items-center text-xl hover:text-2xl">
-        <div class="mx-auto text-white kanit text-center">
-          Personal Life <br />ชีวิตส่วนตัว
-        </div>
-      </div>
-    </div>
-  </a>
- 
-  <a
-    href={{ "/vcard" | locale_url }}
-    style="background-image: url(/img/menulist/8.jpg)"
-    class="h-48 w-full bg-cover"
-  >
-    <div class="hero-overlay bg-opacity-60 hover:bg-opacity-80 cursor-pointer">
-      <div class="w-full flex h-full items-center text-xl hover:text-2xl">
-        <div class="mx-auto text-white kanit text-center">
-          Contacts <br />ติดต่อ
-        </div>
-      </div>
-    </div>
-  </a> <a
-  href="https://theduckcreator.in.th"
-  style="background-image: url(/img/menulist/7.jpg)"
-  class="h-48 w-full bg-cover"
->
-  <div class="hero-overlay bg-opacity-60 hover:bg-opacity-80 cursor-pointer">
-    <div class="w-full flex h-full items-center text-xl hover:text-2xl">
-      <div class="mx-auto text-white kanit text-center">
-        Blogs <br />บล็อก
-      </div>
-    </div>
-  </div>
-</a>
-</div>

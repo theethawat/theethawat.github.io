@@ -19,6 +19,8 @@ module.exports = [
     image: "/img/project/ehealth.jpg",
     type: "research",
     year: "2019-2020",
+    language: ["android", "kotlin"],
+    organization: "coe",
   },
   {
     translation: {
@@ -34,10 +36,12 @@ module.exports = [
         description: "Neural Network Inspired Glass Box Cost Estimation Model",
       },
     },
-    image: "/img/project/thesis.jpg",
+    image: "/img/project/thesis/cover.jpg",
     link: "cost-estimation",
     year: "2023-Present",
     type: "research",
+    language: ["python", "numpy", "pandas"],
+    organization: "iaec",
   },
   {
     translation: {
@@ -59,6 +63,8 @@ module.exports = [
     link: "eaccom",
     year: "2021-2023",
     type: "feature-project",
+    language: ["js", "react", "node", "mongo"],
+    organization: "iaec",
   },
   {
     translation: {
@@ -79,6 +85,8 @@ module.exports = [
     image: "/img/project/emanufac/3.jpg",
     year: "2021-Present",
     type: "feature-project",
+    language: ["js", "react", "npm", "node", "mongo", "gql"],
+    organization: "iaec",
   },
   {
     translation: {
@@ -100,6 +108,8 @@ module.exports = [
       "/img/project/eiot/147278054_3693318977423555_4131158599099766082_n.jpg",
     year: "2020-2021",
     type: "feature-project",
+    language: ["js", "react", "node", "mongo"],
+    organization: "iaec",
   },
   {
     translation: {
@@ -117,6 +127,7 @@ module.exports = [
     link: "internship",
     year: 2019,
     type: "working-project",
+    language: ["php", "laravel", "mysql"],
   },
   {
     translation: {
@@ -137,6 +148,8 @@ module.exports = [
     link: "esalesman",
     year: 2020,
     type: "working-project",
+    language: ["js", "react", "node", "mongo"],
+    organization: "iaec",
   },
   {
     translation: {
@@ -157,6 +170,7 @@ module.exports = [
     // link: "eworker",
     year: 2021,
     type: "working-project",
+    organization: "iaec",
   },
   // {
   //   translation: {
@@ -291,6 +305,7 @@ module.exports = [
     link: "https://theduckcreator.in.th",
     year: "2019-ปัจจุบัน",
     type: "writing",
+    organization: "tdc",
   },
   {
     translation: {

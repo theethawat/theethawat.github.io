@@ -8,8 +8,8 @@
     "dev": "npx @11ty/eleventy --serve",
     "image": "npx @11ty/eleventy  --formats=liquid,html,jpg,png,pdf,js,vcf",
     "build": "npx @11ty/eleventy --output=docs",
-    "build:image": "npx @11ty/eleventy --output=docs --formats=liquid,html,jpg,png,pdf,js,vcf",
-    "dev:image": "npx @11ty/eleventy  --formats=liquid,html,jpg,png,pdf,js,vcf",
+    "build:image": "npx @11ty/eleventy --output=docs --formats=liquid,html,jpg,png,pdf,js,vcf,svg",
+    "dev:image": "npx @11ty/eleventy  --formats=liquid,html,jpg,png,pdf,js,vcf,svg",
     "build:css": "tailwindcss -i src/index.css -o _site/index.css && tailwindcss -i src/main.css -o _site/main.css  ",
     "dev:css": "tailwindcss -i src/index.css -o _site/index.css --watch "
   },
