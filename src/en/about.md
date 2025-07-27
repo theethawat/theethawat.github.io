@@ -16,11 +16,11 @@ next_page_name: Working Timeline
 ---
 
 <div class="flex flex-wrap my-4 items-start">
-<div class="lg:w-1/3 ">
+<div class="lg:w-1/3 md:w-1/2">
 <img src="/img/tin_photo.jpg" class="max-w-sm rounded-lg   h-48" />
     
 </div>
-    <div class="p-4 lg:p-1 lg:w-2/3">
+    <div class="p-4 lg:p-1 lg:w-2/3 md:w-1/2">
       <h1 class="text-xl lg:text-3xl lg:flex items-baseline">
         <div>Theethawat Savastham</div>
       </h1>
