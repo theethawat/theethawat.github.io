@@ -3,7 +3,11 @@ const tailwindcss = require("tailwindcss");
 const autoprefixer = require("autoprefixer");
 const sharp = require("sharp");
 const Image = require("@11ty/eleventy-img");
+const dayjs = require("dayjs");
+const _ = require("lodash");
 const { EleventyI18nPlugin } = require("@11ty/eleventy");
+const markdownIt = require("markdown-it");
+const markdownItAnchor = require("markdown-it-anchor");
 
 const GALLERY_IMAGE_WIDTH = 192;
 const LANDSCAPE_LIGHTBOX_IMAGE_WIDTH = 2000;
@@ -62,7 +66,7 @@ async function galleryImageShortcode(src, alt) {
 module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
     // any valid BCP 47-compatible language tag is supported
-    defaultLanguage: "en", // Required, this site uses "en"
+    defaultLanguage: "th", // Required, this site uses "en"
     // when normal use
     errorMode: "allow-fallback", //"never", // // Opting out of "strict"
     // when to build image
@@ -82,6 +86,40 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addLiquidShortcode("galleryImage", galleryImageShortcode);
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addFilter("friendlyDate", (dateObj) => {
+    return dayjs(dateObj).format("DD MMMM YYYY");
+  });
+  eleventyConfig.addFilter("extractHeaders", (content) => {
+    const headers = content.match(/<h[1-6][^>]*>(.*?)<\/h[1-6]>/g);
+    if (!headers) {
+      return [];
+    }
+    return headers.map((header) => {
+      const text = header.replace(/<[^>]+>/g, ""); // Remove HTML tags
+      const textWithHyphens = text.replace(/\s+/g, "-");
+      const cleanedId = textWithHyphens.replace(/-#$/, "");
+      return { text, id: cleanedId };
+    });
+  });
+
+  const md = markdownIt({ html: true }).use(markdownItAnchor, {
+    // Options for anchor generation
+    //    permalink: markdownItAnchor.permalink.ariaHidden({}),
+    slugify: (s) =>
+      encodeURIComponent(String(s).trim().toLowerCase().replace(/\s+/g, "-")),
+  });
+  eleventyConfig.setLibrary("md", md);
+  eleventyConfig.addFilter("onlyExcerpt", (content) => {
+    const excerptMatch = content.match(/<p>(.*?)<\/p>/);
+    if (excerptMatch) {
+      // Remove HTML tags from the excerpt
+      const textWithoutHtml = content.replace(/<\/?[^>]+(>|$)/g, "");
+      return _.truncate(textWithoutHtml, {
+        length: 200,
+      });
+    }
+    return "";
+  });
   return {
     dir: {
       input: "src",

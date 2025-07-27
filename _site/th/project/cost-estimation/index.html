@@ -125,17 +125,17 @@
           </div>
         </div>
         <div class="container px-8 py-10 lg:py-5  lg:px-32">
-          <div class="blog"><h2>Project Info</h2>
+          <div class="blog"><h2 id="project-info" tabindex="-1">Project Info</h2>
 <ul>
 <li><strong>รูปแบบงาน</strong> : งานวิจัยระดับปริญญาโท</li>
 <li><strong>ปี</strong> : 2566 - ปัจจุบัน</li>
 <li><strong>ที่ปรึกษา</strong>: ผศ.ดร. นิคม สุวรรณวร</li>
 <li><strong>ร่วมงานกับ</strong>: ศูนย์วิศวกรรมระบบอัตโนมัติอัจฉริยะ และ สาขาวิศวกรรมคอมพิวเตอร์ คณะวิศวกรรมศาสตร์ มหาวิทยาลัยสงขลานครินทร์</li>
 </ul>
-<h2>บทคัดย่อ</h2>
+<h2 id="%E0%B8%9A%E0%B8%97%E0%B8%84%E0%B8%B1%E0%B8%94%E0%B8%A2%E0%B9%88%E0%B8%AD" tabindex="-1">บทคัดย่อ</h2>
 <p>ต้นทุนมีส่วนสำคัญอย่างมากต่อผลกำไร และการตั้งราคาของสินค้าในสภาวะที่เสถียรภาพของห่วงโซ่อุปทานน้อยลง ในงานวิจัยต่างๆ ที่ผ่านมาได้มีการใช้เครื่องมือต่าง ๆ ทางการเรียนรู้ของเครื่องจักร (Machine Learning) เช่น โครงสร้างประสาทเทียม (Artificial Neural Network หรือ ANN) และโมเดลอื่น ๆ ที่สืบทอดไป รวมถึงยังมีการใช้หลักการของการปรับเส้นโค้ง (Curve Fitting) ที่ใช้ทฤษฎีวิเคราะห์การถดถอย (Regression Analysis) ต่าง ๆ งานวิจัยชิ้นนี้เสนอโมเดลลูกผสมสำหรับการประมาณการต้นทุน โดยได้จากการรวมจุดเด่นของการใช้การเรียนรู้เครื่องจักร และ การวิเคราะห์การถดถอย โมเดลที่สร้างขึ้นตั้งอยู่บนพื้นของการประมาณการต้นทุนแบบพาราเมตริกซ์ (Parametric Cost Estimation) ที่มีการแทนที่ความสัมพันธ์สำหรับการประมาณการต้นทุน (Cost Estimation Relationships หรือ CERs) แบบดั้งเดิมด้วยการใช้โครงสร้างประสาทเทียม และใช้หลักการประมาณการต้นโดยการวิเคราะห์ (Analytic Cost Estimation) ที่มีชื่อว่า การประมาณการต้นทุนฐานกิจกรรมตามเวลา (Time-Driven Activity-Based Costing หรือ TDABC) โดยในการทดลองนี้จะใช้ข้อมูลจากอุตสาหกรรมการผลิตเนื้อปูพาสเจอร์ไรซ์พร้อมทาน เป็นกรณีศึกษา โดยอยาภายใต้การรวมทุกขั้นตอนการผลิตเป็นขั้นตอนเดียว การทำงานเริ่มจากปรับสมการหลักของการประมาณการต้นทุนฐานกิจกรรมตามเวลา ให้เหมาะสมกับโครงสร้างประสาทเทียม จากนั้นแปลงสมการให้ออกมาเป็นโมเดล ที่มีหน่วยประมวลกลาง รับผลลัพธ์มาจากหน่วยประมวลผลย่อยของต้นทุนในกลุ่มต่าง ๆ โมเดลถูกออกแบบให้มีค่าน้ำหนักของตัวแปรแต่ละตัวในส่วนย่อยของโมเดล น้ำหนักของส่วนย่อยต่อโมเดล รวมถึงค่าคงที่ที่สามารถเรียนรู้ได้อย่างไบแอส (Bias) โดยจะมีการตั้งค่าเริ่มต้นให้ในรอบที่หนึ่งของการให้การเรียนรู้ และในแต่ละรอบส่วนประกอบทั้งสามส่วนย่อยของโมเดล จะประมาณการต้นทุน และจะมารวมกันเป็นต้นทุนของสินค้า และเช่นนั้นเองในแต่ละรอบของการเรียนรู้ ค่าน้ำหนัก และ ไบแอส จะถูกปรับโดยใช้วิธีที่ได้รับแรงบันดาลใจมาจากการถดถอยของกราเดียนต์ (Gradient Descent) โดยใช้ค่าอนุพันธ์ของค่าเฉลี่ยข้อผิดพลาดกำลังสอง (Mean Square Error) ที่ได้จากการเปรียบเทียบระหว่างต้นทุนที่ทำนายได้โดยโมเดล และต้นทุนจริงของข้อมูลที่เข้ามาสอนโมเดล นอกจากนี้ยังมีการใช้หลักการการทำให้อยู่ในรูปปกติ (Normalization), การกำจัดข้อมูลที่ผิดปกติ (Outlier Removal) และ การเสริมข้อมูล (Data Augmentation) เพื่อลดความซับซ้อน และเพิ่มประสิทธิภาพการทำงานของโมเดล ผลจากการทดลองพบว่าโมเดลสามารถประมาณการต้นทุนในชุดข้อมูลจริงของโรงงานได้ มีความผิดพลาด 15.76 % ภายหลังจากการมีการกำจัดข้อมูลที่ผิดปกติและการเสริมข้อมูลแล้ว แต่ในข้อมูลที่มีความซับซ้อนสูงขึ้น ยังต้องมีการปรับแต่งและพัฒนาเพิ่มขึ้น เพื่อให้โมเดลสามารถประมาณการและได้ผลออกมาเป็นที่พอใจได้</p>
-<h2>การตีพิมพ์</h2>
-<h3>Time Driven Cost Estimation Learning Model - Theethawat Savastham &amp; Nikom Suvonvorn</h3>
+<h2 id="%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%95%E0%B8%B5%E0%B8%9E%E0%B8%B4%E0%B8%A1%E0%B8%9E%E0%B9%8C" tabindex="-1">การตีพิมพ์</h2>
+<h3 id="time-driven-cost-estimation-learning-model---theethawat-savastham-%26-nikom-suvonvorn" tabindex="-1">Time Driven Cost Estimation Learning Model - Theethawat Savastham &amp; Nikom Suvonvorn</h3>
 <p>Conference Paper ใน <a href="https://link.springer.com/book/10.1007/978-981-96-1531-5">Genetic and Evolutionary Computing</a>, ในซีรีส์ของ Lecture Notes in Electrical Engineering (LNEE,volume 1321), Springer, 8 กุมภาพันธ์ 2568 จากการนำเสนอในการประชุมวิชาการ <a href="https://icgec24.github.io/">International Conference on Genetic and Evolutionary Computing 2024 (ICGEC-2024)</a>, เมืองมิยาซากิ จังหวัดมิยาซากิ ประเทศญี่ปุ่น เมื่อ 28 สิงหาคม 2567</p>
 <p>Savastham, T., Suvonvorn, N. (2025). Time-Driven Cost Estimation Learning Model. In: Pan, JS., Zin, T.T., Sung, TW., Lin, J.CW. (eds) Genetic and Evolutionary Computing. ICGEC 2024. Lecture Notes in Electrical Engineering, vol 1321. Springer, Singapore. https://doi.org/10.1007/978-981-96-1531-5_26</p>
 <p><a href="https://link.springer.com/chapter/10.1007/978-981-96-1531-5_26"><button class="btn btn-sm btn-accent">Go To Paper</button></a></p>
@@ -214,15 +214,18 @@
               <strong>Theethawat</strong>
               &
               <strong>The Duck Creator</strong>, Web Content is licensed
-                by
+                                                by
               <a rel="license" class="link" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons 4.0 BY International</a>
-              <br/>Front Page Made by
+              <br/> Front Page Made by
               <a href="https://www.11ty.dev/">11ty
               </a>Server
-                                                                      By
+                                          By
               <a class="link" href="https://github.com/theethawat">GitHub Page</a>
               on
               <a class="link" href="https://github.com">GitHub</a>
+              Free SVG Backgrounds and Patterns by<a class="link" href="https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/">
+                SVGBackgrounds.com
+              </a>
             </p>
           </div>
         </footer>

@@ -28,6 +28,10 @@
   },
   "dependencies": {
     "@11ty/eleventy-img": "^4.0.2",
+    "dayjs": "^1.11.13",
+    "lodash": "^4.17.21",
+    "markdown-it": "^14.1.0",
+    "markdown-it-anchor": "^9.2.0",
     "photoswipe": "^5.4.4",
     "sharp": "^0.33.4"
   }

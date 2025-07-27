@@ -49,7 +49,9 @@ list-style-position: inside;
 margin-left:2em;
 }
 
-
+blockquote {
+  @apply alert bg-gray-100 my-2 pt-4 pb-0;
+}
 
 
  .btn a {

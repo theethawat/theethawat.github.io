@@ -1,0 +1,36 @@
+---
+layout: mainlayout.njk
+title: Blogs
+subtitle: บทความ
+---
+
+<div class="py-10 lg:py-5">
+  <div class="flex flex-wrap my-4 py-4">
+    <div class="w-full lg:w-4/6 px-4">
+      <div>
+        {%- for post in collections.post -%}
+          <div{% if page.url == post.url %} aria-current="page"{% endif %}>
+          <h2 class="text-2xl font-normal">
+            {{ post.data.title }}
+          </h2>  
+          <p>
+            {{ post.content | onlyExcerpt}}
+          </p>
+        </div>
+        {%- endfor -%}
+      </div>
+    </div>
+    <div class="w-full lg:w-2/6">
+      <div>
+        <h3 class="text-xl font-semibold mb-2">
+          <i class="fa-solid fa-list mr-2"></i>
+          Table of Contents
+        </h3>
+        <hr class="py-0" />
+        <div class="py-4 rounded-xl">
+          <ul class="list-disc ml-4"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

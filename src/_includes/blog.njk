@@ -1,112 +1,66 @@
+---
+title: My Rad Blog
+---
 
 <!DOCTYPE html>
-<html lang="">
+<html lang="{{ lang }}">
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Blogs - บทความ</title>
-    <meta property="description" content="บทความ"/>
-    <meta property="og:title" content="Blogs"/>
+    <title>{{ title }} - {{ subtitle }}</title>
+    <meta property="description" content="{{ subtitle | safe }}"/>
+    <meta property="og:title" content="{{ title }}"/>
     <meta property="og:type" content="text/html"/>
-    <meta property="og:description" content="บทความ"/>
+    <meta property="og:description" content="{{ subtitle | safe }}"/>
     <meta property="og:image" content="https://www.theduckcreator.in.th/assets/Logo2021/Banner2021.png"/>
     <link href="https://fonts.googleapis.com/css?family=Kanit:300,400&display=swap" rel="stylesheet"/>
     <link rel="icon" href="/img/ThSFavicon.png"/>
-    <link rel="stylesheet" href="/index.css">
-    <link rel="stylesheet" href="/main.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/index.css">
-    <link rel="alternate" hreflang="" href="/en/blog/">
-    
-      <link rel="alternate" hreflang="th" href="https://www.11ty.dev/th/blog/">
-    
+    <link rel="stylesheet" href="{{ '/index.css' | url }}">
+    <link rel="stylesheet" href="{{ '/main.css' | url }}">
+    <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
+    <link rel="stylesheet" href="{{ '/index.css' | url }}">
+    <link rel="alternate" hreflang="{{ lang }}" href="{{ page.url }}">
+    {% for link in page.url | locale_links %}
+      <link rel="alternate" hreflang="{{ link.lang }}" href="https://www.11ty.dev{{ link.url }}">
+    {% endfor %}
   </head>
   <body class="bg-base-100">
     <nav class="navbar" role="navigation" aria-label="main navigation" class="rounded-md">
       <div class="navbar bg-base-100">
         <div class="flex-1">
-          <a class="btn btn-ghost normal-case text-xl" href="/en/">
+          <a class="btn btn-ghost normal-case text-xl" href="{{ "/" | locale_url }}">
             <img src="/img/logo.png" class="w-36"/>
           </a>
         </div>
         <div class="flex-none">
           <ul class="menu menu-horizontal px-1 pr-10">
-            
-              
+            {% for item in navigation[page.lang] %}
+              {% if item.inside == false %}
                 <li class="hidden md:block">
-                  <a href="/en/about/">About</a>
+                  <a href="{{ item.url }}">{{ item.text }}</a>
                 </li>
-              
-            
-              
-                <li class="hidden md:block">
-                  <a href="/en/timeline/">Working Timeline</a>
-                </li>
-              
-            
-              
-                <li class="hidden md:block">
-                  <a href="/en/project/">Portfolio</a>
-                </li>
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-            
+              {% endif %}
+            {% endfor %}
+            {% for link in page.url | locale_links %}
+              {%- if not loop.first %},{% endif %}
               <li>
-                <a href="/th/blog/" lang="th" hreflang="th">
-                  <img class="w-5 py-1" src="/img/th.png"/>
+                <a href="{{ link.url }}" lang="{{ link.lang }}" hreflang="{{ link.lang }}">
+                  <img class="w-5 py-1" src="/img/{{ link.lang }}.png"/>
                 </a>
               </li>
-            
+            {% endfor %}
             <li>
               <details>
                 <summary>
-                  Menu
+                  {{ language[page.lang].menuText }}
                 </summary>
                 <ul class="p-2 bg-base-100">
-                  
+                  {% for item in navigation[page.lang] %}
                     <li>
-                      <a href="/en/about/">About</a>
+                      <a href="{{ item.url }}">{{ item.text }}</a>
                     </li>
-                  
-                    <li>
-                      <a href="/en/timeline/">Working Timeline</a>
-                    </li>
-                  
-                    <li>
-                      <a href="/en/project/">Portfolio</a>
-                    </li>
-                  
-                    <li>
-                      <a href="/en/skill/">Skill</a>
-                    </li>
-                  
-                    <li>
-                      <a href="/en/cv/">CV</a>
-                    </li>
-                  
-                    <li>
-                      <a href="/en/event/">Upcoming Event</a>
-                    </li>
-                  
-                    <li>
-                      <a href="https://dev.theduckcreator.in.th">Server</a>
-                    </li>
-                  
-                    <li>
-                      <a href="/en/vcard/">Contact</a>
-                    </li>
-                  
+                  {% endfor %}
                 </ul>
               </details>
             </li>
@@ -116,119 +70,72 @@
           <div class="px-8 lg:px-32 py-8 bg-gray-100 tdc-hero">
             <div class="flex gap-4 items-center">
               <div>
-                
-                <h1 class="text-2xl lg:text-4xl my-0 py-0 font-semibold ">Blogs</h1>
-                <h2 class=" text-gray-800 text-lg my-0 py-0 font-normal">
-                  บทความ</h2>
+                {{ project.html }}
+                <h1 class="text-2xl lg:text-4xl my-0 py-0 font-semibold ">{{ title }}</h1>
+                <h2 class=" text-gray-600 text-base my-2 py-0 font-normal">
+                  <i class="fa-solid fa-circle-user"></i>
+                  {{ author }} <span class="mx-2"/>
+                  <i class="fa-solid fa-calendar-days"></i>
+                  {{ date | friendlyDate }}</h2>
               </div>
             </div>
           </div>
         </div>
         <div class="container px-8 py-10 lg:py-5  lg:px-32">
-          <div class="blog">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-  <div class="card bg-base-100 shadow-xl">
-    <figure>
-      <img
-        src="/img/blog/tdc.png"
-        alt="theduckcreator blog assets"
-        class="h-48 w-full object-center object-cover"
-      />
-    </figure>
-    <div class="card-body">
-      <h2 class="card-title">
-        <a
-          style="text-decoration: none; color: black"
-          href="https://theduckcreator.in.th"
-          >The Duck Creator.in.th</a
-        >
-      </h2>
-
-      <div class="kanitlight text-lg">
-        บทความเกี่ยวกับคอมพิวเตอร์ / ประสบการณ์ / วิชาการ
-      </div>
-
-      <p>
-        เริ่มเขียนตั้งแต่ปี 2019 ในชื่อ เดอะดักส์ครีเอเตอร์
-        จากคอนเสปของการทำอะไรเล่น ๆ ในงานที่ใครไม่ต้องการแต่เราต้องการ
-        จนเกิดความรู้ และสามารถแบ่งปันให้กับคนรอบข้างได้
-      </p>
-      <div class="card-actions justify-end">
-        <a
-          class="btn btn-primary btn-sm"
-          style="color: white; text-decoration: none"
-          href="https://theduckcreator.in.th"
-        >
-          Visit
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="card bg-base-100 shadow-xl">
-    <figure>
-      <img
-        src="/img/blog/theethawatdev.jpg"
-        alt="The Duck Creator Logo"
-        class="w-full h-48 object-center object-cover"
-      />
-    </figure>
-    <div class="card-body">
-      <h2 class="card-title">
-        <a
-          style="text-decoration: none; color: black"
-          href="https://blog.theethawat.dev"
-          >blog.theethawat.dev</a
-        >
-      </h2>
-
-      <div class="kanitlight text-lg">บทความส่วนตัว</div>
-
-      <p>
-        บล็อกส่วนตัว งานเขียนต่างๆ รวมถึงบนความที่เคยเขียนไว้ในที่ต่าง ๆ งานต่าง
-        ๆ ด้วย
-      </p>
-      <div class="card-actions justify-end">
-        <a
-          class="btn btn-primary btn-sm"
-          style="color: white; text-decoration: none"
-          href="https://blog.theethawat.dev"
-        >
-          Visit
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
+          <div class="flex flex-wrap  my-4 py-4">
+            <div class="w-full lg:w-4/6 px-4">
+              <div class="blog">{{ content | safe }}</div>
+            </div>
+            <div class="w-full lg:w-2/6">
+              <div>
+                <h3 class="text-xl font-semibold mb-2">
+                  <i class="fa-solid fa-list mr-2"></i>
+                  Table of Contents</h3>
+                <hr class="py-0"/>
+                <div class="py-4 rounded-xl">
+                  <ul class="list-disc ml-4">
+                    {% set headers = content | extractHeaders %}
+                    {% for header in headers %}
+                      <li>
+                        <a href="#{{ header.id }}" class="hover:link hover:text-accent">{{ header.text }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="h-10"></div>
           <div class="flex w-full justify-between">
-            
-              <a class="btn btn-block w-1/2 md:w-1/4 justify-between mx-2 " href=/contact>
+            {% if prev_page %}
+              <a class="btn btn-block w-1/2 md:w-1/4 justify-between mx-2 " href={{ prev_page }}>
                 <i class="fas fa-chevron-left"></i>
                 <div class="text-left">
                   <div class="text-xs font-thin">
                     Prev
                   </div>
                   <div>
-                    Contact
+                    {{ prev_page_name }}
                   </div>
                 </div>
               </a>
-            
-            
-            
-              <a href=/personal-life class="btn btn-block w-1/2 md:w-1/4 justify-between  btn-outline mx-2">
+            {% endif %}
+            {% if not prev_page %}
+              <div></div>
+            {% endif %}
+            {% if next_page %}
+              <a href={{ next_page }} class="btn btn-block w-1/2 md:w-1/4 justify-between  btn-outline mx-2">
                 <div class="text-left">
                   <div class="text-xs font-thin">
                     Next
                   </div>
                   <div>
-                    Personal Life
+                    {{ next_page_name }}
                   </div>
                 </div>
                 <i class="fas fa-chevron-right"></i>
               </a>
-            
+            {% endif %}
           </div>
         </div><br/> <br/><br/><footer class="footer footer-center p-10 bg-base-200 text-base-content rounded">
           <div>
@@ -274,12 +181,12 @@
               <strong>Theethawat</strong>
               &
               <strong>The Duck Creator</strong>, Web Content is licensed
-                                                by
+                by
               <a rel="license" class="link" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons 4.0 BY International</a>
               <br/> Front Page Made by
               <a href="https://www.11ty.dev/">11ty
               </a>Server
-                                          By
+                                                                      By
               <a class="link" href="https://github.com/theethawat">GitHub Page</a>
               on
               <a class="link" href="https://github.com">GitHub</a>
