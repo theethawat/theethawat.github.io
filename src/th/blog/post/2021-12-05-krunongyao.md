@@ -3,10 +3,12 @@ title: ครูนงเยาวน์ กับอีกหนึ่งจุ
 subtitle: ธีร์ธวัช ธีร์ธวัช เธอเรียกใคร ครูอยู่ในห้อง เธอต้องเกรงใจครูด้วย
 layout: blog.njk
 author: Theethawat Savastham
-category: life
+categories:
+  - life
 created_year: 2021
 comments: true
 date: 2021-12-05
+updated_date: 2025-07-28
 tags: post
 ---
 
@@ -56,7 +58,3 @@ tags: post
 
 ธีร์ธวัช สวาสดิ์ธรรม
 นักเรียนที่เรียนชั้น ม. 4/1 ปีการศึกษา 2556
-
-<hr/>
-- **First Publish** blog.theethawat.dev : วันที่ 5 ธันวาคม 2021
-- **Move to**  TheDuckCreator.in.th : 21 กรกฎาคม 2025

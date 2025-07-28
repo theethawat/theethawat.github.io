@@ -85,6 +85,37 @@ title: My Rad Blog
           <div class="flex flex-wrap  my-4 py-4">
             <div class="w-full lg:w-4/6 px-4">
               <div class="blog">{{ content | safe }}</div>
+              <hr/>
+              <div class="flex gap-4 my-2 items-center kanitlight text-neutral">
+                <div>
+                  <i class="fa-solid fa-clock-rotate-left"></i>
+                  Latest Update : {{ updated_date | friendlyDate }}
+                </div>
+                <div>
+                  <i class="fa-solid fa-tags"></i>
+                  Tags:
+                  <span class="ml-2">
+                    {% for category in categories %}
+                      <div class="badge badge-ghost kanitlight">{{ category }}</div>
+                    {% endfor %}
+                  </span>
+                </div>
+              </div>
+              {% if comments %}
+                <div id="disqus_thread"></div>
+                <script>
+                  (function () { // DON'T EDIT BELOW THIS LINE
+                    var d = document,
+                      s = d.createElement('script');
+                    s.src = 'https://tdc-space.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', + new Date());
+                    (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the
+                  <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript>
+              {% endif %}
             </div>
             <div class="w-full lg:w-2/6">
               <div>
@@ -181,12 +212,12 @@ title: My Rad Blog
               <strong>Theethawat</strong>
               &
               <strong>The Duck Creator</strong>, Web Content is licensed
-                by
+                                                                                                by
               <a rel="license" class="link" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons 4.0 BY International</a>
               <br/> Front Page Made by
               <a href="https://www.11ty.dev/">11ty
               </a>Server
-                                                                      By
+                            By
               <a class="link" href="https://github.com/theethawat">GitHub Page</a>
               on
               <a class="link" href="https://github.com">GitHub</a>

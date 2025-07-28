@@ -17,6 +17,11 @@ module.exports = {
       inside: false,
     },
     {
+      text: "บล็อก",
+      url: "/th/blog/",
+      inside: false,
+    },
+    {
       text: "ความสามารถ",
       url: "/th/skill/",
       inside: true,
@@ -56,6 +61,11 @@ module.exports = {
     {
       text: "Portfolio",
       url: "/en/project/",
+      inside: false,
+    },
+    {
+      text: "Blogs",
+      url: "/en/blog/",
       inside: false,
     },
     {

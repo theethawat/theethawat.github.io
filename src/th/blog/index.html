@@ -1,27 +1,41 @@
 ---
 layout: mainlayout.njk
-title: Blogs
-subtitle: บทความ
+title: บทความ
+subtitle: Blogs
 ---
 
 <div class="py-10 lg:py-5">
-  <div class="flex flex-wrap my-4 py-4">
+  <h3>บทความล่าสุด</h3>
+  <div class="flex flex-wrap my-2">
     <div class="w-full lg:w-4/6 px-4">
       <div>
         {%- for post in collections.post -%}
-          <div{% if page.url == post.url %} aria-current="page"{% endif %}>
-          <h2 class="text-2xl font-normal">
+          <div{% if page.url == post.url %} aria-current="page"{% endif %} class="py-4">
+          <a href="{{ post.url }}" class="no-underline" style="text-decoration: none;" >
+          <h2 class="text-2xl font-normal no-underline text-neutral hover:text-accent">
             {{ post.data.title }}
           </h2>  
+          </a>
           <p>
             {{ post.content | onlyExcerpt}}
           </p>
+          <div class="flex gap-5 items-center">
+            <div class="kanitlight text-neutral">
+              <i class="fa-solid fa-calendar"></i> {{ post.date | friendlyDate }}
+            </div>
+             <div>
+              <i class="fa-solid fa-tags"></i>
+              {% for category in post.data.categories %}
+              <div class="badge badge-ghost kanitlight">{{ category | capitalize }}</div>
+              {% endfor %}
+            </div>
+          </div>
         </div>
         {%- endfor -%}
       </div>
     </div>
     <div class="w-full lg:w-2/6">
-      <div>
+      <!-- <div>
         <h3 class="text-xl font-semibold mb-2">
           <i class="fa-solid fa-list mr-2"></i>
           Table of Contents
@@ -30,7 +44,7 @@ subtitle: บทความ
         <div class="py-4 rounded-xl">
           <ul class="list-disc ml-4"></ul>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>

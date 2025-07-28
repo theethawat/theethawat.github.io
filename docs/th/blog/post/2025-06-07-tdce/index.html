@@ -1,0 +1,386 @@
+
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Time Driven Cost Estimation Learning Model - </title>
+    <meta property="description" content=""/>
+    <meta property="og:title" content="Time Driven Cost Estimation Learning Model"/>
+    <meta property="og:type" content="text/html"/>
+    <meta property="og:description" content=""/>
+    <meta property="og:image" content="https://www.theduckcreator.in.th/assets/Logo2021/Banner2021.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Kanit:300,400&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="/img/ThSFavicon.png"/>
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/index.css">
+    <link rel="alternate" hreflang="" href="/th/blog/post/2025-06-07-tdce/">
+    
+  </head>
+  <body class="bg-base-100">
+    <nav class="navbar" role="navigation" aria-label="main navigation" class="rounded-md">
+      <div class="navbar bg-base-100">
+        <div class="flex-1">
+          <a class="btn btn-ghost normal-case text-xl" href="/th/">
+            <img src="/img/logo.png" class="w-36"/>
+          </a>
+        </div>
+        <div class="flex-none">
+          <ul class="menu menu-horizontal px-1 pr-10">
+            
+              
+                <li class="hidden md:block">
+                  <a href="/th/about/">เกี่ยวกับ</a>
+                </li>
+              
+            
+              
+                <li class="hidden md:block">
+                  <a href="/th/timeline/">ประวัติการทำงาน</a>
+                </li>
+              
+            
+              
+                <li class="hidden md:block">
+                  <a href="/th/project/">แฟ้มผลงาน</a>
+                </li>
+              
+            
+              
+                <li class="hidden md:block">
+                  <a href="/th/blog/">บล็อก</a>
+                </li>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+            
+            <li>
+              <details>
+                <summary>
+                  เมนู
+                </summary>
+                <ul class="p-2 bg-base-100">
+                  
+                    <li>
+                      <a href="/th/about/">เกี่ยวกับ</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/th/timeline/">ประวัติการทำงาน</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/th/project/">แฟ้มผลงาน</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/th/blog/">บล็อก</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/th/skill/">ความสามารถ</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/th/cv/">CV</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/th/event/">กิจกรรมที่กำลังจะมาถึง</a>
+                    </li>
+                  
+                    <li>
+                      <a href="https://dev.theduckcreator.in.th">เซิฟเวอร์</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/th/vcard/">ติดต่อ</a>
+                    </li>
+                  
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </nav>
+        <div class="w-full h-32">
+          <div class="px-8 lg:px-32 py-8 bg-gray-100 tdc-hero">
+            <div class="flex gap-4 items-center">
+              <div>
+                
+                <h1 class="text-2xl lg:text-4xl my-0 py-0 font-semibold ">Time Driven Cost Estimation Learning Model</h1>
+                <h2 class=" text-gray-600 text-base my-2 py-0 font-normal">
+                  <i class="fa-solid fa-circle-user"></i>
+                  Theethawat Savastham <span class="mx-2"/>
+                  <i class="fa-solid fa-calendar-days"></i>
+                  07 June 2025</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container px-8 py-10 lg:py-5  lg:px-32">
+          <div class="flex flex-wrap  my-4 py-4">
+            <div class="w-full lg:w-4/6 px-4">
+              <div class="blog"><h1 id="time-driven-cost-estimation-learning-model-(tdce)" tabindex="-1">Time Driven Cost Estimation Learning Model (TDCE)</h1>
+<p>This is the open-source part of Time-Driven Cost Estimation Learning Model under the research titled &quot;Artificial Neural Network like for Manufacturing Cost Estimation&quot; wish to create neural network like system by using the core equation of time-driven activity-based costing.</p>
+<h2 id="starting" tabindex="-1">Starting</h2>
+<p>Creating ENV followed by <code>.env.example</code> and then Creating your virtual environment</p>
+<pre><code>python -m venv venv
+venv/Script/activate
+</code></pre>
+<p>Install all requirements</p>
+<pre><code>pip install -r requirement.txt
+</code></pre>
+<h2 id="repository-structure" tabindex="-1">Repository Structure</h2>
+<p>The Model is structure into folder model, functions. The model and functions that related to <strong>model</strong> is located in folder model and the <strong>function</strong> contain the function to do the experiment.</p>
+<h2 id="model" tabindex="-1">Model</h2>
+<p>The model is located in <code>model/</code> folder. The main file is <code>tdce_model.py</code> which is a based model of TDCE.</p>
+<h3 id="main-model" tabindex="-1">Main Model</h3>
+<p>TDCE class is the main class of our model. It was constructed by 3 elements which are <code>self.material_element</code>, <code>selef.employee_element</code>, and <code>self.capital_cost_element</code>. The material element is non-time driven element, it came from the <code>material_network.py</code> while employee and capital cost (or called utility cost in the thesis and article) were time-driven elements, which came from <code>time_driven_network</code>.</p>
+<p>On this main class, it located function <code>fit_with_validation</code> for a training. The procedure of them can be listed as.</p>
+<ul>
+<li>
+<p><strong>Normalize the payload</strong> by using function <code>mnorm.normalize_payload()</code> which come from <code>normalize.py</code>.</p>
+</li>
+<li>
+<p><strong>Training Period</strong> for each epoch or iterations, errors are initialize with 0. Then we iteration over the samples, find the payload of sample, and find the associated validation sample. We send the sample into each model element under the function <code>predict_sample()</code> and recieve their results and do that again for the validation data sample. Finally we combined the result weighted by the model-level weight.</p>
+</li>
+<li>
+<p><strong>Back Propagation</strong> Follwed by the training, in the same iteration, we find the derviative of error (MSE) ad we find the gradient of each model-level weight.</p>
+</li>
+</ul>
+<pre><code class="language-python">   loss_prime = self.loss_prime(result_input, result)
+   material_weight_error = np.dot(predicted_mc, loss_prime)
+
+</code></pre>
+<h3 id="model-element" tabindex="-1">Model-Element</h3>
+<p>For the element-level weight, we pass it to the <code>back_propagate</code> function. To make the element-level learning from the previous iteration error. It adjust their weight and biases using gradient descent-liked algorithm as same as the model-level weight and bias. After the <code>back_propagate</code> function is called (in file <code>network.py</code>) it will forward into the layer inside the model element (<code>material_fc_layer.py</code>,<code>capital_fc_layer.py</code>, and <code>employee_fc_layer.py</code>).</p>
+<p>The model is not fully constructed is file <code>tdce_model.py</code> because it depends on the input. We will construt it before we use.</p>
+<h2 id="experiment" tabindex="-1">Experiment</h2>
+<p>On the Artifical Neural Network-Like for Manufacturing Cost Estimation Project, we evaluate the model with the experiment inside the folder <code>experiment</code>. We using 4 set of datasets, 3 from simulation and 1 from the actual dataset. The actual dataset is prohibit to display and open. Three simulation datasets consist of <strong>Simple Dataset</strong>, <strong>Complicated Dataset</strong> (High Variation), and <strong>Extended Random Dataset</strong> (High data dimension).</p>
+<h3 id="data-gathering" tabindex="-1">Data Gathering</h3>
+<p>The three set of data (Simple,Complicated,Actual) is created by upload the based data into IAEC Manufacturing ERP System &quot;E-Manufac&quot; and retrieve the data using REST API. The Code of data retrival can be located at <code>functions/data_extractor</code> directory, while the <code>emanufac_tdabc_extractor_class.py</code> is the main code. After the data was retrieved, it saved into the CSV file and the code in <code>adjust_data.py</code> was employed to intial preprocessing.</p>
+<p>For testing or validate our model, without access to the E-Manufac system. The simulation dataset can be downloaded from HuggingFace Dataset (the actual dataset will not provided).</p>
+<ul>
+<li><a href="https://huggingface.co/datasets/theethawats98/tdce-example-simple-dataset">Simple Dataset</a></li>
+<li><a href="https://huggingface.co/datasets/theethawats98/tdce-example-complicated-dataset">Complicated Dataset</a></li>
+<li><a href="https://huggingface.co/datasets/theethawats98/tdce-example-extended-random">Extended Random Dataset</a></li>
+</ul>
+<p>Go to tab <strong>Files and Version</strong> and download their files. File names are initial with the name <code>generated</code>. If you want to use our experiment script, please create the directory named <code>dataset</code> and then create folder for each set, and put all files of each set insided.</p>
+<h3 id="construct-experiment" tabindex="-1">Construct Experiment</h3>
+<p>On our research project, we create the validation experiment as a script, which is located in <code>experiment/experiment_script.py</code> the main function name is <code>run_experiment</code>.</p>
+<p>This require the setting parameters like <code>data_directory</code>, <code>epoch</code> amount, <code>folder_name</code> to keep the result, <code>round_number</code> to specify the amount of training replication for preventing the error, <code>learning_rate_list</code> for learning rate which used for testing, we can use multiple learning rate at one time you run this script.</p>
+<p>We also provide the experimented scenario to choose and test which boolean parameters.</p>
+<ul>
+<li>
+<p><strong>Outlier Removal</strong> - Set the <code>remove_outlier_qtr</code> to <code>True</code> for enable, with using iterquartile range, you can specify the <code>outlier_index</code> to remove (the default is <code>1.5</code> which refer to 1.5IQR will reject as outliers).</p>
+</li>
+<li>
+<p><strong>Early Stopping</strong> - You can preventing the high validation error and improve model regularization using the early stopping, by enable <code>early_stopping</code> as <code>True</code> and also can modify the <code>patience_round</code> for the model.</p>
+</li>
+<li>
+<p><strong>Data Augmentation</strong> - Enable or Disable Class balacing for the input material by enable the flag <code>augmentation</code>.</p>
+</li>
+</ul>
+<p>The script will load the data from the defined directory and use them to perform the experiment.</p>
+<h2 id="example" tabindex="-1">Example</h2>
+<p>For the easier experiment, we provide the Jupyter Notebook file to construct the model and training. In GitHub, You can visit the <a href="/example/1-Basic-Model-Constructor.ipynb">1-Basic-Model-Construction.ipynb</a> and if you visit this repo from Huggingface, you can go to Huggingface's <a href="https://huggingface.co/iaecpsu-1/tdce-basic/blob/main/example/1-Basic-Model-Constructor.ipynb">1-Basic-Model-Construction.ipynb</a> and click the button <strong>Open in Collab</strong> to re-run this experiment. Or if you open from GitHub, you can open in GitHub Codespace to run your own Jupyter Notebook.</p>
+<p>© 2024, Prince of Songkla University under the Inteligent Automation Engineering Center, Faculty of Engineering.</p>
+</div>
+              <hr/>
+              <div class="flex gap-4 my-2 items-center kanitlight text-neutral">
+                <div>
+                  <i class="fa-solid fa-clock-rotate-left"></i>
+                  Latest Update : 28 July 2025
+                </div>
+                <div>
+                  <i class="fa-solid fa-tags"></i>
+                  Tags:
+                  <span class="ml-2">
+                    
+                      <div class="badge badge-ghost kanitlight">programing</div>
+                    
+                      <div class="badge badge-ghost kanitlight">research</div>
+                    
+                  </span>
+                </div>
+              </div>
+              
+                <div id="disqus_thread"></div>
+                <script>
+                  (function () { // DON'T EDIT BELOW THIS LINE
+                    var d = document,
+                      s = d.createElement('script');
+                    s.src = 'https://tdc-space.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', + new Date());
+                    (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the
+                  <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript>
+              
+            </div>
+            <div class="w-full lg:w-2/6">
+              <div>
+                <h3 class="text-xl font-semibold mb-2">
+                  <i class="fa-solid fa-list mr-2"></i>
+                  Table of Contents</h3>
+                <hr class="py-0"/>
+                <div class="py-4 rounded-xl">
+                  <ul class="list-disc ml-4">
+                    
+                    
+                      <li>
+                        <a href="#Time-Driven-Cost-Estimation-Learning-Model-(TDCE)" class="hover:link hover:text-accent">Time Driven Cost Estimation Learning Model (TDCE)</a>
+                      </li>
+                    
+                      <li>
+                        <a href="#Starting" class="hover:link hover:text-accent">Starting</a>
+                      </li>
+                    
+                      <li>
+                        <a href="#Repository-Structure" class="hover:link hover:text-accent">Repository Structure</a>
+                      </li>
+                    
+                      <li>
+                        <a href="#Model" class="hover:link hover:text-accent">Model</a>
+                      </li>
+                    
+                      <li>
+                        <a href="#Main-Model" class="hover:link hover:text-accent">Main Model</a>
+                      </li>
+                    
+                      <li>
+                        <a href="#Model-Element" class="hover:link hover:text-accent">Model-Element</a>
+                      </li>
+                    
+                      <li>
+                        <a href="#Experiment" class="hover:link hover:text-accent">Experiment</a>
+                      </li>
+                    
+                      <li>
+                        <a href="#Data-Gathering" class="hover:link hover:text-accent">Data Gathering</a>
+                      </li>
+                    
+                      <li>
+                        <a href="#Construct-Experiment" class="hover:link hover:text-accent">Construct Experiment</a>
+                      </li>
+                    
+                      <li>
+                        <a href="#Example" class="hover:link hover:text-accent">Example</a>
+                      </li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="h-10"></div>
+          <div class="flex w-full justify-between">
+            
+            
+              <div></div>
+            
+            
+          </div>
+        </div><br/> <br/><br/><footer class="footer footer-center p-10 bg-base-200 text-base-content rounded">
+          <div>
+            <div class="grid grid-flow-col gap-4">
+              <a class="link link-hover"><img src="/img/logo.png" class="image piccenter " style="height:70px;"/>
+              </a>
+              <a class="link link-hover" href="https://theduckcreator.in.th">
+                <img src="/img/logotdc.png" class="image piccenter" style="height:70px;"/>
+              </a>
+            </div>
+          </div>
+          <div>
+            <div class="grid grid-flow-col gap-4">
+              <a href="https://github.com/theethawat" title="Github Theethawat" target="_blank">
+                <i class="fa-brands fa-github  text-xl mx-1 my-2"></i>
+              </a>
+              <a href="https://facebook.com/tin.savastham" title="Theethawat Savastham Facebook" target="_blank">
+                <i class="fa-brands fa-facebook  text-xl mx-1 my-2"></i>
+              </a>
+              <a href="https://instagram.com/tin_savastham" title="Theethawat IG" target="_blank">
+                <i class="fa-brands fa-instagram  text-xl mx-1 my-2"></i>
+              </a>
+              <a href="https://threads.net/tin_savastham" title="Theethawat Threads" target="_blank">
+                <i class="fa-brands fa-square-threads  text-xl mx-1 my-2"></i>
+              </a>
+              <a href="https://th.linkedin.com/in/theethawat-savastham" title="Linkedin" target="_blank">
+                <i class="fa-brands fa-linkedin  text-xl mx-1 my-2"></i>
+              </a>
+              <a href="https://www.youtube.com/channel/UCCJCyyJie_v2t76AcJZvjVA" title="Youtube" target="_blank">
+                <i class="fa-brands fa-youtube  text-xl mx-1 my-2"></i>
+              </a>
+              <a href="http://line.me/ti/p/~svstin1998" title="Line" target="_blank">
+                <i class="fa-brands fa-line  text-xl mx-1 my-2"></i>
+              </a>
+              <a href="mailto:theethawat@outlook.co.th" title="Line" target="_blank">
+                <i class="fa-solid fa-envelope  text-xl mx-1 my-2"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <p class="kanitlight">
+              &copy; 2023 - 2025
+              <strong>Theethawat</strong>
+              &
+              <strong>The Duck Creator</strong>, Web Content is licensed
+                                                                                                by
+              <a rel="license" class="link" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons 4.0 BY International</a>
+              <br/> Front Page Made by
+              <a href="https://www.11ty.dev/">11ty
+              </a>Server
+                            By
+              <a class="link" href="https://github.com/theethawat">GitHub Page</a>
+              on
+              <a class="link" href="https://github.com">GitHub</a>
+              Free SVG Backgrounds and Patterns by<a class="link" href="https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/">
+                SVGBackgrounds.com
+              </a>
+            </p>
+          </div>
+        </footer>
+      </body>
+    </html>
+    <script src="https://kit.fontawesome.com/942c2b45e2.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array
+          .prototype
+          .slice
+          .call(document.querySelectorAll('.navbar-burger'), 0);
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+          // Add a click event on each of them
+          $navbarBurgers.forEach(el => {
+            el.addEventListener('click', () => {
+              // Get the target from the "data-target" attribute
+              const target = el.dataset.target;
+              const $target = document.getElementById(target);
+              // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+              el.classList.toggle('is-active');
+              $target.classList.toggle('is-active');
+            });
+          });
+        }
+      });
+    </script>
+    <script src="js/lightgallery.min.js"></script><!-- lightgallery plugins --><script src="js/plugins/lg-thumbnail.umd.js"></script>
+    <script src="js/plugins/lg-zoom.umd.js"></script>
+  </body>
+</html>

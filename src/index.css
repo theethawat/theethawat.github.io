@@ -53,6 +53,11 @@ blockquote {
   @apply alert bg-gray-100 my-2 pt-4 pb-0;
 }
 
+code {
+  @apply  bg-gray-100 p-1 rounded-md;
+}
+
+
 
  .btn a {
   all: none;
