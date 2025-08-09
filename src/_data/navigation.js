@@ -18,7 +18,7 @@ module.exports = {
     },
     {
       text: "บล็อก",
-      url: "/th/blog/",
+      url: "https://blog.theethawat.dev",
       inside: false,
     },
     {
@@ -65,7 +65,7 @@ module.exports = {
     },
     {
       text: "Blogs",
-      url: "/en/blog/",
+      url: "https://blog.theethawat.dev",
       inside: false,
     },
     {
