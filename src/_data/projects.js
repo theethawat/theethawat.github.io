@@ -38,7 +38,7 @@ module.exports = [
     },
     image: "/img/project/thesis/cover.jpg",
     link: "cost-estimation",
-    year: "2023-Present",
+    year: "2023-2025",
     type: "research",
     language: ["python", "numpy", "pandas"],
     organization: "iaec",

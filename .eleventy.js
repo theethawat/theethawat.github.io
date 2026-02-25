@@ -70,14 +70,14 @@ module.exports = (eleventyConfig) => {
     // when normal use
     errorMode: "allow-fallback", //"never", // // Opting out of "strict"
     // when to build image
-    //errorMode: "never", //"never", // // Opting out of "strict"
+    // errorMode: "never", //"never", // // Opting out of "strict"
   });
   eleventyConfig.addNunjucksAsyncFilter("postcss", (cssCode, done) => {
     postcss([tailwindcss(require("./tailwind.config.js")), autoprefixer()])
       .process(cssCode)
       .then(
         (r) => done(null, r.css),
-        (e) => done(e, null)
+        (e) => done(e, null),
       );
   });
 

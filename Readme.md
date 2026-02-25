@@ -59,7 +59,7 @@ and
 
 ### Build And Deploy
 
-- Run the comand
+- Run the command
 
 ```
     npm run build
