@@ -1,53 +1,27 @@
 ---
 layout: mainlayout.njk
-title: Upcoming Event
-subtitle: กิจกรรมที่กำลังจะมาถึง
+title: กิจกรรมที่กำลังจะมาถึง 
+subtitle: Upcoming Event
 ---
 
 <html>
-  <h3>นำเสนอความก้าวหน้าวิทยานิพนธ์ปลายภาค 1/2024</h3>
-  <h1 id="progress1"></h1>
-  <p>ตุลาคม 2567</p>
-  <h3>นำเสนอความก้าวหน้าวิทยานิพนธ์กลางภาค 2/2024</h3>
-  <h1 id="midtermProg"></h1>
-  <p>16 มกราคม 2568</p>
+  <h3>นำเสนอความก้าวหน้าในสัมมนา 3/2569</h3>
+  <h1 id="seminarReport"></h1>
+  <p>6 กรกฎาคม 2569</p>
 
-  <h3>สอบปกป้องวิทยานิพนธ์</h3>
-  <h1 id="defend2"></h1>
-  <p>กุมภาพันธ์ 2568</p>
+ <h3>เดินทางเข้าร่วมรับพระราชทานปริญญาบัตร</h3>
+  <h1 id="gradCeremony"></h1>
+  <p>21 กันยายน 2569</p>
 
-  <h3>ต้องจบการศึกษาเพื่อรับปริญญา และศึกษาต่อ</h3>
-  <h1 id="finished"></h1>
-  <p>ปลายพฤษภาคม 2568</p>
+   <h3>ครบรอบ 1 ปีการมาอยู่ญี่ปุ่น</h3>
+  <h1 id="livingAnniversary"></h1>
+  <p>27 กันยายน 2569</p>
   <script>
     // Converting string to required date format
-    let progressReportDate = new Date("Oct 10, 2024 09:00:00").getTime();
-    let midtermProgress = new Date("Jan 16, 2025 09:00:00").getTime();
+    let seminarReport = new Date("Jul 6, 2026 14:50:00").getTime();
+    let gradCeremony = new Date("Sep 21, 2026 06:00:00").getTime();
+    let livingAnniversary = new Date("Sep 27, 2026 14:00:00").getTime();
 
-    // To call defined fuction every second
-    let x = setInterval(function () {
-      // Getting current time in required format
-      let now = new Date().getTime();
-
-      // Calculating the difference
-      let t = progressReportDate - now;
-
-      // Getting value of days, hours, minutes, seconds
-      let days = Math.floor(t / (1000 * 60 * 60 * 24));
-      let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-      let seconds = Math.floor((t % (1000 * 60)) / 1000);
-
-      // Output the remaining time
-      document.getElementById("progress1").innerHTML =
-        days + " Day " + hours + ":" + minutes + ":" + seconds + "";
-
-      // Output for over time
-      if (t < 0) {
-        clearInterval(x);
-        document.getElementById("progress1").innerHTML = "EXPIRED";
-      }
-    }, 1000);
 
     // To call defined fuction every second
     let firstTDInt = setInterval(function () {
@@ -55,7 +29,7 @@ subtitle: กิจกรรมที่กำลังจะมาถึง
       let now = new Date().getTime();
 
       // Calculating the difference
-      let t = midtermProgress - now;
+      let t = seminarReport - now;
 
       // Getting value of days, hours, minutes, seconds
       let days = Math.floor(t / (1000 * 60 * 60 * 24));
@@ -64,25 +38,23 @@ subtitle: กิจกรรมที่กำลังจะมาถึง
       let seconds = Math.floor((t % (1000 * 60)) / 1000);
 
       // Output the remaining time
-      document.getElementById("midtermProg").innerHTML =
-        days + " Day " + hours + ":" + minutes + ":" + seconds + "";
+      document.getElementById("seminarReport").innerHTML =
+        days + " Days " + hours + ":" + minutes + ":" + seconds + "";
 
       // Output for over time
       if (t < 0) {
         clearInterval(firstTDInt);
-        document.getElementById("midtermProg").innerHTML = "EXPIRED";
+        document.getElementById("seminarReport").innerHTML = "EXPIRED";
       }
     }, 1000);
 
-    let secondThesisDefend = new Date("Feb 14, 2025 09:00:00").getTime();
-
-    // To call defined fuction every second
-    let secondTDInt = setInterval(function () {
+// To call defined fuction every second
+    let gradCeremonyInt = setInterval(function () {
       // Getting current time in required format
       let now = new Date().getTime();
 
       // Calculating the difference
-      let t = secondThesisDefend - now;
+      let t = gradCeremony - now;
 
       // Getting value of days, hours, minutes, seconds
       let days = Math.floor(t / (1000 * 60 * 60 * 24));
@@ -91,25 +63,23 @@ subtitle: กิจกรรมที่กำลังจะมาถึง
       let seconds = Math.floor((t % (1000 * 60)) / 1000);
 
       // Output the remaining time
-      document.getElementById("defend2").innerHTML =
-        days + " Day " + hours + ":" + minutes + ":" + seconds + "";
+      document.getElementById("gradCeremony").innerHTML =
+        days + " Days " + hours + ":" + minutes + ":" + seconds + "";
 
       // Output for over time
       if (t < 0) {
-        clearInterval(secondTDInt);
-        document.getElementById("defend2").innerHTML = "EXPIRED";
+        clearInterval(firstTDInt);
+        document.getElementById("gradCeremony").innerHTML = "EXPIRED";
       }
     }, 1000);
 
-    let finished = new Date("May 15, 2025 00:00:00").getTime();
-
     // To call defined fuction every second
-    let finishedInt = setInterval(function () {
+    let livingAnniversaryInt = setInterval(function () {
       // Getting current time in required format
       let now = new Date().getTime();
 
       // Calculating the difference
-      let t = finished - now;
+      let t = livingAnniversary - now;
 
       // Getting value of days, hours, minutes, seconds
       let days = Math.floor(t / (1000 * 60 * 60 * 24));
@@ -118,14 +88,15 @@ subtitle: กิจกรรมที่กำลังจะมาถึง
       let seconds = Math.floor((t % (1000 * 60)) / 1000);
 
       // Output the remaining time
-      document.getElementById("finished").innerHTML =
-        days + " Day " + hours + ":" + minutes + ":" + seconds + "";
+      document.getElementById("livingAnniversary").innerHTML =
+        days + " Days " + hours + ":" + minutes + ":" + seconds + "";
 
       // Output for over time
       if (t < 0) {
-        clearInterval(finishedInt);
-        document.getElementById("finished").innerHTML = "EXPIRED";
+        clearInterval(firstTDInt);
+        document.getElementById("livingAnniversary").innerHTML = "EXPIRED";
       }
     }, 1000);
+   
   </script>
 </html>

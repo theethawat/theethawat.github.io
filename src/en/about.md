@@ -27,7 +27,7 @@ next_page_name: Working Timeline
         </div>
       </h1>
       <h2 class="text-lg text-accent md:text-black">
-      Research Student at Graduate School of Engineering
+    Student at the Interdisciplinary Graduate School of Agriculture and Engineering, University of Miyazaki, Japan
       </h2> <li >
         Birthday : 7 Febuary 1998
       </li> <li >
@@ -38,7 +38,7 @@ next_page_name: Working Timeline
 
 ## Biography
 
-I am Theethawat Savastham or you can called me Tin, a research student at the Graduate School of Engineering, University of Miyazaki, Miyazaki prefecture, Japan. 
+I am Theethawat Savastham or you can called me Tin, a Ph.D. student at the Interdisciplinary Graduate School of Agriculture and Engineering, University of Miyazaki, Miyazaki prefecture, Japan.
 
 My work and academic journey has begun when I was an undergraduate student in computer engineering at the Prince of Songkla University. In 2020, I had been invited by my advisor to work with the Intelligent Automation Research Center as a Full-Stack software developer. During my work from 2020-2023, I developed various software to support the research center’s academic service.
 
@@ -62,13 +62,14 @@ In 2021, I joined a development team for a hotel property management system name
 {% endfor %}
 </div>
 
-In 2022, I started a master's degree journey to research to develop better software. I was interested in data science, machine learning, and system performance.  In October 2023, I devoted my self into a study by resigning my job, that was the time that my research journey truly begin.
+In 2022, I started a master's degree journey to research to develop better software. I was interested in data science, machine learning, and system performance. In October 2023, I devoted my self into a study by resigning my job, that was the time that my research journey truly begin.
 
-During the master's degree study, I got a chance to join the Sakura Science Exchange Program in Miyazaki prefecture, Japan. On that event, I had the opportunity to met the professor from the University of Miyazaki and communicating about research experience and further study. In 2025, I got the scholarship and started my student life in Japan as a research student for my Ph.D. journey on the upcoming April.
+During the master's degree study, I got a chance to join the Sakura Science Exchange Program in Miyazaki prefecture, Japan. On that event, I had the opportunity to met the professor from the University of Miyazaki and communicating about research experience and further study. In 2025, I got the scholarship and started my student life in Japan as a research student. And my Ph.D. journey was start on April 1st, 2026.
 
 ## Education Background
 
-- 2025 - Present: Research Student, Graduate School of Engineering, University of Miyazaki, Miyazaki
+- 2026 - Present: Ph.D. Student, Interdisciplinary Graduate School of Agriculture and Engineering, University of Miyazaki, Miyazaki
+- 2025 - 2026: Research Student, Graduate School of Engineering, University of Miyazaki, Miyazaki
 - 2022 - 2025: Master of Engineering in Computer Engineering, Prince of Songkla University, Hatyai, Songkhla
 - 2016 - 2020: Bachelor of Engineering in Computer Engineering, Prince of Songkla University, Hatyai, Songkhla
 - 2012 - 2016: Grade 9-12, Benjamarachutit School, Nakhon Si Thammarat

@@ -5,11 +5,11 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Upcoming Event - กิจกรรมที่กำลังจะมาถึง</title>
-    <meta property="description" content="กิจกรรมที่กำลังจะมาถึง"/>
-    <meta property="og:title" content="Upcoming Event"/>
+    <title>กิจกรรมที่กำลังจะมาถึง - Upcoming Event</title>
+    <meta property="description" content="Upcoming Event"/>
+    <meta property="og:title" content="กิจกรรมที่กำลังจะมาถึง"/>
     <meta property="og:type" content="text/html"/>
-    <meta property="og:description" content="กิจกรรมที่กำลังจะมาถึง"/>
+    <meta property="og:description" content="Upcoming Event"/>
     <meta property="og:image" content="https://www.theduckcreator.in.th/assets/Logo2021/Banner2021.png"/>
     <link href="https://fonts.googleapis.com/css?family=Kanit:300,400&display=swap" rel="stylesheet"/>
     <link rel="icon" href="/img/ThSFavicon.png"/>
@@ -127,9 +127,9 @@
             <div class="flex gap-4 items-center">
               <div>
                 
-                <h1 class="text-2xl lg:text-4xl my-0 py-0 font-semibold ">Upcoming Event</h1>
+                <h1 class="text-2xl lg:text-4xl my-0 py-0 font-semibold ">กิจกรรมที่กำลังจะมาถึง</h1>
                 <h2 class=" text-gray-800 text-lg my-0 py-0 font-normal">
-                  กิจกรรมที่กำลังจะมาถึง</h2>
+                  Upcoming Event</h2>
               </div>
             </div>
           </div>
@@ -137,49 +137,23 @@
         <div class="container px-8 py-10 lg:py-5  lg:px-32">
           <div class="blog">
 <html>
-  <h3>นำเสนอความก้าวหน้าวิทยานิพนธ์ปลายภาค 1/2024</h3>
-  <h1 id="progress1"></h1>
-  <p>ตุลาคม 2567</p>
-  <h3>นำเสนอความก้าวหน้าวิทยานิพนธ์กลางภาค 2/2024</h3>
-  <h1 id="midtermProg"></h1>
-  <p>16 มกราคม 2568</p>
+  <h3>นำเสนอความก้าวหน้าในสัมมนา 3/2569</h3>
+  <h1 id="seminarReport"></h1>
+  <p>6 กรกฎาคม 2569</p>
 
-  <h3>สอบปกป้องวิทยานิพนธ์</h3>
-  <h1 id="defend2"></h1>
-  <p>กุมภาพันธ์ 2568</p>
+ <h3>เดินทางเข้าร่วมรับพระราชทานปริญญาบัตร</h3>
+  <h1 id="gradCeremony"></h1>
+  <p>21 กันยายน 2569</p>
 
-  <h3>ต้องจบการศึกษาเพื่อรับปริญญา และศึกษาต่อ</h3>
-  <h1 id="finished"></h1>
-  <p>ปลายพฤษภาคม 2568</p>
+   <h3>ครบรอบ 1 ปีการมาอยู่ญี่ปุ่น</h3>
+  <h1 id="livingAnniversary"></h1>
+  <p>27 กันยายน 2569</p>
   <script>
     // Converting string to required date format
-    let progressReportDate = new Date("Oct 10, 2024 09:00:00").getTime();
-    let midtermProgress = new Date("Jan 16, 2025 09:00:00").getTime();
+    let seminarReport = new Date("Jul 6, 2026 14:50:00").getTime();
+    let gradCeremony = new Date("Sep 21, 2026 06:00:00").getTime();
+    let livingAnniversary = new Date("Sep 27, 2026 14:00:00").getTime();
 
-    // To call defined fuction every second
-    let x = setInterval(function () {
-      // Getting current time in required format
-      let now = new Date().getTime();
-
-      // Calculating the difference
-      let t = progressReportDate - now;
-
-      // Getting value of days, hours, minutes, seconds
-      let days = Math.floor(t / (1000 * 60 * 60 * 24));
-      let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-      let seconds = Math.floor((t % (1000 * 60)) / 1000);
-
-      // Output the remaining time
-      document.getElementById("progress1").innerHTML =
-        days + " Day " + hours + ":" + minutes + ":" + seconds + "";
-
-      // Output for over time
-      if (t < 0) {
-        clearInterval(x);
-        document.getElementById("progress1").innerHTML = "EXPIRED";
-      }
-    }, 1000);
 
     // To call defined fuction every second
     let firstTDInt = setInterval(function () {
@@ -187,7 +161,7 @@
       let now = new Date().getTime();
 
       // Calculating the difference
-      let t = midtermProgress - now;
+      let t = seminarReport - now;
 
       // Getting value of days, hours, minutes, seconds
       let days = Math.floor(t / (1000 * 60 * 60 * 24));
@@ -196,25 +170,23 @@
       let seconds = Math.floor((t % (1000 * 60)) / 1000);
 
       // Output the remaining time
-      document.getElementById("midtermProg").innerHTML =
-        days + " Day " + hours + ":" + minutes + ":" + seconds + "";
+      document.getElementById("seminarReport").innerHTML =
+        days + " Days " + hours + ":" + minutes + ":" + seconds + "";
 
       // Output for over time
       if (t < 0) {
         clearInterval(firstTDInt);
-        document.getElementById("midtermProg").innerHTML = "EXPIRED";
+        document.getElementById("seminarReport").innerHTML = "EXPIRED";
       }
     }, 1000);
 
-    let secondThesisDefend = new Date("Feb 14, 2025 09:00:00").getTime();
-
-    // To call defined fuction every second
-    let secondTDInt = setInterval(function () {
+// To call defined fuction every second
+    let gradCeremonyInt = setInterval(function () {
       // Getting current time in required format
       let now = new Date().getTime();
 
       // Calculating the difference
-      let t = secondThesisDefend - now;
+      let t = gradCeremony - now;
 
       // Getting value of days, hours, minutes, seconds
       let days = Math.floor(t / (1000 * 60 * 60 * 24));
@@ -223,25 +195,23 @@
       let seconds = Math.floor((t % (1000 * 60)) / 1000);
 
       // Output the remaining time
-      document.getElementById("defend2").innerHTML =
-        days + " Day " + hours + ":" + minutes + ":" + seconds + "";
+      document.getElementById("gradCeremony").innerHTML =
+        days + " Days " + hours + ":" + minutes + ":" + seconds + "";
 
       // Output for over time
       if (t < 0) {
-        clearInterval(secondTDInt);
-        document.getElementById("defend2").innerHTML = "EXPIRED";
+        clearInterval(firstTDInt);
+        document.getElementById("gradCeremony").innerHTML = "EXPIRED";
       }
     }, 1000);
 
-    let finished = new Date("May 15, 2025 00:00:00").getTime();
-
     // To call defined fuction every second
-    let finishedInt = setInterval(function () {
+    let livingAnniversaryInt = setInterval(function () {
       // Getting current time in required format
       let now = new Date().getTime();
 
       // Calculating the difference
-      let t = finished - now;
+      let t = livingAnniversary - now;
 
       // Getting value of days, hours, minutes, seconds
       let days = Math.floor(t / (1000 * 60 * 60 * 24));
@@ -250,15 +220,16 @@
       let seconds = Math.floor((t % (1000 * 60)) / 1000);
 
       // Output the remaining time
-      document.getElementById("finished").innerHTML =
-        days + " Day " + hours + ":" + minutes + ":" + seconds + "";
+      document.getElementById("livingAnniversary").innerHTML =
+        days + " Days " + hours + ":" + minutes + ":" + seconds + "";
 
       // Output for over time
       if (t < 0) {
-        clearInterval(finishedInt);
-        document.getElementById("finished").innerHTML = "EXPIRED";
+        clearInterval(firstTDInt);
+        document.getElementById("livingAnniversary").innerHTML = "EXPIRED";
       }
     }, 1000);
+   
   </script>
 </html>
 </div>
@@ -310,16 +281,16 @@
           </div>
           <div>
             <p class="kanitlight">
-              &copy; 2023 - 2025
+              &copy; 2023 - 2026
               <strong>Theethawat</strong>
               &
               <strong>The Duck Creator</strong>, Web Content is licensed
-                                                by
+                                                                by
               <a rel="license" class="link" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons 4.0 BY International</a>
               <br/> Front Page Made by
               <a href="https://www.11ty.dev/">11ty
               </a>Server
-                                          By
+                                                        By
               <a class="link" href="https://github.com/theethawat">GitHub Page</a>
               on
               <a class="link" href="https://github.com">GitHub</a>
