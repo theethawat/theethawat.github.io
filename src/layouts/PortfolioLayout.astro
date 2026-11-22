@@ -11,7 +11,12 @@ interface Props {
   alternateLocales?: Locale[];
 }
 
-const { locale, title, description = messages[locale].siteDescription, alternateLocales = ["en", "th"] } = Astro.props;
+const {
+  locale,
+  title,
+  description = messages[locale].siteDescription,
+  alternateLocales = ["en", "th"],
+} = Astro.props;
 const t = messages[locale];
 const path = Astro.url.pathname.replace(/^\/(en|th)(?=\/|$)/, "") || "/";
 const nav = [
@@ -24,7 +29,6 @@ const nav = [
   ["cv", t.cv],
   ["vcard", t.contact],
 ] as const;
-
 ---
 
 <!doctype html>
@@ -34,12 +38,24 @@ const nav = [
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
     <title>{title} | Theethawat Savastham</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.url.origin)} />
-    {alternateLocales.map((language) => <link rel="alternate" hreflang={language} href={new URL(`/${language}${path}`, Astro.url.origin)} />)}
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <link
+      rel="canonical"
+      href={new URL(Astro.url.pathname, Astro.url.origin)}
+    />
+    {alternateLocales.map((language) => (
+      <link
+        rel="alternate"
+        hreflang={language}
+        href={new URL(`/${language}${path}`, Astro.url.origin)}
+      />
+    ))}
     <meta property="og:title" content={`${title} | Theethawat Savastham`} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={new URL(Astro.url.pathname, Astro.url.origin)} />
+    <meta
+      property="og:url"
+      content={new URL(Astro.url.pathname, Astro.url.origin)}
+    />
     <style>
       .site-logo-dark {
         display: none;
@@ -63,15 +79,47 @@ const nav = [
         </a>
         <div class="flex items-center gap-3">
           <nav aria-label="Language" class="join">
-            <a class:list={["btn btn-sm join-item", { "btn-active": locale === "en" }]} href={`/en${path}`} lang="en" aria-current={locale === "en" ? "true" : undefined}>EN</a>
-            <a class:list={["btn btn-sm join-item", { "btn-active": locale === "th" }]} href={`/th${path}`} lang="th" aria-current={locale === "th" ? "true" : undefined}>ไทย</a>
+            <a
+              class:list={[
+                "btn btn-sm join-item",
+                { "btn-active": locale === "en" },
+              ]}
+              href={`/en${path}`}
+              lang="en"
+              aria-current={locale === "en" ? "true" : undefined}
+            >
+              EN
+            </a>
+            <a
+              class:list={[
+                "btn btn-sm join-item",
+                { "btn-active": locale === "th" },
+              ]}
+              href={`/th${path}`}
+              lang="th"
+              aria-current={locale === "th" ? "true" : undefined}
+            >
+              ไทย
+            </a>
           </nav>
           <ThemeToggle />
         </div>
-        <nav aria-label={t.home} class="w-full flex flex-wrap gap-x-4 gap-y-2 text-sm">
+        <nav
+          aria-label={t.home}
+          class="w-full flex flex-wrap gap-x-4 gap-y-2 text-sm"
+        >
           {nav.map(([href, label]) => {
             const isExternal = href.startsWith("https://");
-            return <a class="link link-hover" href={isExternal ? href : `/${locale}/${href}`} target={isExternal ? "_blank" : undefined} rel={isExternal ? "noopener noreferrer" : undefined}>{label}</a>;
+            return (
+              <a
+                class="link link-hover"
+                href={isExternal ? href : `/${locale}/${href}`}
+                target={isExternal ? "_blank" : undefined}
+                rel={isExternal ? "noopener noreferrer" : undefined}
+              >
+                {label}
+              </a>
+            );
           })}
         </nav>
       </div>

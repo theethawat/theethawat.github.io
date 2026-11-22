@@ -55,7 +55,7 @@ const origin = Astro.url.origin;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
 
@@ -83,24 +83,22 @@ const origin = Astro.url.origin;
 
     <slot />
 
-    {
-      general.extraLinksEnabled && (
-        <>
-          {/* FabFlower for desktop - show 'both' and 'fab' items */}
-          <FabFlower
-            extraLinks={general.extraLinks.filter(
-              (link) => link.displayOn !== "dock"
-            )}
-          />
-          {/* Dock for mobile - show 'both' and 'dock' items */}
-          <Dock
-            extraLinks={general.extraLinks.filter(
-              (link) => link.displayOn !== "fab"
-            )}
-          />
-        </>
-      )
-    }
+    {general.extraLinksEnabled && (
+      <>
+        {/* FabFlower for desktop - show 'both' and 'fab' items */}
+        <FabFlower
+          extraLinks={general.extraLinks.filter(
+            (link) => link.displayOn !== "dock",
+          )}
+        />
+        {/* Dock for mobile - show 'both' and 'dock' items */}
+        <Dock
+          extraLinks={general.extraLinks.filter(
+            (link) => link.displayOn !== "fab",
+          )}
+        />
+      </>
+    )}
 
     <!-- Smooth Scroll -->
     <style is:global>
