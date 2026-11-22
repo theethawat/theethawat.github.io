@@ -1,1 +1,10 @@
-<!doctype html><title>Redirecting to: /en/</title><meta http-equiv="refresh" content="2;url=/en/"><meta name="robots" content="noindex"><link rel="canonical" href="https://theethawat.dev/en/"><body>	<a href="/en/">Redirecting from <code>/</code> to <code>/en/</code></a></body>
+<!DOCTYPE html><script>
+  (function () {
+    var lang = navigator.language || navigator.userLanguage;
+    if (lang && lang.toLowerCase().startsWith("th")) {
+      window.location.replace("/th");
+    } else {
+      window.location.replace("/en");
+    }
+  })();
+</script>

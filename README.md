@@ -36,7 +36,8 @@ To build the project for deployment:
   npm run build
 ```
 
-The static pages are written to `docs/client/`. Dynamic content routes are
+The static pages are written to `docs/`. The build copies the root `CNAME` file
+into the output directory. Dynamic content routes are
 generated for both languages, including pages that use the other language as a
 fallback. Legacy redirects are HTML redirects on static hosts. Keystatic's
 admin and API routes require a server and are not available on GitHub Pages.
@@ -44,8 +45,8 @@ After building, verify the generated routes with `node --test tests/static-pages
 
 ## Content Structure
 
-- The public portfolio uses English (`/en/`) and Thai (`/th/`); `/` redirects to
-  English.
+- The public portfolio uses English (`/en/`) and Thai (`/th/`); `/` redirects
+  Thai browser languages to Thai and all others to English using JavaScript.
 - The migrated pages and articles are Markdown files in `src/content/site/en` and
   `src/content/site/th`. Their `contentLanguage` identifies the language actually
   used by the text. If a translation is missing, the site displays the available

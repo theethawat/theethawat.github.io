@@ -2,8 +2,9 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
+import { runInNewContext } from "node:vm";
 
-const output = process.env.STATIC_BUILD_DIR ?? "docs/client";
+const output = process.env.STATIC_BUILD_DIR ?? "docs";
 const content = "src/content/site";
 const locales = ["en", "th"];
 
@@ -24,6 +25,35 @@ async function contentPaths(directory, prefix = "") {
 async function page(route) {
   return readFile(path.join(output, route, "index.html"), "utf8");
 }
+
+test("root redirects immediately based on browser language", async () => {
+  const html = await page("");
+  const match = html.match(/<script>([\s\S]*?)<\/script>/);
+  assert.ok(match, "root page must contain an inline script");
+  assert.doesNotMatch(html, /http-equiv=["']refresh/i);
+
+  for (const [navigator, expected] of [
+    [{ language: "th-TH" }, "/th"],
+    [{ language: "TH" }, "/th"],
+    [{ language: "en-US" }, "/en"],
+    [{ userLanguage: "th" }, "/th"],
+    [{}, "/en"],
+  ]) {
+    let destination;
+    runInNewContext(match[1], {
+      navigator,
+      window: { location: { replace: (url) => { destination = url; } } },
+    });
+    assert.equal(destination, expected);
+  }
+});
+
+test("static output contains the root CNAME", async () => {
+  assert.equal(
+    await readFile(path.join(output, "CNAME"), "utf8"),
+    await readFile("CNAME", "utf8"),
+  );
+});
 
 test("static output includes both locales for every content path", async () => {
   const paths = new Set(
