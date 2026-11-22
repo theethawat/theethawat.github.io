@@ -32,6 +32,13 @@ import Twitter from "../components/icons/Twitter.astro";
 import Bluesky from "../components/icons/Bluesky.astro";
 import Instagram from "../components/icons/Instagram.astro";
 import YouTube from "../components/icons/YouTube.astro";
+import Facebook from "../components/icons/Facebook.astro";
+import Line from "../components/icons/Line.astro";
+import StackShare from "../components/icons/StackShare.astro";
+import Orcid from "../components/icons/Orcid.astro";
+import ResearchGate from "../components/icons/ResearchGate.astro";
+import DevHub from "../components/icons/DevHub.astro";
+import Blockdit from "../components/icons/Blockdit.astro";
 
 export type IconName =
   | "Flower2"
@@ -64,6 +71,13 @@ export type IconName =
   | "Bluesky"
   | "Instagram"
   | "YouTube"
+  | "Facebook"
+  | "Line"
+  | "StackShare"
+  | "Orcid"
+  | "ResearchGate"
+  | "DevHub"
+  | "Blockdit"
   | "Email";
 
 export const iconMap: Record<IconName, any> = {
@@ -98,6 +112,13 @@ export const iconMap: Record<IconName, any> = {
   Instagram,
   YouTube,
   Email: Mail,
+  Facebook,
+  Line,
+  StackShare,
+  Orcid,
+  ResearchGate,
+  DevHub,
+  Blockdit,
 };
 
 export function getIcon(iconName: IconName) {

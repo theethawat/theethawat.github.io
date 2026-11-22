@@ -1,26 +1,21 @@
 ---
 title: "E-\_Machine / E-IotSoft"
 subtitle: ระบบแดชบอร์ด และ ควบคุมสำหรับ IoT
-contentLanguage: th
+contentLanguage: en
+projectType: Working Project
+organization: ศูนย์วิศวกรรมระบบอัตโนมัติอัจฉริยะ มหาวิทยาลัยสงขลานครินทร์
+demoLink: https://psuie.com/th/e-machine
 ---
-
-
-## Project Info
-
-- **Project Type** : Working Project
-- **Year** : 2020 - 2021
-- **Owner** : [Intelligent Automation Research Center](https://iarc.psu.ac.th)
-- **Technique** : JavaScript, React, MongoDB, Firebase Realtime DB, MQTT
-- **Website** : [emachine.efactory.biz](https://emachine.efactory.biz)
-- **Role in Project** : Developer
 
 ## Information
 
-ระบบนี้ได้ถูกพัฒนาขึ้นเริ่มแรก เพื่อใช้สำหรับการมอนิเตอร์ และ ควบคุม ระบบน้ำประปาหมู่บ้านของตำบลสะกอม อำเภอจะนะ จังหวัดสงขลา แต่ได้มีการพัฒนาโปรแกรม ให้รอบรับการเปลี่ยนแปลงที่หลากหลาย มีความเป็น General สำหรับการพัฒนาต่อ โปรแกรมพัฒนาโดยการให้ข้อมูลวิ่งจากเครื่อง PLC เข้าสู่ระบบ Cloud ผ่าน IoT Gateway บน Siemense IoT 2000 และวิ่งเข้าไปบน Firebase Realtime Database จากนั้นระบบจะไป Pulling ข้อมูลจาก Realtime DB เข้ามาในโปรแกรม
+This system was initially developed to monitor and control the village water supply system in Sakom Subdistrict, Chana District, Songkhla Province. The software was designed with a high degree of flexibility and generality to facilitate future expansion. Data flows from a PLC to the cloud via an IoT gateway—specifically a Siemens IoT 2000—and is then transmitted to a Firebase Realtime Database, from which the application retrieves the data.
 
-ระบบดูออกแบบมาให้สามารถเลือกข้อมูลมาแสดงได้ เลือกรูปแบบของ Gauge และ เลือกรูปแบบของ Chart มาแสดงได้ โดยผู้ใช้งาน ไม่ขึ้นกับการพัฒนา รวมถึงสามารถส่งสัญญาณไป Control เครื่อง PLC ผ่านทาง Realtime Database ได้เช่นกัน
+The system allows users to select which data to display, choose from various gauge and chart formats, and configure the interface independently of the underlying software development. Furthermore, it enables users to send control signals back to the PLC through the Realtime Database.
 
-ปัจจุบัน แม้ทางผมจะไม่ได้พัฒนาระบบนี้แล้ว แต่ศูนย์วิจัยระบบอัตโนมัติอัจฉริยะ ได้พัฒนาระบบนี้ต่อ ในนามของระบบ E-Machine ได้มีการเปลี่ยนจากการใช้ Realtime Database บน Firebase ไปเป็นการใช้โปรโตคอลอย่าง MQTT มีการประยุกต์ใช้ที่หลากหลายยิ่งขึ้น รับจากอุปกรณ์ทั้ง PLC, Raspberry PI หรือ เซนเซอร์อื่นๆ ได้มากมาย รวมถึงมีระบบตัวแปร แดชบอร์ด การกรอกค่าโดยมนุษย์ ประมาณการบิลค่าไฟ และอื่นๆ อีกมากมาย
+Although I am no longer involved in its development, the Intelligent Automation Engineering Center has continued to evolve the platform—now known as "E-Machine." It has transitioned from using the Firebase Realtime Database to the MQTT protocol, supporting a broader range of applications. It can now interface with diverse hardware, including PLCs, Raspberry Pi units, and various other sensors. Additional features include variable management, customizable dashboards, manual data entry, electricity bill estimation, and more.
+
+Currently, the system is being further developed by the next generation of engineers at PSU Innovative Engineering Co., Ltd., under an academic agreement with Prince of Songkla University.
 
 ## Gallery
 

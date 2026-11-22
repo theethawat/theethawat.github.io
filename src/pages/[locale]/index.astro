@@ -4,27 +4,43 @@ import PortfolioProjects from "../../components/PortfolioProjects.astro";
 import MyMenu from "../../components/MyMenu.astro";
 import { getCollection } from "astro:content";
 import { isLocale, messages } from "../../data/i18n";
+import { getIcon } from "../../utils/iconMapper";
 
 const { locale } = Astro.params;
 if (!isLocale(locale)) return Astro.redirect("/404");
 const t = messages[locale];
-const posts = (await getCollection("site", ({ id }) => id.startsWith("th/blog/post/")))
-  .sort((a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0));
+const posts = (
+  await getCollection("site", ({ id }) => id.startsWith("th/blog/post/"))
+).sort((a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0));
 ---
 
 <PortfolioLayout locale={locale} title={t.home}>
   <main class="mx-auto max-w-6xl px-4">
     <section class="hero py-16 lg:py-24">
       <div class="hero-content flex-col lg:flex-row-reverse gap-10">
-        <img src="/img/tin_photo.jpg" alt="Theethawat Savastham" class="w-48 lg:w-64 rounded-3xl shadow-xl" />
+        <img
+          src="/img/tin_photo.jpg"
+          alt="Theethawat Savastham"
+          class="w-48 lg:w-64 rounded-3xl shadow-xl"
+        />
         <div class="max-w-3xl">
-          <h1 class="text-4xl font-display lg:text-5xl font-bold">{locale === "en" ? "Theethawat Savastham" : "ธีร์ธวัช สวาสดิ์ธรรม"}</h1>         
-           <h1 class="text-3xl font-display lg:text-4xl font-bold color-neutral-content my-2">{locale === "th" ? "Theethawat Savastham" : "ธีร์ธวัช สวาสดิ์ธรรม"}</h1>
+          <h1 class="text-4xl font-display lg:text-5xl font-bold">
+            {locale === "en" ? "Theethawat Savastham" : "ธีร์ธวัช สวาสดิ์ธรรม"}
+          </h1>
+          <h1 class="text-3xl font-display lg:text-4xl font-bold color-neutral-content my-2">
+            {locale === "th" ? "Theethawat Savastham" : "ธีร์ธวัช สวาสดิ์ธรรม"}
+          </h1>
           <p class="mt-4 text-xl font-medium text-primary">{t.role}</p>
-          <p class="mt-5 leading-relaxed article-prose prose ">{t.introduction}</p>
+          <p class="mt-5 leading-relaxed article-prose prose">
+            {t.introduction}
+          </p>
           <div class="mt-6 flex flex-wrap gap-3">
-            <a href={`/${locale}/about`} class="btn btn-primary">{t.biography}</a>
-            <a href={`/${locale}/timeline`} class="btn btn-secondary">{t.viewTimeline}</a>
+            <a href={`/${locale}/about`} class="btn btn-primary">
+              {t.biography}
+            </a>
+            <a href={`/${locale}/timeline`} class="btn btn-secondary">
+              {t.viewTimeline}
+            </a>
           </div>
         </div>
       </div>
@@ -32,16 +48,17 @@ const posts = (await getCollection("site", ({ id }) => id.startsWith("th/blog/po
     <section class="py-12">
       <div class="flex flex-wrap justify-between items-center gap-3 mb-6">
         <h2 class="text-3xl font-bold">{t.projects}</h2>
-        <a class="link link-primary" href={`/${locale}/project`}>{t.allProjects} →</a>
+        <a class="link link-primary" href={`/${locale}/project`}>
+          {t.allProjects} →
+        </a>
       </div>
       <PortfolioProjects locale={locale} limit={3} />
     </section>
-      <section class="py-12">
+    <section class="py-12">
       <div class="flex flex-wrap justify-between items-center gap-3 mb-6">
         <h2 class="text-3xl font-bold">{t.exploreMe}</h2>
       </div>
-      <MyMenu locale={locale} limit={4  } />
+      <MyMenu locale={locale} limit={4} />
     </section>
-   
   </main>
 </PortfolioLayout>

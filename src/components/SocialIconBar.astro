@@ -1,0 +1,81 @@
+---
+import { getIcon } from "../utils/iconMapper";
+interface SocialLink {
+  icon: string;
+  label: string;
+  url: string;
+}
+
+const socialLinks: SocialLink[] = [
+  {
+    icon: "GitHub",
+    label: "GitHub",
+    url: "https://github.com/theethawat",
+  },
+  {
+    icon: "LinkedIn",
+    label: "LinkedIn",
+    url: "https://www.linkedin.com/in/theethawat-savastham",
+  },
+  {
+    icon: "Instagram",
+    label: "Instagram",
+    url: "https://instagram.com/tin_savastham",
+  },
+  { icon: "Email", label: "Email", url: "mailto:theethawat.s@outlook.co.th" },
+  {
+    icon: "Facebook",
+    label: "Facebook",
+    url: "https://facebook.com/tin.savastham",
+  },
+  {
+    icon: "Line",
+    label: "Line",
+    url: "http://line.me/ti/p/~svstin1998",
+  },
+  {
+    icon: "StackShare",
+    label: "StackShare",
+    url: "https://stackshare.io/theethawat",
+  },
+  {
+    icon: "Orcid",
+    label: "Orcid",
+    url: "https://orcid.org/0009-0004-4639-0398",
+  },
+  {
+    icon: "ResearchGate",
+    label: "ResearchGate",
+    url: "https://www.researchgate.net/profile/Theethawat-Savastham",
+  },
+  {
+    icon: "DevHub",
+    label: "DevHub.in.th",
+    url: "https://devhub.in.th/th/developers/theethawats/",
+  },
+  {
+    icon: "Blockdit",
+    label: "Blockdit",
+    url: "https://www.blockdit.com/tintheethawat",
+  },
+];
+---
+
+<div>
+  {socialLinks.map((link) => {
+    const IconComponent = getIcon(link.icon as any);
+    return (
+      <div class="tooltip tooltip-top" data-tip={link.label}>
+        <a
+          href={link.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-circle btn-neutral lg:btn-ghost"
+          aria-label={link.label}
+        >
+          <IconComponent class="size-6" />
+        </a>
+      </div>
+    );
+  })}
+</div>

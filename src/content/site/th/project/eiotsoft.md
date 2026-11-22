@@ -2,17 +2,10 @@
 title: "E-\_Machine / E-IotSoft"
 subtitle: ระบบแดชบอร์ด และ ควบคุมสำหรับ IoT
 contentLanguage: th
+projectType: Working Project
+organization: ศูนย์วิศวกรรมระบบอัตโนมัติอัจฉริยะ มหาวิทยาลัยสงขลานครินทร์
+demoLink: https://psuie.com/th/e-machine
 ---
-
-
-## Project Info
-
-- **Project Type** : Working Project
-- **Year** : 2020 - 2021
-- **Owner** : [Intelligent Automation Research Center](https://iarc.psu.ac.th)
-- **Technique** : JavaScript, React, MongoDB, Firebase Realtime DB, MQTT
-- **Website** : [emachine.efactory.biz](https://emachine.efactory.biz)
-- **Role in Project** : Developer
 
 ## Information
 
@@ -20,7 +13,9 @@ contentLanguage: th
 
 ระบบดูออกแบบมาให้สามารถเลือกข้อมูลมาแสดงได้ เลือกรูปแบบของ Gauge และ เลือกรูปแบบของ Chart มาแสดงได้ โดยผู้ใช้งาน ไม่ขึ้นกับการพัฒนา รวมถึงสามารถส่งสัญญาณไป Control เครื่อง PLC ผ่านทาง Realtime Database ได้เช่นกัน
 
-ปัจจุบัน แม้ทางผมจะไม่ได้พัฒนาระบบนี้แล้ว แต่ศูนย์วิจัยระบบอัตโนมัติอัจฉริยะ ได้พัฒนาระบบนี้ต่อ ในนามของระบบ E-Machine ได้มีการเปลี่ยนจากการใช้ Realtime Database บน Firebase ไปเป็นการใช้โปรโตคอลอย่าง MQTT มีการประยุกต์ใช้ที่หลากหลายยิ่งขึ้น รับจากอุปกรณ์ทั้ง PLC, Raspberry PI หรือ เซนเซอร์อื่นๆ ได้มากมาย รวมถึงมีระบบตัวแปร แดชบอร์ด การกรอกค่าโดยมนุษย์ ประมาณการบิลค่าไฟ และอื่นๆ อีกมากมาย
+แม้ทางผมจะไม่ได้พัฒนาระบบนี้แล้ว แต่ศูนย์วิจัยระบบอัตโนมัติอัจฉริยะ ได้พัฒนาระบบนี้ต่อ ในนามของระบบ E-Machine ได้มีการเปลี่ยนจากการใช้ Realtime Database บน Firebase ไปเป็นการใช้โปรโตคอลอย่าง MQTT มีการประยุกต์ใช้ที่หลากหลายยิ่งขึ้น รับจากอุปกรณ์ทั้ง PLC, Raspberry PI หรือ เซนเซอร์อื่นๆ ได้มากมาย รวมถึงมีระบบตัวแปร แดชบอร์ด การกรอกค่าโดยมนุษย์ ประมาณการบิลค่าไฟ และอื่นๆ อีกมากมาย
+
+และในปัจจุบันระบบนี้ได้ถูกพัฒนาต่อโดยนักพัฒนารุ่นต่อไปของบริษัท พีเอสยู อินโนเวทีฟ เอนจิเนียริ่ง จำกัด ภายใต้ข้อตกลงทางวิชาการกับมหาวิทยาลัยสงขลานครินทร์
 
 ## Gallery
 

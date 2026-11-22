@@ -1,0 +1,62 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  class={className}
+  width="24"
+  height="24"
+  fill="currentColor"
+  viewBox="0 0 1000 840"
+>
+  <!-- White "D" -->
+  <path
+    fill="currentColor"
+    fill-rule="evenodd"
+    d="
+    M 222 276
+    H 322
+    C 418 276, 467 329, 467 428
+    C 467 527, 418 580, 322 580
+    H 222
+    Z
+    M 258 308
+    V 548
+    H 318
+    C 392 548, 429 506, 429 428
+    C 429 350, 392 308, 318 308
+    Z
+  "
+  />
+
+  <!-- Neon Green Square with Cutout "H" -->
+  <path
+    fill="currentColor"
+    fill-rule="evenodd"
+    d="
+    M 521 276
+    H 788
+    V 580
+    H 521
+    Z
+    M 570 331
+    V 524
+    H 624
+    V 444
+    H 685
+    V 524
+    H 739
+    V 331
+    H 685
+    V 405
+    H 624
+    V 331
+    Z
+  "
+  />
+</svg>
