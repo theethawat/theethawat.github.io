@@ -3,6 +3,19 @@ import PortfolioLayout from "../../layouts/PortfolioLayout.astro";
 import PortfolioProjects from "../../components/PortfolioProjects.astro";
 import { getCollection, getEntry, render } from "astro:content";
 import { isLocale, messages } from "../../data/i18n";
+import { getSiteContentPaths, locales } from "../../utils/sitePaths";
+
+export async function getStaticPaths() {
+  const contentPaths = await getSiteContentPaths();
+  const paths = new Set([
+    "project",
+    "blog",
+    ...contentPaths.filter((path) => !/^project\/[^/]+$/.test(path)),
+  ]);
+  return locales.flatMap((locale) =>
+    [...paths].map((path) => ({ params: { locale, path } })),
+  );
+}
 
 const { locale, path } = Astro.params;
 if (!isLocale(locale) || !path) return Astro.redirect("/404");

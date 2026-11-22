@@ -4,7 +4,18 @@ import ProjectLayout from "../../../layouts/ProjectLayout.astro";
 import { isLocale } from "../../../data/i18n";
 import projects from "../../../data/portfolio.json";
 import { resolveContentSidebar } from "../../../utils/contentSidebar";
+import { getSiteContentPaths, locales } from "../../../utils/sitePaths";
 import _ from "lodash";
+
+export async function getStaticPaths() {
+  const paths = await getSiteContentPaths();
+  const slugs = paths
+    .filter((path) => /^project\/[^/]+$/.test(path))
+    .map((path) => path.slice("project/".length));
+  return locales.flatMap((locale) =>
+    slugs.map((slug) => ({ params: { locale, slug } })),
+  );
+}
 
 const { locale, slug } = Astro.params;
 if (!isLocale(locale) || !slug) return Astro.redirect("/404");
@@ -22,10 +33,11 @@ const project = projects.find((item) => item.link === slug);
 const general = await getEntry("general", "index");
 const alternateLocales = [
   ...new Set(
-    [requested?.data.contentLanguage, alternate?.data.contentLanguage].filter(isLocale),
+    [requested?.data.contentLanguage, alternate?.data.contentLanguage].filter(
+      isLocale,
+    ),
   ),
 ];
-
 ---
 
 <ProjectLayout
@@ -43,8 +55,8 @@ const alternateLocales = [
   adviser={entry.data.adviser}
   organization={entry.data.organization}
   demoLink={entry.data.demoLink}
-  startDate={project?.startDate ? new Date(project?.startDate):undefined}
-  endDate={project?.endDate ? new Date(project?.endDate):undefined}
+  startDate={project?.startDate ? new Date(project?.startDate) : undefined}
+  endDate={project?.endDate ? new Date(project?.endDate) : undefined}
   contentSidebar={resolveContentSidebar(general?.data, undefined)}
 >
   <Content />

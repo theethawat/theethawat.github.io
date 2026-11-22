@@ -1,5 +1,5 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import PortfolioLayout from "../layouts/PortfolioLayout.astro";
 import { House, ArrowLeft } from "@lucide/astro";
 
 interface Props {
@@ -22,7 +22,8 @@ if (error instanceof Error) {
 }
 ---
 
-<Layout
+<PortfolioLayout
+  locale="en"
   title="500 - Server Error | Bloomfolio"
   description="An error occurred while processing your request."
 >
@@ -85,4 +86,4 @@ if (error instanceof Error) {
       </div>
     </div>
   </div>
-</Layout>
+</PortfolioLayout>

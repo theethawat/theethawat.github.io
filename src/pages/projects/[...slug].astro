@@ -1,3 +1,12 @@
 ---
+import { getSiteContentPaths } from "../../utils/sitePaths";
+
+export async function getStaticPaths() {
+  const paths = await getSiteContentPaths();
+  return paths
+    .filter((path) => path.startsWith("project/"))
+    .map((path) => ({ params: { slug: path.slice("project/".length) } }));
+}
+
 return Astro.redirect(Astro.params.slug ? `/en/project/${Astro.params.slug}` : "/en/project", 301);
 ---

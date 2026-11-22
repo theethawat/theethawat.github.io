@@ -30,11 +30,17 @@ using `http://localhost:4321`.
 
 ## Deployment
 
-To deploy this project run, the build will created at `docs/` folders, that can be deployed at the GitHub Page.
+To build the project for deployment:
 
 ```bash
   npm run build
 ```
+
+The static pages are written to `docs/client/`. Dynamic content routes are
+generated for both languages, including pages that use the other language as a
+fallback. Legacy redirects are HTML redirects on static hosts. Keystatic's
+admin and API routes require a server and are not available on GitHub Pages.
+After building, verify the generated routes with `node --test tests/static-pages.test.mjs`.
 
 ## Content Structure
 

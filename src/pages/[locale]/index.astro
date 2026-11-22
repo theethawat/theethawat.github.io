@@ -5,6 +5,11 @@ import MyMenu from "../../components/MyMenu.astro";
 import { getCollection } from "astro:content";
 import { isLocale, messages } from "../../data/i18n";
 import { getIcon } from "../../utils/iconMapper";
+import { locales } from "../../utils/sitePaths";
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
 
 const { locale } = Astro.params;
 if (!isLocale(locale)) return Astro.redirect("/404");
